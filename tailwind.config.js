@@ -11,7 +11,9 @@ module.exports = {
         extend: {
             colors: {
                 "official": "#f6821f",
+                "bg6":"#131f2b",
             },
+
         },
         screens: {
             'sm': '576px',

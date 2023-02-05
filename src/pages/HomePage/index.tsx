@@ -10,7 +10,6 @@ import Section7 from "@/pages/HomePage/Section7";
 const HomePage = () => {
   return (
     <div className="flex flex-col items-center">
-      HomePage
         <Section1/>
         <Section2/>
         <Section3/>

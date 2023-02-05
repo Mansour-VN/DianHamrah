@@ -12,10 +12,6 @@ module.exports = {
             colors: {
                 "official": "#f6821f",
             },
-            backgroundImage:{
-                "bgSection1": "url('/public/assets/imagesbackground/header-bg.png')"
-
-            }
         },
         screens: {
             'sm': '576px',

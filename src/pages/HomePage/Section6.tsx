@@ -15,7 +15,7 @@ const Section6 = () => {
         </div>
       </div>
       <div className="w-4/12">
-        <Image className="scale-125"
+        <Image className="scale-125 md:hidden"
             // loader={myLoader}
             src="/assets/images/People/features-lg-img.png"
             alt="Picture of the author"

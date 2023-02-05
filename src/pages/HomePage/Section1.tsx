@@ -1,7 +1,7 @@
 const section1 = () => {
   return (
-    <div className="w-screen bg-no-repeat bg-cover bg-center ">
-
+    <div className="bg-no-repeat bg-cover bg-center">
+        <img/>
       <div className="container">section1 Mansour</div>
       </div>
   )

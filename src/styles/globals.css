@@ -5,7 +5,7 @@
 
 /*Button */
 .btn {
-    background-image:-webkit-linear-gradient( 0deg, rgb(254,87,107) 0%, rgb(254,157,106) 100%);
+    background-image:-webkit-linear-gradient( 0deg, rgb(254,87,107) 0%, rgb(246,130,31) 100%);
     border-radius: 8px;
     font-weight:600;
     color:white;

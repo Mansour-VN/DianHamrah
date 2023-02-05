@@ -1,6 +1,8 @@
 const section1 = () => {
   return (
-    <div className="container">section1 Mansour</div>
+    <div className="container  bg-official">
+      <div>section1 Mansour</div>
+      </div>
   )
 }
 

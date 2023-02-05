@@ -9,7 +9,7 @@ import Section7 from "@/pages/HomePage/Section7";
 
 const HomePage = () => {
   return (
-    <div className="container mx-auto flex-col ">
+    <div className="flex flex-col items-center">
       HomePage
         <Section1/>
         <Section2/>

@@ -42,3 +42,8 @@
     border-radius: 50%;
     color: #fff;
 }
+
+myshadow {
+    box-shadow: 2.5px 4.33px 15px 0 rgb(254 88 107 / 40%)
+
+}

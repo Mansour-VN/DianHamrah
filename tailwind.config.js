@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         "./app/**/*.{js,ts,jsx,tsx}",
@@ -13,6 +12,10 @@ module.exports = {
             colors: {
                 "official": "#f6821f",
             },
+            backgroundImage:{
+                "bgSection1": "url('/public/assets/imagesbackground/header-bg.png')"
+
+            }
         },
         screens: {
             'sm': '576px',
@@ -32,3 +35,6 @@ module.exports = {
     },
     plugins: [],
 }
+
+
+/** @type {import('tailwindcss').Config} */

@@ -1,6 +1,6 @@
 const section1 = () => {
   return (
-    <div>section1</div>
+    <div className="container">section1 Mansour</div>
   )
 }
 

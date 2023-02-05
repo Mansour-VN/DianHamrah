@@ -1,6 +1,6 @@
 const Section6 = () => {
   return (
-    <div>Section6</div>
+    <div>Section6 Sepehr</div>
   )
 }
 

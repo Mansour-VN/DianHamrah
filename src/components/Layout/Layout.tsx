@@ -6,7 +6,7 @@ export default function Layout({ children }: {
 }) {
     return (
         <>
-            <div className="header_Layout sticky top-0">
+            <div className="header_Layout sticky top-0 z-10">
                 <Header />
             </div>
             <main>{children}</main>

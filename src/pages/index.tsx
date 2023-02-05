@@ -2,6 +2,7 @@ import Head from 'next/head'
 import { Inter } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
+
 const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
       </Head>
       <main className="">
         <h1 className="text-3xl font-bold underline bg-zinc-700	">
-           Hello world!
+
        </h1>
       </main>
     </>

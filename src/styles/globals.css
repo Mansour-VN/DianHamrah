@@ -1,3 +1,44 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/*Button */
+.btn {
+    background-image:-webkit-linear-gradient( 0deg, rgb(254,87,107) 0%, rgb(254,157,106) 100%);
+    border-radius: 8px;
+    font-weight:600;
+    color:white;
+}
+.btn-normal {
+    padding:14px 50px 14px 25px;
+}
+.btn-normal:hover {
+    box-shadow: 2.5px 4.33px 15px 0 rgb(254 88 107 / 40%)
+}
+.btn-tel {
+    width: 100px;
+    height: 100px;
+    text-align: center;
+    line-height: 92px;
+
+}
+.btn-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+
+}
+.btn-s {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 5px;
+    height: 35px;
+    width: 35px;
+    background: #ffffff1c;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 50%;
+    color: #fff;
+}

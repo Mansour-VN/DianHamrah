@@ -1,6 +1,11 @@
+import Button from "@/components/Button/Button";
+
 const HomePage = () => {
   return (
-    <div>HomePage</div>
+      <>
+        <Button text=" درخواست مشاوره"  type ="normal"  icon = "icon"/>
+      </>
+
   )
 }
 

@@ -4,7 +4,7 @@ export default function Document() {
   return (
     <Html lang="en" dir="rtl">
       <Head />
-      <body className=" h-screen">
+      <body className="w-full h-screen">
         <Main />
 
         <NextScript />

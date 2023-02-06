@@ -24,8 +24,8 @@ const Section3 = () => {
             <div className="flex-1">
                 <Image style={{width:"540px" ,}}  src={about_img} alt="about"/>
             </div>
-            <div className="flex-1 flex flex-col justify-around ">
-                <div className="about-title second-atitle pb-40">
+            <div className="flex-1 flex flex-col justify-between  ">
+                <div className="about-title second-atitle ">
                     <h5 className="text-official mt-4 px-4"> راهی جدید برای رشد پیدا کنید</h5>
                     <h2 className="text-7xl text-black mt-2 px-4">بهترین راه حل کسب و کار خود را با قالب ما دریافت کنید</h2>
                     <p className="text-sm text-black mt-4 px-4">طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات

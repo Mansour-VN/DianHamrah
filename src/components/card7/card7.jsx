@@ -11,9 +11,9 @@ function Card7({disc , src ,name ,jobTitle}) {
             <div
                 className=" shadow-lg border-r border-b border-l border-t border-gray-400  lg:border-gray-400 bg-white rounded-b  lg:rounded-r p-4 flex flex-col justify-between leading-normal ">
                 <div className="mb-8  ">
-                    <div className="flex items-center gap-8 ">
+                    <div className="flex  flex-col md:flex-row items-center gap-8 ">
                         <div>
-                            <Image className=""
+                            <Image className="w-[50px]  h-[50px] md:w-[150px] md:h-[150px]"
                                 // loader={myLoader}
                                    src={src}
                                    alt="Picture of the author"
@@ -25,10 +25,10 @@ function Card7({disc , src ,name ,jobTitle}) {
                             <p className="text-gray-700 text-base">{disc}</p>
 
                         </div>
-                        <div className="subtitle flex flex-col justify-between items-center" >
+                        <div className="subtitle flex flex-col justify-between items-center md:text-center" >
                             <div className="py-4">
-                                <div className="font-semibold">{name}</div>
-                                <div className="text-official">{jobTitle}</div>
+                                <div className=" font-semibold ">{name}</div>
+                                <div className="text-official text-center">{jobTitle}</div>
                             </div>
                             <div>
                                 <div>

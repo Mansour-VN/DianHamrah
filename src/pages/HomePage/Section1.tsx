@@ -2,7 +2,7 @@ import Image from 'next/image';
 import headerBg from "../../../public/assets/images/background/header-bg.png";
 import happyMan from "../../../public/assets/images/People/header-img.png";
 import Button from "@/components/Button/Button";
-import {BsArrowLeftSquare} from "react-icons/Bs";
+import {BsArrowLeftSquare} from "react-icons/bs";
 
 
 const section1 = () => {

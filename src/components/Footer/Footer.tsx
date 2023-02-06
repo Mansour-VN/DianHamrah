@@ -12,7 +12,7 @@ const Footer = () => {
                     height={400}
                 />
             </div>
-            <div id='footerr' className='flex flex-col md:flex-row  container justify-around md:absolute md:h-80 z-10'>
+            <div id='footerr' className='flex flex-col md:flex-row  container justify-around md:absolute md:h-80 z-1'>
 
                 <div id='About' className='flex flex-col '>
                     <h3 className='border-b-4 font-bold text-white p-4'>دیان‌همراه‌فردا</h3>

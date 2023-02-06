@@ -13,7 +13,7 @@ function Card7({disc , src ,name ,jobTitle}) {
                 <div className="mb-8  ">
                     <div className="flex  flex-col md:flex-row items-center gap-8 ">
                         <div>
-                            <Image className="w-[50px]  h-[50px] md:w-[150px] md:h-[150px]"
+                            <Image className=""
                                 // loader={myLoader}
                                    src={src}
                                    alt="Picture of the author"

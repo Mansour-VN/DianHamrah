@@ -6,6 +6,7 @@ const Section3 = () => {
 
     const [courses, setCourses] = useState(0)
     const [customers, setCustomer] = useState(0)
+    const [agent, setAgent] = useState(0)
     const increaseCounter = () => {
         if (courses < 575) {
             setCourses(courses + 1)
@@ -13,8 +14,11 @@ const Section3 = () => {
         if (customers < 385) {
             setCustomer(customers + 1)
         }
+        if (agent < 15) {
+            setAgent(customers + 1)
+        }
     }
-    setTimeout(increaseCounter, 5)
+    setTimeout(increaseCounter, 7)
     return (
         <div className="section3 container flex flex-col md:flex-row-reverse  gap-4 items-center justify-center py-[100px]">
             <div className="flex-1">
@@ -34,18 +38,25 @@ const Section3 = () => {
                     </p>
                 </div>
                 <div className="progress-outer">
-                    <div className="flex flex-row justify-around items-center">
+                    <div className="flex flex-row flex-wrap justify-around items-center">
 
 
-                        <div className="stats shadow w-[185px] h-[120px]">
-                            <div className="stat flex flex-col items-center justify-center overflow-hidden">
+                        <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
+                            <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
                                 <div className="stat-title">تعداد مشتریان</div>
                                 <div className="stat-value">{`${customers}+`}</div>
                                 <div className="stat-desc">22% بیشتر از ماه قبل</div>
                             </div>
                         </div>
-                        <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
-                            <div className="stat flex flex-col items-center justify-center">
+                        <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
+                            <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
+                                <div className="stat-title text-ellipsis ">تعداد نمایندگی </div>
+                                <div className="stat-value">{`${agent}+`}</div>
+                                <div className="stat-desc">فعال در کشور</div>
+                            </div>
+                        </div>
+                        <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
+                            <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
                                 <div className="stat-title text-ellipsis ">تعداد دوره های موفق </div>
                                 <div className="stat-value">{`${courses}+`}</div>
                                 <div className="stat-desc">تاکنون </div>

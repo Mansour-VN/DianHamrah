@@ -7,13 +7,18 @@ import {BsArrowLeftSquare} from "react-icons/Bs";
 
 const section1 = () => {
     return (
-        <div className="w-full flex items-center justify-center relative flex-col min-h-[700px] max-h-fit">
-            <div className="w-full z-0 	bg-cover">
-                <Image src={headerBg} alt="image"/>
+        <div className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px] ">
+            <div className="z-0 ">
+                <Image src={headerBg} alt="image"   quality={100}
+                       fill
+                       sizes="100vw"
+                       style={{
+                           objectFit: 'cover',
+                       }}/>
             </div>
             <div className="container flex flex-wrap flex-row  justify-center items-center mx-auto  z-10 absolute bottom-0	">
-                <div className="header-img px-4 mt-[100px] ">
-                    <Image  src={happyMan} alt="image"/>
+                <div className=" px-4 mt-[100px] ">
+                    <Image  src={happyMan} alt="image" />
                 </div>
                 <div className="px-4 flex-1 col-lg-8 ">
                     <div className="slider-content s-slider-content mt-[170px]">

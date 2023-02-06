@@ -1,19 +1,27 @@
 import Button from "@/components/Button/Button"
+import Image from 'next/image'
+
 const Section6 = () => {
   return (
-    <div id="sec6"  className="bg-bg6  text-white">
+    <div id="sec6"  className="bg-bg6  text-white w-full  p-4 md:p-10">
     <div className="container mx-auto py-20 flex items-center" >
-      <div className="w-7/12">
-        <h2 className="text-7xl">اکنون یک مشاوره رایگان برای مشاغل خود دریافت کنید!</h2>
+      <div className=" w-full md:w-8/12">
+        <h2 className=" text-2xl text-center md:text-7xl ">اکنون یک مشاوره رایگان برای مشاغل خود دریافت کنید!</h2>
         <p className="py-4">طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود.</p>
         <div className="phone flex items-center gap-4 " >
 
           <div><Button text ="تلفن" type="tel" icon=""/></div>
-          <div className="text-7xl">0123456789</div>
+          <div className=" text-2xl md:text-7xl">0123456789</div>
         </div>
       </div>
-      <div className="w-3/12">
-        <img className="w-full h-full scale-150" decoding="async" src="https://dehkadeh2.ir/zebizz/wp-content/uploads/2021/06/features-lg-img.png" alt="features-lg-img" />
+      <div className=" w-0 w-4/12">
+        <Image className="scale-125 "
+            // loader={myLoader}
+            src="/assets/images/People/features-lg-img.png"
+            alt="Picture of the author"
+            width={500}
+            height={500}
+        />
       </div>
 
     </div>

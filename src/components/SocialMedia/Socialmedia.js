@@ -8,7 +8,7 @@ const SocialMedial = () => {
     return (
         <>
             <div className="w-full">
-                <div className='flex flex-row gap-2'>
+                <div className='flex flex-row gap-2 flex justify-center'>
                     <a href="https://api.whatsapp.com/send?phone=989045736529&text=سلام وقت بخیر" className="text-3xl rounded-full bg-green-700 p-2 text-white
                     transition ease-in-out delay-150 hover:scale-110 hover:bg-green-600 duration-300">
                         <BsWhatsapp />

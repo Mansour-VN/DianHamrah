@@ -1,7 +1,11 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+p,h1,h2,h3,h4,h5,a,span, button, div{
+    font-family: 'Noto Sans Arabic', sans-serif !important;
+}
 
 /*Button */
 .btn {

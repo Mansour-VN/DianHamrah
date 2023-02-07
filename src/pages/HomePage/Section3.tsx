@@ -20,8 +20,8 @@ const Section3 = () => {
     }
     setTimeout(increaseCounter, 7)
     return (
-        <div
-            className="section3 container flex flex-col gap-24 py-[100px]">
+        <div className="section3 container flex flex-col gap-24 py-[100px]">
+            <div className="bg-official w-full h-1.5"></div>
             <div className="flex flex-col md:flex-row-reverse  gap-4 items-center justify-center">
                 <div className="flex-1">
                     <Image style={{width: "540px",}} src={about_img} alt="about"/>
@@ -72,7 +72,7 @@ const Section3 = () => {
 
             </div>
 
-
+            <div className="bg-official w-full h-1.5"></div>
         </div>
     )
 }

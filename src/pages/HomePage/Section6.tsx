@@ -5,8 +5,8 @@ import { FiPhoneCall } from 'react-icons/fi';
 
 const Section6 = () => {
   return (
-    <div id="sec6"  className="bg-bg6  text-white w-full  p-4 md:p-10">
-    <div className="container mx-auto py-20 flex items-center" >
+    <div id="sec6"  className="bg-bg6  text-white w-full   ">
+    <div className="container mx-auto  flex items-center" >
       <div className=" w-full md:w-8/12">
         <h2 className=" text-2xl text-center md:text-6xl py-2 md:pb-8  leading-normal">اکنون یک مشاوره رایگان برای مشاغل خود دریافت کنید!</h2>
         <p className="py-4">طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود.</p>
@@ -17,7 +17,7 @@ const Section6 = () => {
         </div>
       </div>
       <div className="  w-0 md:w-4/12">
-        <Image className="scale-125 "
+        <Image className=" "
             // loader={myLoader}
             src="/assets/images/People/features-lg-img.png"
             alt="Picture of the author"

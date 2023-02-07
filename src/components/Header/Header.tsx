@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {AiOutlineMenu, AiOutlineClose} from 'react-icons/ai';
+import {AiOutlineMenu, AiOutlineClose, AiFillCaretDown} from 'react-icons/ai';
 import Image from "next/image";
 import Socialmedia from "@/components/SocialMedia/Socialmedia";
 
@@ -30,7 +30,18 @@ const Header = () => {
                         <li><a href="#">خانه</a></li>
                         <li><a href="#">درباره دیان</a></li>
                         <li><a href="#">ارتباط با دیان</a></li>
-                        <li><a href="#">آموزشهای دیان</a></li>
+                        <li>
+                            <div className="dropdown dropdown-bottom dropdown-end">
+                                <div className="flex flex-row item-center justify-center gap-1">
+                                <label tabIndex={0} className="bg-slate-800">آموزشهای دیان همراه </label>
+                                <AiFillCaretDown className="mt-1.5 md:block hidden"/>
+                                </div>
+                                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
+                                    <li><a>آموزش یک</a></li>
+                                    <li><a> آموزش دو</a></li>
+                                </ul>
+                            </div>
+                       </li>
                     </ul>
                 </div>
                 <div className="hidden md:block">

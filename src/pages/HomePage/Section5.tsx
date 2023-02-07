@@ -2,8 +2,51 @@ const Section5 = () => {
   return (
     <div id="sec5">
       <div className="py-8">
-          <div className="container flex flex-row ">
-              <div className="w-4/12">1</div>
+          <div className="container flex flex-row gap-10 ">
+              <div className="w-3/12">
+                  <div className="flex gap-4 pb-4">
+                      <div className="card w-96 bg-base-100 shadow-xl">
+                          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                          <div className="card-body">
+                              <h2 className="card-title">Shoes!</h2>
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <div className="card-actions justify-end">
+                              </div>
+                          </div>
+                      </div>
+                      <div className="card w-96 bg-base-100 shadow-xl">
+                          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                          <div className="card-body">
+                              <h2 className="card-title">Shoes!</h2>
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <div className="card-actions justify-end">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div className="flex gap-4">
+                      <div className="card w-96 bg-base-100 shadow-xl">
+                          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                          <div className="card-body">
+                              <h2 className="card-title">Shoes!</h2>
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <div className="card-actions justify-end">
+                              </div>
+                          </div>
+                      </div>
+                      <div className="card w-96 bg-base-100 shadow-xl">
+                          <figure><img src="/images/stock/photo-1606107557195-0e29a4b5b4aa.jpg" alt="Shoes" /></figure>
+                          <div className="card-body">
+                              <h2 className="card-title">Shoes!</h2>
+                              <p>If a dog chews shoes whose shoes does he choose?</p>
+                              <div className="card-actions justify-end">
+
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
               <div className="w-8/12">
                   <h2 className="text-4xl py-8">ما خدماتی را برای رشد تجارت شما ارائه می دهیم</h2>
                   <p className="py-2">

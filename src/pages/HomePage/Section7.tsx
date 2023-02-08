@@ -5,8 +5,8 @@ const Section7 = () => {
  <div id="sec7 " className="w-full p-10">
    <div className="container mx-auto">
        <div className="p-20 text-center">
-            <h2 className="text-xl md:text-7xl font-bold">
-                نظرات مشتریان ما
+            <h2 className="text-xl md:text-4xl font-bold">
+                سازمان هایی که افتخار همکاری با آنها را داریم
             </h2>
        </div>
        <div>

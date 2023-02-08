@@ -29,16 +29,17 @@ const Section3 = () => {
                 <div className="flex-1 flex flex-col justify-between  ">
                     <div className="about-title second-atitle ">
                         <h5 className="text-official mt-4 px-4"> راهی جدید برای رشد پیدا کنید</h5>
-                        <h2 className="text-7xl text-black mt-2 px-4">بهترین راه حل کسب و کار خود را با قالب ما دریافت
-                            کنید</h2>
-                        <p className="text-sm text-black mt-4 px-4">طراحان سایت هنگام طراحی قالب سایت معمولا با این
+                        <h2 className="text-4xl text-black font-semibold  mt-2 px-4">
+                            الزام همکاری با معتمد مالیاتی
+                        </h2>
+                        <p className="text-sm text-black mt-4 px-4">
+                            طراحان سایت هنگام طراحی قالب سایت معمولا با این
                             موضوع رو برو هستند که محتوای اصلی صفحات
                             آماده
                             نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط
                             بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود. همچنین طراح به
                             دنبال
                             این است که پس از ارایه کار نظر دیگران را در مورد طراحی جویا شود.
-
                         </p>
                     </div>
                 </div>
@@ -46,7 +47,7 @@ const Section3 = () => {
             <div className="">
                 <div className="flex md:flex-row flex-wrap justify-between gap-4 flex-col items-center">
 
-                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
+                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
                         <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
                             <div className="stat-title">تعداد مشتریان</div>
                             <div className="stat-value">{`${customers}+`}</div>

@@ -8,12 +8,12 @@ const Section6 = () => {
     <div id="sec6"  className="bg-bg6  text-white w-full   ">
     <div className="container mx-auto  flex items-center" >
       <div className=" w-full md:w-8/12">
-        <h2 className=" text-2xl text-center md:text-6xl py-2 md:pb-8  leading-normal">اکنون یک مشاوره رایگان برای مشاغل خود دریافت کنید!</h2>
-        <p className="py-4">طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود.</p>
+        <h2 className=" text-2xl  md:text-5xl py-2 md:pb-8  leading-normal">با دیان همراه فردا مطمئن قدم بردارید</h2>
+        <p className="py-4 md:text-xl">جهت راهنمایی و دریافت مشاوره رایگان با مشاوران ما تماس حاصل فرمائید.</p>
         <div className="phone flex items-center gap-4 " >
 
           <div className="text-center text-4xl flex items-center"><Button text ="" type="tel" icon={<FiPhoneCall/>}/></div>
-          <div className=" text-2xl md:text-4xl">0123456789</div>
+          <div className=" text-2xl md:text-4xl">021-96646</div>
         </div>
       </div>
       <div className="  w-0 md:w-4/12">

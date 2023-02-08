@@ -14,7 +14,7 @@ const Card2 = ({src, textTitleCard, mainTextCard}) => {
             </div>
 
             <div className='px-3'>
-                <h3 className='text-2xl font-bold p-1'>{textTitleCard}</h3>
+                <h3 className='text-xl text-official font-bold p-1 text-center'>{textTitleCard}</h3>
                 <p className='font-semibold text-justify p-2'>{mainTextCard}</p>
             </div>
 

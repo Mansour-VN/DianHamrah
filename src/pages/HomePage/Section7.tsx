@@ -1,4 +1,17 @@
 import Card7 from "@/components/card7/card7"
+//swiper
+import React, { useRef, useState } from "react";
+// Import Swiper React components
+import { Swiper, SwiperSlide } from "swiper/react";
+// import required modules
+import { Pagination } from "swiper";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+//end import swiper
+import Image from 'next/image';
 const Section7 = () => {
   return (
  <>
@@ -9,27 +22,103 @@ const Section7 = () => {
                 سازمان هایی که افتخار همکاری با آنها را داریم
             </h2>
        </div>
-       <div>
-           <div className="comments flex flex-col md:flex-row gap-8  " >
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-           </div>
+       <div className="bg-slate-800">
+               <Swiper
+                   slidesPerView={1}
+                   spaceBetween={10}
+                   pagination={{
+                       clickable: true,
+                   }}
+                   breakpoints={{
+                       640: {
+                           slidesPerView: 2,
+                           spaceBetween: 20,
+                       },
+                       768: {
+                           slidesPerView: 4,
+                           spaceBetween: 40,
+                       },
+                       1024: {
+                           slidesPerView: 5,
+                           spaceBetween: 50,
+                       },
+                   }}
+                   modules={[Pagination]}
+                   className="mySwiper hidden "
+               >
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo1.png"
+                            alt="image1"
+                            width={500}
+                            height={500}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo4.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo2.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo1.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo5.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo4.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo3.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+
+                   <SwiperSlide>
+                       <Image
+                            src="/assets/images/Logos/b-logo2.png"
+                            alt="image1"
+                            width={400}
+                            height={400}
+                       />
+                   </SwiperSlide>
+               </Swiper>
        </div>
 
 

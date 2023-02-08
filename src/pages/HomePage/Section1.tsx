@@ -30,7 +30,7 @@ const section1 = () => {
                             شرکت دیان همراه فردا دی ماه سال 1400 تاسیس و در راستای تصویب و اجرای قانون پایانه های فروشگاهی و سامانه مودیان از مهرماه 1401 به عنوان اولین و تنها معتمد مالیاتی نوع دو و سه با هکاری تیم متخصص و حرفه ای در حال فعالیت است.
                         </p>
                         <div className="mt-[40px] mb-[100px]">
-                            <Button text="اطلاعات بیشتر" type="normal" icon=<BsArrowLeftSquare/>/>
+                            <Button text="اطلاعات بیشتر" type="normal" icon=<BsArrowLeftSquare/> mobile={false}/>
                         </div>
 
                     </div>

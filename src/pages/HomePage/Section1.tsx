@@ -32,7 +32,7 @@ const section1 = () => {
                             نمیدهد.
                         </p>
                         <div className="mt-[40px] mb-[100px]">
-                            <Button text="اطلاعات بیشتر" type="normal" icon=<BsArrowLeftSquare/>/>
+                            <Button text="اطلاعات بیشتر" type="normal" icon=<BsArrowLeftSquare/> mobile={false}/>
                         </div>
 
                     </div>

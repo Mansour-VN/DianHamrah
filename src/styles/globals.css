@@ -11,6 +11,7 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
 .btn {
     background-image:-webkit-linear-gradient( 0deg, rgb(254,87,107) 0%, rgb(246,130,31) 100%);
     border-radius: 8px;
+    text-align: center;
     font-weight:600;
     color:white;
 }
@@ -21,8 +22,7 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
     box-shadow: 2.5px 4.33px 15px 0 rgb(254 88 107 / 40%)
 }
 .btn-tel {
-    width: 100px;
-    height: 100px;
+
     text-align: center;
     line-height: 92px;
 
@@ -34,8 +34,8 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
     line-height: 92px;
 }
 .btn-tel-desktop {
-    width: 100px;
-    height: 100px;
+    width: 60px;
+    height: 60px;
 }
 .btn-icon {
     width: 40px;

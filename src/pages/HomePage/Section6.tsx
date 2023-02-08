@@ -12,7 +12,9 @@ const Section6 = () => {
         <p className="py-4 md:text-xl">جهت راهنمایی و دریافت مشاوره رایگان با مشاوران ما تماس حاصل فرمائید.</p>
         <div className="phone flex items-center gap-4 " >
 
-          <div className="text-center text-4xl flex items-center"><Button text ="" type="tel" icon={<FiPhoneCall/>}/></div>
+          <div className="text-center text-4xl flex items-center">
+            <Button mobile="" text ="تماس با ما" type="tel" icon={<FiPhoneCall/>}/>
+          </div>
           <div className=" text-2xl md:text-4xl">021-96646</div>
         </div>
       </div>

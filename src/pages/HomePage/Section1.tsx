@@ -7,7 +7,7 @@ import {BsArrowLeftSquare} from "react-icons/bs";
 
 const section1 = () => {
     return (
-        <div className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
+        <div id="sec1" className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
             <div className="w-full z-0 	bg-cover">
                 <Image placeholder="blur"
                        quality={100}

@@ -3,7 +3,7 @@ import Card2 from "./../../components/card2/Card2";
 const Section2 = () => {
 
     return (
-        <div id="section2" className="section2 w-full flex flex-col items-center relative z-0">
+        <div id="sec2" className="section2 w-full flex flex-col items-center relative z-0">
             <h1 className="text-4xl font-bold	text-center	 sticky h-72 bg-bg6 w-full text-white pt-6">
                 خدمات دیان همراه فردا
             </h1>

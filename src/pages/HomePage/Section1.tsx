@@ -7,7 +7,7 @@ import {BsArrowLeftSquare} from "react-icons/bs";
 
 const section1 = () => {
     return (
-        <div className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
+        <div id="sec1" className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
             <div className="w-full z-0 	bg-cover">
                 <Image placeholder="blur"
                        quality={100}
@@ -24,12 +24,10 @@ const section1 = () => {
                 </div>
                 <div className="px-4 flex-1  ">
                     <div className=" mt-[140px] md:mt-[170px]">
-                        <h5 className="text-official font-xl font-extrabold mb-5">خوش آمدید</h5>
-                        <h2 className="text-6xl font-extrabold mb-6 text-black">کسب و کار شما راه حل بهتری پیدا می کند</h2>
-                        <p className="text-lg text-gray-400">طراحان سایت هنگام طراحی قالب سایت معمولا با این
-                            موضوع رو برو هستند که محتوای اصلی صفحات آماده نیست. در نتیجه طرح کلی دید درستی به کار
-                            فرما
-                            نمیدهد.
+                        <p className="text-black text-6xl font-extrabold mb-5">دیان همراه فردا</p>
+                        <h2 className="text-2xl font-extrabold mb-6 text-black">اولین و تنها معتمد مالیاتی نوع دو و سه در کشور </h2>
+                        <p className="text-lg text-gray-400">
+                            شرکت دیان همراه فردا دی ماه سال 1400 تاسیس و در راستای تصویب و اجرای قانون پایانه های فروشگاهی و سامانه مودیان از مهرماه 1401 به عنوان اولین و تنها معتمد مالیاتی نوع دو و سه با هکاری تیم متخصص و حرفه ای در حال فعالیت است.
                         </p>
                         <div className="mt-[40px] mb-[100px]">
                             <Button text="اطلاعات بیشتر" type="normal" icon=<BsArrowLeftSquare/> mobile={false}/>

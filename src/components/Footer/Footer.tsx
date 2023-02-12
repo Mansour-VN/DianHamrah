@@ -41,13 +41,27 @@ const Footer = () => {
                 </div>
 
                 <div id='Link' className='flex flex-col gap-5 md:w-1/3 md:p-0 p-4'>
-                    <h3 className='border-b-4 border-dotted border-orange-500/100 w-1/3  text-white p-2 font-extrabold'>سایت‌های
-                        مربوطه</h3>
+                    <h3 className='border-b-4 border-dotted border-orange-500/100 w-1/2  text-white p-2 font-extrabold'>سایت‌های
+                        مورد نیاز</h3>
                     <div className="flex flex-col gap-2 text-sky-100 ">
-                        <p>لورم ایپسوم متن ساختگی با تولید صنعت وگرافیک است</p>
-                        <p>لورم ایپسوم متن ساختگی با تولید صنعت وگرافیک است</p>
-                        <p>لورم ایپسوم متن ساختگی با تولید صنعت وگرافیک است</p>
-                        <p>لورم ایپسوم متن ساختگی با تولید صنعت وگرافیک است</p>
+                        <ul className="flex flex-col gap-2">
+                            <li className="hover:text-official">
+                                <a href="https://dianhamrah.ir/"> آساک قرن</a>
+                            </li>
+                            <li  className="hover:text-official">
+                                <a href="https://mefa.ir/fa-IR/mefa/1/page/%D8%B5%D9%81%D8%AD%D9%87-%D8%A7%D8%B5%D9%84%DB%8C">وزارت اقتصاد و دارایی</a>
+                            </li>
+                            <li   className="hover:text-official">
+                                <a href="https://www.tax.gov.ir/Pages/HomePage">سازمان امورمالیاتی کشور</a>
+                            </li>
+                            <li  className="hover:text-official">
+                                <a href="https://www.evat.ir/">سامانه عملیات الکترونیک مالیات بر ارزش افزوده</a>
+                            </li>
+                            <li  className="hover:text-official">
+                                <a href="https://irsherkat.ssaa.ir/Design/EstablishmentRequest/Index.aspx">سازمان ثبت اسناد و املاک کشور</a>
+                            </li>
+
+                        </ul>
                     </div>
                 </div>
 

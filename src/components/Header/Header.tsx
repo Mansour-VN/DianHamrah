@@ -12,13 +12,13 @@ const Header = () => {
                 className={`w-fulltransition  duration-1000 ease-in-out justify-around md:p-0 bg-slate-800 text-white flex items-center justify-center md:justify-around
                    md:font-bold ${menu ? 'h-screen  ' : 'md:h-24 h-20 '} `}
             >
-                <div className={`${menu? 'hidden' : 'fixed top-4 right-8 bock'}`}>
+                <div className={`${menu? 'hidden' : 'fixed top-8 right-8 bock'}`}>
                 <Image
                     src="/assets/images/Logos/DianHamrah.jpg"
                     alt="لوگو"
                     width={40}
                     height={40}
-                    className='rounded-full animate-bounce '/>
+                    className='rounded animate-bounce '/>
 
                 </div>
 
@@ -27,18 +27,34 @@ const Header = () => {
                         {menu? <AiOutlineClose/> :  <AiOutlineMenu/> }
                     </button>
                     <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
-                        <li><a href="#">خانه</a></li>
-                        <li><a href="#">درباره دیان</a></li>
-                        <li><a href="#">ارتباط با دیان</a></li>
+                        <li><a href="#"> صفحه اصلی </a></li>
                         <li>
                             <div className="dropdown dropdown-bottom dropdown-end">
                                 <div className="flex flex-row item-center justify-center gap-1">
-                                <label tabIndex={0} className="bg-slate-800">آموزشهای دیان همراه </label>
+                                    <label tabIndex={0} className="bg-slate-800">   درباره ما  </label>
+                                    <AiFillCaretDown className="mt-1.5 md:block hidden"/>
+                                </div>
+                                <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
+                                    <li><a>  تاریخچه </a></li>
+                                    <li><a> اطلاعات تماس  </a></li>
+                                    <li><a>  شعب و نمایندگی  </a></li>
+                                    <li><a>  باشگاه مشتریان   </a></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="#">ارتباط با ما</a></li>
+                        <li><a href="#">کتابخانه دیان همراه</a></li>
+                        <li>
+                            <div className="dropdown dropdown-bottom dropdown-end">
+                                <div className="flex flex-row item-center justify-center gap-1">
+                                <label tabIndex={0} className="bg-slate-800"> دوره های آموزشی  </label>
                                 <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
-                                    <li><a>آموزش یک</a></li>
-                                    <li><a> آموزش دو</a></li>
+                                    <li><a> آموزش حضوری </a></li>
+                                    <li><a> آموزش آنلاین </a></li>
+                                    <li><a> آموزش های سازمانی </a></li>
+                                    <li><a>  سمینارهای استانی  </a></li>
                                 </ul>
                             </div>
                        </li>

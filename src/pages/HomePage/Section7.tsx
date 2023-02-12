@@ -1,44 +1,21 @@
-import Card7 from "@/components/card7/card7"
+import CustomerSwiper from "@/components/CustomerSwiper/CustomerSwiper"
+import React, {useRef, useState} from "react";
+
+
+
+
 const Section7 = () => {
-  return (
- <>
- <div id="sec7 " className="w-full p-10">
-   <div className="container mx-auto">
-       <div className="p-20 text-center">
-            <h2 className="text-xl md:text-7xl font-bold">
-                نظرات مشتریان ما
-            </h2>
-       </div>
-       <div>
-           <div className="comments flex flex-col md:flex-row gap-8  " >
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-               <Card7
-                   disc="نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند."
-                   src="/assets/images/Icons/testi_avatar.png"
-                   name="سعیده سعیدی"
-                   jobTitle=" مشاور"
-               />
-           </div>
-       </div>
 
 
 
-   </div>
+    return (
+        <>
+            <div id="sec7 " className="w-full">
+               <CustomerSwiper/>
 
- </div>
- </>
-  )
+            </div>
+        </>
+    )
 }
 
 export default Section7

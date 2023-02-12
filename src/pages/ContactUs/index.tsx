@@ -1,8 +1,8 @@
- const Index = ()=>{
+ const ContactUs = ()=>{
     return(
         <div>
             Contact Page
         </div>
     )
 }
- export default Index
+ export default ContactUs

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import {AiOutlineMenu, AiOutlineClose, AiFillCaretDown} from 'react-icons/ai';
 import Image from "next/image";
 import Socialmedia from "@/components/SocialMedia/Socialmedia";
+import Link from "next/link";
 
 const Header = () => {
     const [menu, setMenu] = useState(false);
@@ -27,7 +28,10 @@ const Header = () => {
                         {menu? <AiOutlineClose/> :  <AiOutlineMenu/> }
                     </button>
                     <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
-                        <li><a href="#"> صفحه اصلی </a></li>
+
+                        <li>
+                            <Link href="/">صفحه اصلی</Link>
+                        </li>
                         <li>
                             <div className="dropdown dropdown-bottom dropdown-end">
                                 <div className="flex flex-row item-center justify-center gap-1">
@@ -42,8 +46,18 @@ const Header = () => {
                                 </ul>
                             </div>
                         </li>
-                        <li><a href="#">ارتباط با ما</a></li>
-                        <li><a href="#">کتابخانه دیان همراه</a></li>
+                        <li>
+                            <Link href="/AboutUs">
+                                 ارتباط با ما
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link href="/ghavanin">
+                                کتابخانه دیان همراه
+                            </Link>
+
+                        </li>
                         <li>
                             <div className="dropdown dropdown-bottom dropdown-end">
                                 <div className="flex flex-row item-center justify-center gap-1">

@@ -14,9 +14,11 @@ A
 package-lock.json,f/a/fa288d1472d29beccb489a676f68739ad365fc47
 P
  src/components/Layout/Layout.tsx,2/e/2e4ebd8383dda42ab8614d204b9d33067a4cf1ec
-N
-src/components/card7/card7.jsx,8/d/8d4b7da0f2afca67bc8c4153814f0899275af58c
 <
 package.json,7/0/7030d0b2f71b999ff89a343de08c414af32fc93a
 O
 src/pages/HomePage/Section7.tsx,e/f/efc1c5af28f4433e847419e534b516e6ea8f2446
+I
+public/Constants/dummy.js,1/b/1b48c70e6902e4146dd89555bd7bc07187a8aee3
+O
+src/pages/HomePage/Section5.tsx,8/3/8326b19d0a87dce9ae9bb99b5598fe93b75d1dc5

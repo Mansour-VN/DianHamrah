@@ -39,7 +39,9 @@ const Header = () => {
                                     <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                                 </div>
                                 <ul tabIndex={0} className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
-                                    <li><a>  تاریخچه </a></li>
+                                    <li> <Link href="/AboutUs/#sec8">
+                                        تاریخچه
+                                    </Link></li>
                                     <li><a> اطلاعات تماس  </a></li>
                                     <li><a>  شعب و نمایندگی  </a></li>
                                     <li><a>  باشگاه مشتریان   </a></li>

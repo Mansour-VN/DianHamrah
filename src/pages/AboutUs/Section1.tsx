@@ -6,8 +6,8 @@ const Secton1 = () => {
     return (
         <div className="block">
             <div
-                className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
-                <div className="w-full z-0 	bg-cover">
+                className="w-full flex items-center justify-center relative flex-col h-[300px]  ">
+                <div className="w-full  z-0 bg-cover">
                     <Image placeholder="blur"
                            quality={100}
                            fill
@@ -16,7 +16,7 @@ const Secton1 = () => {
                                objectFit: 'cover',
                            }} src={headerBg} alt="image"/>
                 </div>
-                <div className="z-1 absolute container flex flex-row-reverse items-center justify-between ">
+                <div className="z-1 absolute container flex md:flex-row-reverse flex-col items-center justify-between ">
                     <div className="text-sm breadcrumbs">
                         <ul>
                             <li><a>صفحه اصلی</a></li>

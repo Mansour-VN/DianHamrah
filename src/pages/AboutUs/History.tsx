@@ -4,7 +4,7 @@ import about_image from "../../../public/assets/images/People/about-img2.png";
 
 const Secton1 = () => {
     return (
-        <div className="block">
+        <div id="History" className="block w-full">
             <div
                 className="w-full flex items-center justify-center relative flex-col h-[300px]  ">
                 <div className="w-full  z-0 bg-cover">
@@ -33,7 +33,7 @@ const Secton1 = () => {
 
             </div>
 
-            <div className="container mx-auto flex flex-col md:flex-row items-center justify-center py-20">
+            <div   className="container mx-auto flex flex-col md:flex-row items-center justify-center py-20">
                 <div className=" md:w-1/2 w-full">
                     <div className="s-about-img ">
                         <Image
@@ -44,10 +44,10 @@ const Secton1 = () => {
                 <div className="md:w-1/2 w-full ">
                     <div className="about-content ">
                         <div className="about-title pb-20">
-                            <h5 className="text-official p-5 md:p-0"> درباره ما</h5>
+                            <h5 className="text-official p-5 md:p-0"> تاریخچه</h5>
                             <h2 className="text-[45px]">بهترین راه حل کسب و کار خود را با ما دریافت کنید</h2>
                         </div>
-                        <p>نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
+                        <p className="text-justify">نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
                             کاران
                             بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می&zwnj;برند که متن لورم
                             را

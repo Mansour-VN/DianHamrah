@@ -10,7 +10,6 @@ const Secton3 = () => {
             <Avatar name={"رها امینی"} title={"طراح"} image={raha}/>
             <Avatar name={"محمد محمدی"} title={"مدیرعامل"} image={mohamad}/>
             <Avatar name={"مینا اسدی"} title={"توسعه دهنده"} image={mina}/>
-
         </div>
     )
 }

@@ -2,7 +2,7 @@ const BranchesCard = ({title, address, map, tel, mobile, mail, manager, services
 
     return (
         <div tabIndex={0}
-             className="collapse-open collapse-arrow border border-base-300 bg-base-100 rounded-box w-full p-3">
+             className="collapse collapse-arrow border border-base-300 bg-base-100 rounded-box w-full p-3">
             <div className="collapse-title text-xl font-medium">
 
                 <h2 className="text-3xl font-bold  text-center pb-6 ">{title}</h2>
@@ -10,7 +10,7 @@ const BranchesCard = ({title, address, map, tel, mobile, mail, manager, services
                     آدرس: {address}
                 </div>
             </div>
-            <div className="md:grid md:grid-cols-2 flex flex-col  gap-4 ">
+            <div className="collapse-content md:grid md:grid-cols-2 flex flex-col  gap-4 ">
                 <div className="">
                     <p className="font-bold">تلفن: </p>
                     <p>{tel}</p>

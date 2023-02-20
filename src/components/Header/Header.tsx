@@ -30,7 +30,7 @@ const Header = () => {
                     </button>
                     <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
 
-                        <li>
+                        <li onClick={() => setMenu(!menu)}>
                             <Link href="/">صفحه اصلی</Link>
                         </li>
                         <li>
@@ -41,21 +41,21 @@ const Header = () => {
                                 </div>
                                 <ul tabIndex={0}
                                     className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52 ">
-                                    <li ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
-                                    <li><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
-                                    <li><Link href="/AboutUs/#Branches" scroll={false}> شعب و نمایندگی </Link></li>
-                                    <li><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
+                                    <li ><Link  href="/AboutUs/#History" scroll={false}  onClick={() => setMenu(!menu)}>تاریخچه</Link></li>
+                                    <li><Link href="/AboutUs/#Contact" scroll={false}  onClick={() => setMenu(!menu)}> اطلاعات تماس </Link></li>
+                                    <li><Link href="/AboutUs/#Branches" scroll={false}  onClick={() => setMenu(!menu)}> شعب و نمایندگی </Link></li>
+                                    <li><Link href="/AboutUs/#CustomerClub" scroll={false}  onClick={() => setMenu(!menu)}> باشگاه مشتریان </Link></li>
                                 </ul>
                             </div>
                         </li>
                         <li>
-                            <Link href="/AboutUs">
+                            <Link href="/AboutUs"  onClick={() => setMenu(!menu)}>
                                 ارتباط با ما
                             </Link>
                         </li>
 
                         <li>
-                            <Link href="/ghavanin">
+                            <Link href="/ghavanin"  onClick={() => setMenu(!menu)}>
                                 کتابخانه دیان همراه
                             </Link>
 
@@ -68,10 +68,10 @@ const Header = () => {
                                 </div>
                                 <ul tabIndex={0}
                                     className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
-                                    <li><a> آموزش حضوری </a></li>
-                                    <li><a> آموزش آنلاین </a></li>
-                                    <li><a> آموزش های سازمانی </a></li>
-                                    <li><a> سمینارهای استانی </a></li>
+                                    <li><a onClick={() => setMenu(!menu)}> آموزش حضوری </a></li>
+                                    <li><a onClick={() => setMenu(!menu)}> آموزش آنلاین </a></li>
+                                    <li><a onClick={() => setMenu(!menu)}> آموزش های سازمانی </a></li>
+                                    <li><a onClick={() => setMenu(!menu)}> سمینارهای استانی </a></li>
                                 </ul>
                             </div>
                         </li>

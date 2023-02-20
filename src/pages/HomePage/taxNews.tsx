@@ -3,8 +3,8 @@ import {News} from "../../../public/Constants/dummy";
 
 const Section8 = () => {
     return (
-        <div id="sec8" className="w-full flex flex-col items-center relative z-0 py-40">
-            <h1 className="text-4xl font-bold	text-center	m-4 sticky w-full text-black">اخبارمالیاتی </h1>
+        <div id="sec8" className="w-full flex flex-col items-center relative z-0 pt-4">
+            <h1 className="text-4xl font-bold py-4	text-center	m-4 sticky w-full text-black">اخبارمالیاتی </h1>
             <div className="container">
                 <div className="flex md:flex-row  md:gap-12 justify-center font-bold flex-col items-center">
                     {News.map((New) => (

@@ -10,7 +10,7 @@ import Card5 from "@/components/card5/card5";
 
 const Section5 = () => {
     return (
-        <div id="sec5 ">
+        <div id="lowTerminals ">
             <div className="py-8">
                 <div className="container flex flex-row flex-wrap items-center">
                     <div className="md:w-1/2 flex flex-col md:flex-row">

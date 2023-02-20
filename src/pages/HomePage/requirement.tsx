@@ -21,7 +21,7 @@ const Section3 = () => {
     }
     setTimeout(increaseCounter, 20)
     return (
-        <div id="sec3" className="section3 container flex flex-col gap-24 py-[100px]">
+        <div id="requirement" className="section3 container flex flex-col gap-24 py-[100px]">
             <div className="bg-official w-full h-1.5"></div>
             <div className="flex flex-col md:flex-row-reverse  gap-4 items-center justify-center">
                 <div className="flex-1">

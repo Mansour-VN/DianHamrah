@@ -1,4 +1,4 @@
-import Card2 from "./../../components/card2/Card2";
+import Card2 from "../../components/card2/Card2";
 import {services} from "@/../public/Constants/dummy";
 import React from "react";
 // import * as console from "console";
@@ -6,7 +6,7 @@ import React from "react";
 const Section2 = () => {
 
     return (
-        <div id="sec2" className="section2 w-full flex flex-col items-center relative z-0">
+        <div id="servicesDian" className="section2 w-full flex flex-col items-center relative z-0">
             <h1 className="text-4xl font-bold	text-center	 sticky h-72 bg-bg6 w-full text-white pt-6">
                 خدمات دیان همراه فردا
             </h1>

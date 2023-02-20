@@ -3,7 +3,7 @@ import Image from "next/image";
 
 function Card5({backImg, icon, title, content}) {
     return (
-        <div className="sm:w-full rounded-lg drop-shadow-xl relative p-8 box-border mt-3" data-theme="light">
+        <div className="w-full rounded-lg drop-shadow-xl relative p-8 box-border mt-3" data-theme="light">
             <div >
                 <Image
                        src={backImg}

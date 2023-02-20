@@ -40,8 +40,11 @@ const ServicesDian = () => {
         <div id="servicesDian ">
             <div className="py-8">
                 <div className="container flex flex-row flex-wrap items-center">
+                <h2 className="text-4xl  text-center w-full font-semibold md:hidden">
+                            خدمات دیان همراه فردا
+                 </h2>
                     <div className="md:w-1/2 flex flex-col md:flex-row">
-                        <div className="flex flex-col p-2 w-1/2">
+                        <div className="flex flex-col p-2 md:w-1/2">
 
                             <Card5 backImg={services[0].image} icon={services[0].image} title={services[0].title}
                                 content={services[0].Description} />
@@ -52,7 +55,7 @@ const ServicesDian = () => {
 
 
                         </div>
-                        <div className="flex flex-col p-2 md:mt-16  w-1/2">
+                        <div className="flex flex-col p-2 md:mt-16  md:w-1/2">
                             <Card5 backImg={services[2].image} icon={services[2].image} title={services[2].title}
                                 content={services[2].Description} />
                             <Card5 backImg={services[2].image} icon={services[2].image} title={services[2].title}
@@ -61,7 +64,7 @@ const ServicesDian = () => {
                         </div>
                     </div>
                     <div className="md:w-1/2 flex-col md:pr-8">
-                        <h2 className="text-4xl font-semibold py-8">
+                        <h2 className="text-4xl hidden font-semibold py-8 md:flex">
                             خدمات دیان همراه فردا
                         </h2>
                         <p className="py-2">

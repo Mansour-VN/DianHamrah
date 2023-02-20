@@ -1,6 +1,7 @@
 import Image from "next/image";
 import about_img from "../../../public/assets/images/background/about_img.png"
 import {useState} from "react";
+import {HomePage} from "../../../public/Constants/dummy";
 
 const Section3 = () => {
 
@@ -14,7 +15,7 @@ const Section3 = () => {
         if (customers < 385) {
             setCustomer(customers + 1)
         }
-        if (agent < 15) {
+        if (agent < 5) {
             setAgent(customers + 1)
         }
     }
@@ -30,16 +31,10 @@ const Section3 = () => {
                     <div className="about-title second-atitle ">
                         <h5 className="text-official mt-4 px-4"> راهی جدید برای رشد پیدا کنید</h5>
                         <h2 className="text-4xl text-black font-semibold  mt-2 px-4">
-                            الزام همکاری با معتمد مالیاتی
+                            {HomePage.Requirement.title}
                         </h2>
                         <p className="text-sm text-black mt-4 px-4">
-                            طراحان سایت هنگام طراحی قالب سایت معمولا با این
-                            موضوع رو برو هستند که محتوای اصلی صفحات
-                            آماده
-                            نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های مرتبط
-                            بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود. همچنین طراح به
-                            دنبال
-                            این است که پس از ارایه کار نظر دیگران را در مورد طراحی جویا شود.
+                            {HomePage.Requirement.Description}
                         </p>
                     </div>
                 </div>

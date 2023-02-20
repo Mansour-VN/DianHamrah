@@ -13,19 +13,25 @@ function Card5({backImg, icon, title, content}) {
                            top: 0,
                            left: 0,
                        }}
+                       className="opacity-20"
                 />
             </div>
-            <div className="bg-orange-100 mb-4 p-5 rounded inline-block">
+            <div className="bg-orange-100 mb-4 rounded inline-block">
                 <Image
                        src={icon}
                        alt="img"
+                       width={100}
+                       height={100}
 
                 />
             </div>
-            <div className="services-content2">
+            <div className="services-content2 h-40 overflow-hidden">
                 <h5 className="hover:text-official text-2xl font-extrabold"><a href="">{title}</a>
                 </h5>
-                <p>{content}</p>
+                <p className="font-bold">{content}</p>
+            </div>
+            <div className="card-actions justify-end ">
+                <button className="btn btn-primary">اطلاعات بیشتر</button>
             </div>
         </div>
 

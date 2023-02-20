@@ -13,7 +13,7 @@ const HomePage = () => {
         <ServicesDian/>
         <TaxNews/>
         <Requirement/>
-        <LawTerminals/>
+        {/* <LawTerminals/> */}
         <CallAndCounseling/>
         <OrganizationIcon/>
      </div>

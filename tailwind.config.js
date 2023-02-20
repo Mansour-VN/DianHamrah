@@ -1,4 +1,3 @@
-/** @type {import('tailwindcss').Config} */
 module.exports = {
     content: [
         "./app/**/*.{js,ts,jsx,tsx}",
@@ -9,7 +8,13 @@ module.exports = {
         "./src/**/*.{js,ts,jsx,tsx}",
     ],
     theme: {
-        extend: {},
+        extend: {
+            colors: {
+                "official": "#f6821f",
+                "bg6":"#131f2b",
+            },
+
+        },
         screens: {
             'sm': '576px',
             // => @media (min-width: 576px) { ... }
@@ -20,13 +25,14 @@ module.exports = {
             'lg': '1140px',
             // => @media (min-width: 1140px) { ... }
         },
-        colors: {
-            "official": "#f6821f",
-        },
+
         fontFamily: {
             sans: ['Graphik', 'sans-serif'],
             serif: ['Merriweather', 'serif'],
         },
     },
-    plugins: [],
+    plugins: [require("daisyui")],
 }
+
+
+/** @type {import('tailwindcss').Config} */

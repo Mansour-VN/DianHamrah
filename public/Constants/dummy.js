@@ -26,12 +26,12 @@ import telephone_icon from "./DummyAssets/telephone-in-talk.svg";
 import privacy_icon from "./DummyAssets/privacy-tip.svg";
 import menu_icon from "./DummyAssets/menu.svg";
 import home_icon from "./DummyAssets/home-rounded.svg";
-import search_icon from "./DummyAssets/baseline-search.svg";
+// import search_icon from "./DummyAssets/baseline-search.svg";
 import email_icon from "./DummyAssets/alternate-email-rounded.svg";
 
 
-const socialNetwork = {
-  "شبکه‌های اجتماعی": {
+export const socialNetwork = {
+  socials: {
     Whatsapp: [Whatsapp, "https://chat.whatsapp.com/G0o3ZKS1EHpEhbGtevLhRs"],
     Telegram: [Telegram, "https://t.me/dianhamrahefarda"],
     Twitter: [Twitter, link],

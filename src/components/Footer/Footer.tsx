@@ -69,7 +69,7 @@ const Footer = () => {
                         باما </h3>
 
                         <div className="text-sky-100 flex flex-col gap-2">
-                            <p>شماره تماس :   021-96646</p>
+                            <p>شماره تماس :   96646-021</p>
                             <p> آدرس : تهران، شهرک غرب، بلوارد دادمان کوچه میلاد چهارم پلاک 5</p>
                         </div>
                     <div id="socialMediaFooter" className="">

@@ -17,7 +17,7 @@ function CustomerSwiper () {
                     سازمان هایی که افتخار همکاری با آنها را داریم
                 </h2>
             </div>
-            <div className="bg-slate-800 w-full mt-4">
+            <div className="bg-slate-800 w-full mt-4 md:h-32 flex items-center ">
                 <div className="container mx-auto">
                     <Swiper
                         slidesPerView={1}

@@ -6,12 +6,12 @@ import Socialmedia from "@/components/SocialMedia/Socialmedia";
 
 const Contact = () => {
     return (
-        <div id="Contact" className="bg-bg6  text-white w-full   ">
+        <div id="Contact" className="bg-bg6  text-white w-full py-4">
             <div className="container mx-auto  flex items-center">
-                <div className=" w-full md:w-8/12">
-                    <h2 className=" text-2xl  md:text-5xl py-2 md:pb-8  leading-normal">با دیان همراه فردا مطمئن قدم
+                <div className=" w-full md:w-8/12 px-2 md:p-0">
+                    <h2 className=" text-2xl text-center md:text-5xl py-2 md:pb-8">با دیان همراه فردا مطمئن قدم
                         بردارید</h2>
-                    <p className="py-4 md:text-xl">جهت راهنمایی و دریافت مشاوره رایگان با مشاوران ما تماس حاصل
+                    <p className="py-4 md:text-xl text-sm">جهت راهنمایی و دریافت مشاوره رایگان با مشاوران ما تماس حاصل
                         فرمائید.</p>
                     <div className="phone flex flex-col items-start gap-4 ">
 

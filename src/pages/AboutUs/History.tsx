@@ -25,8 +25,8 @@ const Secton1 = () => {
                         </ul>
                     </div>
                     <div className="breadcrumb-title  mb-30">
-                        <h2 className="text-[60px] text-black ">درباره ما</h2>
-                        <p className="text-gray-400 ">با استفاده از الگوهای پیش ساخته ما وب سایت های قدرتمند و
+                        <h2 className="text-[60px] md:p-0 px-2 text-black ">درباره ما</h2>
+                        <p className="text-gray-400 px-2 md:p-0">با استفاده از الگوهای پیش ساخته ما وب سایت های قدرتمند و
                             چشمگیری ایجاد کنید</p>
                     </div>
                 </div>
@@ -43,11 +43,11 @@ const Secton1 = () => {
                 </div>
                 <div className="md:w-1/2 w-full ">
                     <div className="about-content ">
-                        <div className="about-title pb-20">
-                            <h5 className="text-official p-5 md:p-0"> تاریخچه</h5>
-                            <h2 className="text-[45px]">بهترین راه حل کسب و کار خود را با ما دریافت کنید</h2>
+                        <div className="about-title">
+                            <h5 className="text-official p-2 md:p-0"> تاریخچه</h5>
+                            <h2 className="text-4xl text-center p-2">بهترین راه حل کسب و کار خود را با ما دریافت کنید</h2>
                         </div>
-                        <p className="text-justify">نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
+                        <p className="text-justify p-2 md:p-0">نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
                             کاران
                             بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می&zwnj;برند که متن لورم
                             را

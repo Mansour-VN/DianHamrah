@@ -5,7 +5,7 @@ import { FiPhoneCall } from 'react-icons/fi';
 
 const Section6 = () => {
   return (
-    <div id="sec6"  className="bg-bg6  text-white w-full   ">
+    <div id="callAndCounseling"  className="bg-bg6  text-white w-full   ">
     <div className="container mx-auto  flex items-center" >
       <div className=" w-full md:w-8/12">
         <h2 className=" text-2xl  md:text-5xl py-2 md:pb-8  leading-normal">با دیان همراه فردا مطمئن قدم بردارید</h2>

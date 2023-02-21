@@ -10,7 +10,7 @@ const Section7 = () => {
 
     return (
         <>
-            <div id="sec7 " className="w-full">
+            <div id="organizationIcon" className="w-full">
                <CustomerSwiper/>
 
             </div>

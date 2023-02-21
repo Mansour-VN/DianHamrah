@@ -15,7 +15,7 @@ const AboutUs = () => {
             <Contact/>
             <div id="Branches" className="flex flex-col items-center justify-center container my-10"> {/*Branches*/}
                 <h2 className="mb-10 text-4xl font-extrabold text-official">لیست شعب و دفاتر</h2>
-                <div className="container flex flex-col items-center justify-center  md:grid md:grid-cols-2 gap-4	">
+                <div className="container flex flex-col items-center justify-center  gap-4	">
                     <BranchesCard title="دفتر مرکزی" address="میدان صنعت، خیابان دادمان"
                                   map="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d809.3563388866064!2d51.351392072989924!3d35.76492647493776!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f8e0710ba2cbbbb%3A0xf6f06ac08e9d909!2sasak%20gahrn!5e0!3m2!1sfa!2s!4v1675675421405!5m2!1sfa!2s"
                                   tel="021-2165496" mobile="09121234567" mail="info@dian.ir" manager="آقای دکتر محمودی"
@@ -50,18 +50,18 @@ const AboutUs = () => {
                            }} src={BgCustomerClub} alt="image"/>
                 </div>
                 <div
-                    className="z-1 absolute container flex flex-col items-center justify-between gap-6 px-36 py-6 text-justify bg-white/30 rounded-2xl">
-                    <h2 className="text-center w-full text-7xl font-extrabold hover:cursor-pointer">باشگاه مشتریان</h2>
-                    <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است،
-                        چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی
-                        مورد نیاز، و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه
-                        درصد گذشته حال و آینده، شناخت فراوان جامعه و متخصصان را می طلبد،ایط سخت تایپ به پایان رسد و
-                        زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی
-                        اساسا مورد استفاده قرار گیرد.</p>
+                    className="z-1 absolute container flex flex-col items-center justify-between gap-6 md:px-36 py-6 text-justify bg-white/30 rounded-2xl">
+                    <h2 className="text-center w-full md:text-7xl  text-4xl font-extrabold hover:cursor-pointer">باشگاه مشتریان</h2>
+                    <p className="px-4 font-bold">
+                        
+                    از مهم‌ترین هدف باشگاه دیان‌همراه فردا ایجاد ارتباط دو سویه با شما مشتری گرامی و ایجاد منافع مشترک است. 
+            <hr/>
+            برای وارد شدن به باشگاه مشتریان روی لینک زیر کلید
+                        </p>
                     <Button text="ورود" type="normal" icon={<AiOutlineLogin/>} mobile={false}/>
                 </div>
             </div>
-            <OurTeam/>
+            {/* <OurTeam/> */}
         </div>
     )
 }

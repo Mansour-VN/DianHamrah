@@ -1,24 +1,24 @@
 import React from 'react';
 import Image from 'next/image';
-import {Swiper, SwiperSlide} from "swiper/react";
-import {Pagination} from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-
-function CustomerSwiper () {
+import { Logos } from "@/../public/Constants/dummy"
+function CustomerSwiper() {
     const swiperHeight = 0
     const swiperWidth = 500
 
     return (
 
         <div className="mx-auto">
-            <div className="p-20 text-center">
-                <h2 className="text-xl md:text-4xl font-bold">
+            <div className="text-center">
+                <h2 className="text-xl md:text-4xl font-semibold">
                     سازمان هایی که افتخار همکاری با آنها را داریم
                 </h2>
             </div>
-            <div className="bg-slate-800 w-full">
-                <div className="container mx-auto py-10">
+            <div className="bg-slate-800 w-full mt-4 md:h-32 flex items-center ">
+                <div className="container mx-auto">
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={10}
@@ -44,79 +44,24 @@ function CustomerSwiper () {
                         className="mySwiper hidden "
                     >
 
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo1.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
+                        <>
+                            {Logos.map((logo) => {
+                                return (
 
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo4.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
+                                    <SwiperSlide>
+                                        <Image
+                                            src={logo.Logo}
+                                            alt="image1"
+                                            width={75}
+                                            height={75}
+                                            className="rounded-lg"
+                                        />
+                                    </SwiperSlide>
 
-                            />
-                        </SwiperSlide>
+                                )
+                            })}
 
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo2.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo1.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo5.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo4.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo3.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
-
-                        <SwiperSlide>
-                            <Image
-                                src="/assets/images/Logos/b-logo2.png"
-                                alt="image1"
-                                width={swiperWidth}
-                                height={swiperHeight}
-                            />
-                        </SwiperSlide>
+                        </>
                     </Swiper>
                 </div>
             </div>

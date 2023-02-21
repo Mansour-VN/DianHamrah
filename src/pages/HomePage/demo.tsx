@@ -34,7 +34,7 @@ const section1 = () => {
                     className="text-xl md:text-3xl font-semibold"
                 />
             </div>
-            <hr className="border-b-8 border-bg6 w-screen"/>
+            
         </div>
     )
 }

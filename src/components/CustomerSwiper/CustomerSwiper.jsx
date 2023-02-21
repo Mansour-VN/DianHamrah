@@ -1,10 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination } from "swiper";
+import {Swiper, SwiperSlide} from "swiper/react";
+import {Pagination} from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Logos } from "@/../public/Constants/dummy"
+import {Logos} from "@/../public/Constants/dummy"
+
 function CustomerSwiper() {
     const swiperHeight = 0
     const swiperWidth = 500
@@ -45,20 +46,20 @@ function CustomerSwiper() {
                     >
 
                         <>
-                            {Logos.map((logo,i) => {
+                            {Logos.map((logo, i) => {
                                 return (
+                                    <div  key={i}>
+                                        <SwiperSlide>
+                                            <Image
 
-                                    <SwiperSlide key={i}>
-                                        <Image
-
-                                            src={logo.Logo}
-                                            alt="image1"
-                                            width={75}
-                                            height={75}
-                                            className="rounded-lg"
-                                        />
-                                    </SwiperSlide>
-
+                                                src={logo.Logo}
+                                                alt="image1"
+                                                width={75}
+                                                height={75}
+                                                className="rounded-lg"
+                                            />
+                                        </SwiperSlide>
+                                    </div>
                                 )
                             })}
 

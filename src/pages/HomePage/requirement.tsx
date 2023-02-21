@@ -33,7 +33,7 @@ const Section3 = () => {
                         <h2 className="text-4xl text-black font-semibold  mt-2 px-4">
                             {HomePage.Requirement.title}
                         </h2>
-                        <p className="text-sm text-black mt-4 px-4">
+                        <p className="text-l text-justify text-black mt-4 px-4 leading-loose">
                             {HomePage.Requirement.Description}
                         </p>
                     </div>
@@ -43,21 +43,21 @@ const Section3 = () => {
                 <div className="flex md:flex-row flex-wrap justify-between gap-4 flex-col items-center">
 
                     <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
-                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
+                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg bg-bg6 text-white">
                             <div className="stat-title">تعداد مشتریان</div>
                             <div className="stat-value">{`${customers}+`}</div>
                             <div className="stat-desc">22% بیشتر از ماه قبل</div>
                         </div>
                     </div>
-                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
-                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
+                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
+                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg  bg-bg6 text-white">
                             <div className="stat-title text-ellipsis ">تعداد نمایندگی</div>
                             <div className="stat-value">{`${agent}+`}</div>
                             <div className="stat-desc">فعال در کشور</div>
                         </div>
                     </div>
                     <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
-                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg">
+                        <div className="stat flex flex-col items-center justify-center drop-shadow-lg  bg-bg6 text-white">
                             <div className="stat-title text-ellipsis ">تعداد دوره های موفق</div>
                             <div className="stat-value">{`${courses}+`}</div>
                             <div className="stat-desc">تاکنون</div>

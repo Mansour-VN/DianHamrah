@@ -8,10 +8,11 @@ function Card5({backImg, icon, title, content}) {
                 <Image
                        src={backImg}
                        alt="img"
+                       width={300}
                        style={{
                            position: "absolute",
                            top: 0,
-                           left: 0,
+                           left: 0
                        }}
                        className="opacity-20"
                 />
@@ -26,7 +27,7 @@ function Card5({backImg, icon, title, content}) {
                 />
             </div>
             <div className="services-content2 h-40 overflow-hidden">
-                <h5 className="hover:text-official text-2xl font-extrabold"><a href="">{title}</a>
+                <h5 className="hover:text-official text-2xl font-extrabold py-4"><a href="">{title}</a>
                 </h5>
                 <p className="font-bold">{content}</p>
             </div>

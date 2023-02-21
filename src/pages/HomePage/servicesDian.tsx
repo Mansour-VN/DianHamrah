@@ -37,59 +37,44 @@ const ServicesDian = () => {
         //     </div>
 
         // </div>
-        <div id="servicesDian ">
-            <div className="py-8">
+        <div id="servicesDian">
                 <div className="container flex flex-row flex-wrap items-center">
-                <h2 className="text-4xl  text-center w-full font-semibold md:hidden">
+                    <div className="flex-col md:pr-8 font-bold">
+                        <h2 className="text-4xl font-semibold py-2">
                             خدمات دیان همراه فردا
-                 </h2>
-                    <div className="md:w-1/2 flex flex-col md:flex-row">
+                        </h2>
+                        <p>
+                            شرکت دیان همراه فردا دی ماه سال 1400 تاسیس و در راستای تصویب و اجرای قانون پایانه های فروشگاهی و سامانه مودیان از مهرماه 1401 به عنوان اولین و تنها معتمد مالیاتی نوع دو و سه با همکاری تیم متخصص و حرفه ای در حال فعالیت است.
+                        </p>
+                        <p className="py-2">
+                            خدمات اصلی این شرکت، آموزش قانون پایانه‌های فروشگاهی و سامانه مودیان، از تصویب تا اجرا می‌باشد.
+                        </p>
+                        <p>
+                           از مهم‌ترین بخش‌های خدمات ما، واحد فعال پشتیبانی است که این اطمینان خاطر را به شرکت‌های متقاضی خدمات دیان‌همراه می‌دهد که از ابتدا تا پایان قرار داد همکاری، در کنار شما هستیم. در کنار این خدمات می‌توانید از مشاوره‌های تلفنی و حضوری اساتید مایلی و مالیاتی شرکت نیز بهره‌مند شوید.
+                        </p>
+
+                    </div>
+
+                    <div className="flex flex-col md:flex-row">
                         <div className="flex flex-col p-2 md:w-1/2">
-
-                            <Card5 backImg={services[0].image} icon={services[0].image} title={services[0].title}
-                                content={services[0].Description} />
-
-
                             <Card5 backImg={services[1].image} icon={services[1].image} title={services[1].title}
                                 content={services[1].Description} />
 
+                            <Card5 backImg={services[0].image} icon={services[0].image} title={services[0].title}
+                                content={services[0].Description} />
 
                         </div>
                         <div className="flex flex-col p-2 md:mt-16  md:w-1/2">
                             <Card5 backImg={services[2].image} icon={services[2].image} title={services[2].title}
                                 content={services[2].Description} />
-                            <Card5 backImg={services[2].image} icon={services[2].image} title={services[2].title}
-                                content={services[2].Description} />
-                           
+                            <Card5 backImg={services[3].image} icon={services[3].image} title={services[3].title}
+                                content={services[3].Description} />      
                         </div>
                     </div>
-                    <div className="md:w-1/2 flex-col md:pr-8">
-                        <h2 className="text-4xl hidden font-semibold py-8 md:flex">
-                            خدمات دیان همراه فردا
-                        </h2>
-                        <p className="py-2">
-                            طراحان سایت هنگام طراحی قالب سایت معمولا با این موضوع رو برو هستند که محتوای اصلی صفحات
-                            آماده نیست. در نتیجه طرح کلی دید درستی به کار فرما نمیدهد. اگر طراح بخواهد دنبال متن های
-                            مرتبط بگردد تمرکزش از روی کار اصلی برداشته میشود و اینکار زمان بر خواهد بود. همچنین طراح
-                            به دنبال این است که پس از ارایه کار نظر دیگران را در مورد طراحی جویا شود و نمی‌خواهد
-                            افراد روی متن های موجود تمرکز کنند.
-                        </p>
-                        <p className="py-2">
-                            از آنجا که لورم ایپسوم، شباهت زیادی به متن های واقعی دارد، طراحان معمولا از لورم ایپسوم
-                            استفاده میکنند تا فقط به مشتری یا کار فرما نشان دهند که قالب طراحی شده بعد از اینکه متن
-                            در آن قرار میگرد چگونه خواهد بود و فونت ها و اندازه ها چگونه در نظر گرفته شده است
-                        </p>
-                        <p className="py-2">
-                            نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
-                            کاران بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می‌برند که متن لورم را
-                            از قسمتهای مختلف سایت حذف کنند
-
-                        </p>
-
-                    </div>
+                    
 
                 </div>
-            </div>
+        
         </div>
     )
 }

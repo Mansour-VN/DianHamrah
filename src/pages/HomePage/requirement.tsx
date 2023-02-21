@@ -29,7 +29,7 @@ const Section3 = () => {
                 </div>
                 <div className="flex-1 flex flex-col justify-between  ">
                     <div className="about-title second-atitle ">
-                        <h5 className="text-official mt-4 px-4"> راهی جدید برای رشد پیدا کنید</h5>
+                        <h5 className="text-official mt-4 px-4"> قوانین جدید مالیاتی را بهتر بشناسید!</h5>
                         <h2 className="text-4xl text-black font-semibold  mt-2 px-4">
                             {HomePage.Requirement.title}
                         </h2>

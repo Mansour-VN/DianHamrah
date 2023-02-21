@@ -29,7 +29,7 @@ function Card5({backImg, icon, title, content}) {
             <div className="services-content2 h-40 overflow-hidden">
                 <h5 className="hover:text-official text-2xl font-extrabold py-4"><a href="">{title}</a>
                 </h5>
-                <p className="font-bold">{content}</p>
+                <p className="font-bold text-justify">{content}</p>
             </div>
             <div className="card-actions justify-end ">
                 <button className="btn btn-primary">اطلاعات بیشتر</button>

@@ -45,11 +45,12 @@ function CustomerSwiper() {
                     >
 
                         <>
-                            {Logos.map((logo) => {
+                            {Logos.map((logo,i) => {
                                 return (
 
-                                    <SwiperSlide>
+                                    <SwiperSlide key={i}>
                                         <Image
+
                                             src={logo.Logo}
                                             alt="image1"
                                             width={75}

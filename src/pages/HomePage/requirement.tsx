@@ -1,5 +1,5 @@
 import Image from "next/image";
-import about_img from "../../../public/assets/images/background/about_img.png"
+import about_img from "./../../../public/assets/images/People/karman1.jpg"
 import {useState} from "react";
 import {HomePage} from "../../../public/Constants/dummy";
 
@@ -23,8 +23,8 @@ const Section3 = () => {
     return (
         <div id="requirement" className="section3 container flex flex-col gap-24 border-t-official border-t-8">
             <div className="flex flex-col md:flex-row-reverse  gap-4 items-center justify-center">
-                <div className="flex-1">
-                    <Image style={{width: "540px",}} src={about_img} alt="about"/>
+                <div className="flex-1 pt-12">
+                    <Image width={500} src={about_img} alt="about" className="rounded"/>
                 </div>
                 <div className="flex-1 flex flex-col justify-between  ">
                     <div className="about-title second-atitle ">

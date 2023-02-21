@@ -20,6 +20,15 @@ import Service1 from "@/../public/assets/images/Services/Service1.svg"
 import Service2 from "@/../public/assets/images/Services/Service2.svg"
 import Service3 from "@/../public/assets/images/Services/Service3.svg"
 import Service4 from "@/../public/assets/images/Services/Service4.svg"
+import Logo1 from "@/../public/assets/images/Logos/logo1.png"
+import Logo2 from "@/../public/assets/images/Logos/logo2.jpg"
+import Logo3 from "@/../public/assets/images/Logos/logo3.png"
+import Logo4 from "@/../public/assets/images/Logos/logo4.jpg"
+import Logo5 from "@/../public/assets/images/Logos/logo5.jpg"
+import Logo6 from "@/../public/assets/images/Logos/logo6.jpg"
+import Logo7 from "@/../public/assets/images/Logos/logo7.png"
+import Logo8 from "@/../public/assets/images/Logos/logo8.png"
+
 
 
 // export const socialNetwork = {
@@ -80,7 +89,7 @@ export const services = [
         id: 1,
         image: Service1,
         title: "برگزاری سمینار",
-        Description: "واحد آموزش شرکت دیان همراه فردا این امکان را برای مدیران و پرسنل سازمانها در سراسر کشور فراهم نموده تا با شرکت در سمینارهای استانی از خدمات آموزشی شرکت ،دیان برخوردار گردند. جهت اطلاع و ثبت نام در سمینار، فرم ثبت نام را تکمیل نمایید."
+        Description: "واحد آموزش شرکت دیان همراه فردا این امکان را برای مدیران و پرسنل سازمانها در سراسر کشور فراهم نموده تا با شرکت در سمینارهای استانی از خدمات آموزشی شرکت دیان برخوردار گردند. جهت اطلاع و ثبت نام در سمینار، فرم ثبت نام را تکمیل نمایید."
     }, {
         id: 2,
         image: Service2,
@@ -98,7 +107,7 @@ export const services = [
         id: 3,
         image: Service3,
         title: "آموزش نحوه صدور و ارسال صورت حساب الکترونیکی به سامانه مودیان",
-        Description: "پیرو قانون جدید پایانه فروشگاهی و سامانه مودیان صدور و ارسال صورتحساب به صورت الکترونیک به سامانه ، از وظایف جدید هر سازمان است که نیاز به آموزش صحیح دارد جهت یادگیری این امر می توانید فرم ثبت نام را تکمیل نموده یا یکی دیگراز راههای ارتباطی که در قسمت درباره ما قابل مشاهده میباشد را انتخاب نمایید.\n" +
+        Description: "پیرو قانون جدید پایانه فروشگاهی و سامانه مودیان صدور و ارسال صورتحساب به صورت الکترونیک به سامانه ، هر سازمان جهت اجرای این قانون نیاز به آموزش صحیح دارد. جهت یادگیری این امر می توانید فرم ثبت نام را تکمیل نموده یا یکی دیگراز راههای ارتباطی که در قسمت درباره ما قابل مشاهده میباشد را انتخاب نمایید.\n" +
             "مهم ترین سرفصلهای آموزش این دوره\n" +
             "آشنایی با دستور العمل فنی\n" +
             "اشنایی با انواع الگوها\n" +
@@ -118,7 +127,7 @@ export const services = [
 
 export const HomePage = {
     Requirement: {
-        title: "الزام همکاری با معتمد مالیاتی",
+        title: " همکاری با معتمد مالیاتی، چرا؟؟؟",
         Description: "با اجرای کامل قانون پایانه های فروشگاهی و سامانه مودیان انقلابی در نظام مالیاتی کشور رخ خواهد داد و امید است با همکاری همه مودیان مالیاتی و فعالان اقتصادی هر چه سریعتر و بهتر این امر حاصل گردد از این رو سازمان مالیاتی شرکت هایی را به عنوان معتمد مالیاتی در سه نوع اول دوم و سوم با شرح وظایف متفاوت تایید و معرفی نموده تا خدمات لازم به فعالان اقتصادی ارائه گردد شرکت دیان همراه فردا به عنوان اولین معتمد نوع ۲ و ۳ با مجوز آموزش و مشاوره در این راستا در خدمت شما مودیان محترم می باشد."
     },
 
@@ -189,3 +198,38 @@ export const News = [{
 },
 
 ];
+
+export const Logos = [{
+    id:1,
+    Logo: Logo1,
+},
+{
+    id:2,
+    Logo: Logo2
+},
+{
+    id:3,
+    Logo: Logo3
+},
+{
+    id:4,
+    Logo: Logo4
+},
+{
+    id:5,
+    Logo: Logo5
+},
+{
+    id:6,
+    Logo: Logo6
+},
+{
+    id:7,
+    Logo: Logo7
+},
+{
+    id:8,
+    Logo: Logo8
+}
+
+]

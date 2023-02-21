@@ -9,20 +9,19 @@ const Section3 = () => {
     const [customers, setCustomer] = useState(0)
     const [agent, setAgent] = useState(0)
     const increaseCounter = () => {
-        if (courses < 575) {
+        if (courses < 24) {
             setCourses(courses + 1)
         }
-        if (customers < 385) {
+        if (customers < 64) {
             setCustomer(customers + 1)
         }
         if (agent < 5) {
             setAgent(customers + 1)
         }
     }
-    setTimeout(increaseCounter, 20)
+    setTimeout(increaseCounter, 75)
     return (
-        <div id="requirement" className="section3 container flex flex-col gap-24 py-[100px]">
-            <div className="bg-official w-full h-1.5"></div>
+        <div id="requirement" className="section3 container flex flex-col gap-24 border-t-official border-t-8">
             <div className="flex flex-col md:flex-row-reverse  gap-4 items-center justify-center">
                 <div className="flex-1">
                     <Image style={{width: "540px",}} src={about_img} alt="about"/>
@@ -40,26 +39,26 @@ const Section3 = () => {
                 </div>
             </div>
             <div className="">
-                <div className="flex md:flex-row flex-wrap justify-between gap-4 flex-col items-center">
+                <div className="flex md:flex-row flex-wrap md:gap-0 gap-2 justify-between  flex-col items-center">
 
-                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
+                    <div className="stats shadow w-1/2 md:w-1/4">
                         <div className="stat flex flex-col items-center justify-center drop-shadow-lg bg-bg6 text-white">
                             <div className="stat-title">تعداد مشتریان</div>
-                            <div className="stat-value">{`${customers}+`}</div>
+                            <div className="stat-value">{`${customers}`}</div>
                             <div className="stat-desc">22% بیشتر از ماه قبل</div>
                         </div>
                     </div>
-                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden">
+                    <div className="stats shadow w-1/2 md:w-1/4">
                         <div className="stat flex flex-col items-center justify-center drop-shadow-lg  bg-bg6 text-white">
-                            <div className="stat-title text-ellipsis ">تعداد نمایندگی</div>
-                            <div className="stat-value">{`${agent}+`}</div>
+                            <div className="stat-title text-ellipsis ">تعداد شعب و دفاتر</div>
+                            <div className="stat-value">{`${agent}`}</div>
                             <div className="stat-desc">فعال در کشور</div>
                         </div>
                     </div>
-                    <div className="stats shadow w-[185px] h-[120px] overflow-hidden ">
+                    <div className="stats shadow w-1/2 md:w-1/4">
                         <div className="stat flex flex-col items-center justify-center drop-shadow-lg  bg-bg6 text-white">
-                            <div className="stat-title text-ellipsis ">تعداد دوره های موفق</div>
-                            <div className="stat-value">{`${courses}+`}</div>
+                            <div className="stat-title text-ellipsis ">تعداد دوره‌های برگزار شده</div>
+                            <div className="stat-value">{`${courses}`}</div>
                             <div className="stat-desc">تاکنون</div>
                         </div>
                     </div>
@@ -67,8 +66,6 @@ const Section3 = () => {
                 </div>
 
             </div>
-
-            <div className="bg-official w-full h-1.5"></div>
         </div>
     )
 }

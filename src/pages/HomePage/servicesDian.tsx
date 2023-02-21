@@ -39,7 +39,7 @@ const ServicesDian = () => {
         // </div>
         <div id="servicesDian">
                 <div className="container flex flex-row flex-wrap items-center">
-                    <div className="flex-col md:pr-8 font-bold">
+                    <div className="flex-col md:pr-8 font-bold p-4 text-justify">
                         <h2 className="text-4xl font-semibold py-2">
                             خدمات دیان همراه فردا
                         </h2>

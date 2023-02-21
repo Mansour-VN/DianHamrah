@@ -29,16 +29,12 @@ const DeskTopMenu = ({setMenu, menu}) => {
                             className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52 ">
                             <li ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
                             <li><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
-                            <li><Link href="/AboutUs/#Branches" scroll={false}> شعب و نمایندگی </Link></li>
+                            <li><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>
                             <li><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
                         </ul>
                     </div>
                 </li>
-                <li>
-                    <Link href="/AboutUs" >
-                        ارتباط با ما
-                    </Link>
-                </li>
+              
 
                 <li>
                     <Link href="/ghavanin" >
@@ -61,6 +57,19 @@ const DeskTopMenu = ({setMenu, menu}) => {
                         </ul>
                     </div>
                 </li>
+
+                <li>
+                    <Link href="/AboutUs/#Contact" scroll={false} >
+                        تماس با ما
+                    </Link>
+                </li>
+
+                <li>
+                    <Link href="/" scroll={false} >
+                          دریافت گواهی آموزشی
+                    </Link>
+                </li>
+
             </ul>
 
         </div>

@@ -22,22 +22,17 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 <li>
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div className="flex flex-row item-center justify-center gap-1">
-                            <label tabIndex={0} className="bg-slate-800" onClick={()=>setMenu(!menu)}> درباره ما </label>
+                            <label tabIndex={0} className="bg-slate-800"> درباره ما </label>
                             <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                         </div>
                         <ul tabIndex={0}
                             className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52 ">
                             <li ><Link  href="/AboutUs/#History" scroll={false} onClick={()=>setMenu(!menu)}>تاریخچه</Link></li>
                             <li><Link href="/AboutUs/#Contact" scroll={false} onClick={()=>setMenu(!menu)}> اطلاعات تماس </Link></li>
-                            <li><Link href="/AboutUs/#Branches" scroll={false} onClick={()=>setMenu(!menu)}> شعب و نمایندگی </Link></li>
+                            <li><Link href="/AboutUs/#Branches" scroll={false} onClick={()=>setMenu(!menu)}> شعب و دفاتر </Link></li>
                             <li><Link href="/AboutUs/#CustomerClub" scroll={false} onClick={()=>setMenu(!menu)}> باشگاه مشتریان </Link></li>
                         </ul>
                     </div>
-                </li>
-                <li onClick={()=>setMenu(!menu)}>
-                    <Link href="/AboutUs" >
-                        ارتباط با ما
-                    </Link>
                 </li>
 
                 <li onClick={()=>setMenu(!menu)}>
@@ -61,6 +56,19 @@ const DeskTopMenu = ({setMenu, menu}) => {
                         </ul>
                     </div>
                 </li>
+
+                <li onClick={()=>setMenu(!menu)}>
+                    <Link href="/AboutUs/#Contact" scroll={false} >
+                          تماس با ما
+                    </Link>
+                </li>
+
+                <li>
+                    <Link href="/" scroll={false} >
+                          دریافت گواهی آموزشی
+                    </Link>
+                </li>
+
             </ul>
 
         </div>

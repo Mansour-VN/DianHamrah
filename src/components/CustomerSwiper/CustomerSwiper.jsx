@@ -12,13 +12,13 @@ function CustomerSwiper () {
     return (
 
         <div className="mx-auto">
-            <div className="p-20 text-center">
-                <h2 className="text-xl md:text-4xl font-bold">
+            <div className="text-center">
+                <h2 className="text-xl md:text-4xl font-semibold">
                     سازمان هایی که افتخار همکاری با آنها را داریم
                 </h2>
             </div>
-            <div className="bg-slate-800 w-full">
-                <div className="container mx-auto py-10">
+            <div className="bg-slate-800 w-full mt-4">
+                <div className="container mx-auto">
                     <Swiper
                         slidesPerView={1}
                         spaceBetween={10}

@@ -8,7 +8,7 @@ import OrganizationIcon from "@/pages/HomePage/organizationIcon";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col gap-8 items-center">
         <Demo/>
         <ServicesDian/>
         <TaxNews/>

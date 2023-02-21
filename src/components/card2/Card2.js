@@ -1,3 +1,4 @@
+import Image from 'next/image'
 
 const Card2 = ({src, textTitleCard, mainTextCard, key,alt}) => {
     return (

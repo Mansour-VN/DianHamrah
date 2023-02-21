@@ -45,24 +45,18 @@ const Secton1 = () => {
                     <div className="about-content ">
                         <div className="about-title">
                             <h5 className="text-official p-2 md:p-0"> تاریخچه</h5>
-                            <h2 className="text-4xl text-center p-2">بهترین راه حل کسب و کار خود را با ما دریافت کنید</h2>
+                            <h2 className="text-4xl text-center p-2"> دیان همراه‌فردا</h2>
                         </div>
-                        <p className="text-justify p-2 md:p-0">نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و گرافیست
-                            کاران
-                            بعد از آنکه قالب و محتوای مورد نظرشون را ایجاد کردند از یاد می&zwnj;برند که متن لورم
-                            را
-                            از قسمتهای مختلف سایت حذف کنند و یا با متن دیگری جایگزین کنند. به همین دلیل اغلب
-                            اوقات
-                            ما با وبسایتهایی مواجه می&zwnj;شویم که در گوشه و کنار صفحات آنها متن لورم ایپسوم
-                            هنوز
-                            وجود دارد.</p>
-                        <ul className="flex flex-row flex-wrap">
+                        <p className="text-justify p-2 md:p-0"> 
+                        شرکت دیان همراه فردا دی ماه سال 1400 تاسیس و در راستای تصویب و اجرای قانون پایانه های فروشگاهی و سامانه مودیان از مهرماه 1401 به عنوان اولین و تنها معتمد مالیاتی نوع دو و سه با همکاری تیم متخصص و حرفه ای در حال فعالیت است.       
+                            </p>
+                        <ul className="flex flex-row  flex-wrap mt-8">
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
                                 <div
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    تحقیقات کاربر
+                                   آموزش قانون پایانه فروشگاهی و سامانه مودیان
                                 </div>
                             </li>
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
@@ -70,7 +64,7 @@ const Secton1 = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    گزینه ها را سفارشی کنید
+                                    آموزش نحوه صدور و ارسال صورت حساب الکترونیکی به سامانه مودیان
                                 </div>
                             </li>
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
@@ -78,7 +72,7 @@ const Secton1 = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    سرویس حسابرسی و ارزیابی
+                                            برگزاری سمینار
                                 </div>
                             </li>
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
@@ -86,7 +80,7 @@ const Secton1 = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    بازارهای مصرف کننده مالی
+                                    پشتیبانی
                                 </div>
                             </li>
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
@@ -94,7 +88,7 @@ const Secton1 = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    توسعه تجره کاربری
+                                    مشاوره مالیاتی 
                                 </div>
                             </li>
                             <li className="flex flex-row items-center justify-start w-full md:w-1/2">
@@ -102,7 +96,7 @@ const Secton1 = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    24/7 پشتیبانی آنلاین
+                                    
                                 </div>
                             </li>
                         </ul>

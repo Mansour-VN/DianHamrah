@@ -1,16 +1,16 @@
-import {AiFillCaretDown, AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
+import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import React from "react";
 
-const DeskTopMenu = ({setMenu, menu}) => {
+const DeskTopMenu = ({ setMenu, menu }) => {
 
 
-    return(
+    return (
         <div className="md:flex">
             <button
-                onClick={()=>setMenu(!menu)}
+                onClick={() => setMenu(!menu)}
                 className={`text-4xl md:hidden ${menu ? "fixed top-4 left-10" : "block fixed top-4 left-10"}`}>
-                {menu ? <AiOutlineClose/> : <AiOutlineMenu/>}
+                {menu ? <AiOutlineClose /> : <AiOutlineMenu />}
             </button>
 
             <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
@@ -23,19 +23,17 @@ const DeskTopMenu = ({setMenu, menu}) => {
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div className="flex flex-row item-center justify-center gap-1">
                             <label tabIndex={0} className="bg-slate-800"> درباره ما </label>
-                            <AiFillCaretDown className="mt-1.5 md:block hidden"/>
+                            <AiFillCaretDown className="mt-1.5 md:block hidden" />
                         </div>
                         <ul tabIndex={0}
                             className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52 ">
-                            <li ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
+                            <li ><Link href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
                             <li><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
                             <li><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>
-                            <li><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
                         </ul>
                     </div>
                 </li>
-              
-
+                <li><Link href="http://club.dianhamrah.ir/branch/1196" scroll={false}> باشگاه مشتریان </Link></li>
                 <li>
                     <Link href="/ghavanin" >
                         کتابخانه دیان همراه
@@ -46,7 +44,7 @@ const DeskTopMenu = ({setMenu, menu}) => {
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div className="flex flex-row item-center justify-center gap-1">
                             <label tabIndex={0} className="bg-slate-800"> دوره های آموزشی </label>
-                            <AiFillCaretDown className="mt-1.5 md:block hidden"/>
+                            <AiFillCaretDown className="mt-1.5 md:block hidden" />
                         </div>
                         <ul tabIndex={0}
                             className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
@@ -59,14 +57,8 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 </li>
 
                 <li>
-                    <Link href="/AboutUs/#Contact" scroll={false} >
-                        تماس با ما
-                    </Link>
-                </li>
-
-                <li>
                     <Link href="/" scroll={false} >
-                          دریافت گواهی آموزشی
+                        دریافت گواهی آموزشی
                     </Link>
                 </li>
 
@@ -76,4 +68,4 @@ const DeskTopMenu = ({setMenu, menu}) => {
     )
 }
 
-export default  DeskTopMenu
+export default DeskTopMenu

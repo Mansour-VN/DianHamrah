@@ -13,7 +13,7 @@ const Section8 = () => {
                             src={New.image}
                             alt={New.title}
                             textTitleCard={New.title}
-                            mainTextCard={New.Description}
+                            mainTextCard={`${New.Description.slice(0,130)} . . .`}
                         />
                     ))}
                 </div>

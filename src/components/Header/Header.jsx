@@ -25,7 +25,7 @@ const Header = () => {
                         className='rounded animate-bounce '/>
 
                 </div>
-                <div>
+                <div className={`${menu? "hidden": "flex flex-col"}` }>
                     <h5 className="text-xl">
                         دیان همراه فردا
                     </h5>

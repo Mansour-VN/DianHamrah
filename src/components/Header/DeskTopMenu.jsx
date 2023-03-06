@@ -37,8 +37,9 @@ const DeskTopMenu = ({setMenu, menu}) => {
                  <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg"><Link href="http://club.dianhamrah.ir/branch/1196" scroll={false}> باشگاه مشتریان </Link></li>
 
                 <li>
+
                     <Link href="/ghavanin" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
-                        کتابخانه
+                        کتابخانه دیان همراه
                     </Link>
 
                 </li>

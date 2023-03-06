@@ -30,15 +30,15 @@ const DeskTopMenu = ({setMenu, menu}) => {
                             <li className="hover:bg-slate-600" ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
                             <li className="hover:bg-slate-600"><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
                             <li className="hover:bg-slate-600"><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>
-                            <li className="hover:bg-slate-600"><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
                         </ul>
                     </div>
                 </li>
-              
+
+                 <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg"><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
 
                 <li>
-                    <Link href="/ghavanin" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg hidden">
-                        کتابخانه دیان همراه
+                    <Link href="/ghavanin" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
+                        کتابخانه
                     </Link>
 
                 </li>

@@ -34,11 +34,12 @@ const DeskTopMenu = ({setMenu, menu}) => {
                     </div>
                 </li>
 
-                 <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg"><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
+                 <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg"><Link href="http://club.dianhamrah.ir/branch/1196" scroll={false}> باشگاه مشتریان </Link></li>
 
                 <li>
+
                     <Link href="/ghavanin" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
-                        کتابخانه
+                        کتابخانه دیان همراه
                     </Link>
 
                 </li>
@@ -59,13 +60,13 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 </li>
 
                 <li>
-                    <Link href="/AboutUs/#Contact" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg" >
+                    <Link href="/#Contact" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg" >
                         تماس با ما
                     </Link>
                 </li>
 
                 <li>
-                    <Link href="/" scroll={false}  className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg hidden">
+                    <Link href="/" scroll={false}  className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                           دریافت گواهی آموزشی
                     </Link>
                 </li>

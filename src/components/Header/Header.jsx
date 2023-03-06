@@ -13,7 +13,7 @@ const Header = () => {
     return (
         <div>
             <nav
-                className={`w-fulltransition  duration-1000 ease-in-out justify-around md:p-0 bg-slate-800 text-white flex items-center justify-center md:justify-around
+                className={`w-fulltransition  duration-1000 ease-in-out  md:p-0 bg-slate-800 text-white flex items-center justify-center md:justify-around
                    md:font-bold ${menu ? 'h-screen  ' : 'md:h-24 h-20 '} `}
             >
                 <div className={`${menu ? 'hidden' : 'fixed top-8 right-8 bock'}`}>
@@ -24,6 +24,12 @@ const Header = () => {
                         height={40}
                         className='rounded animate-bounce '/>
 
+                </div>
+                <div className={`${menu? "hidden": "flex flex-col"}` }>
+                    <h5 className="text-xl">
+                        دیان همراه فردا
+                    </h5>
+                    <span className="badge badge-sm">تنها معتمد مالیاتی نوع دو و سه کشور</span>
                 </div>
 
                 {/*deskTop*/}

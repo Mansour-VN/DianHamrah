@@ -16,56 +16,57 @@ const DeskTopMenu = ({setMenu, menu}) => {
             <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
 
 
-                <li>
+                <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                     <Link href="/">صفحه اصلی</Link>
                 </li>
-                <li>
+                <li className="hover:bg-slate-600 p-2 rounded-lg" >
                     <div className="dropdown dropdown-bottom dropdown-end">
-                        <div className="flex flex-row item-center justify-center gap-1">
-                            <label tabIndex={0} className="bg-slate-800"> درباره ما </label>
+                        <div className="flex flex-row item-center justify-center gap-1" >
+                            <label tabIndex={0} className="hover:cursor-pointer"> درباره ما </label>
                             <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                         </div>
                         <ul tabIndex={0}
-                            className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52 ">
-                            <li ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
-                            <li><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
-                            <li><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>
-                            <li><Link href="/AboutUs/#CustomerClub" scroll={false}> باشگاه مشتریان </Link></li>
+                            className="dropdown-content menu p-2 mt-2 shadow bg-slate-800 border-t-2 rounded-box w-52 ">
+                            <li className="hover:bg-slate-600" ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
+                            <li className="hover:bg-slate-600"><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
+                            <li className="hover:bg-slate-600"><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>
                         </ul>
                     </div>
                 </li>
-              
+
+                 <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg"><Link href="http://club.dianhamrah.ir/branch/1196" scroll={false}> باشگاه مشتریان </Link></li>
 
                 <li>
-                    <Link href="/ghavanin" >
+
+                    <Link href="/ghavanin" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                         کتابخانه دیان همراه
                     </Link>
 
                 </li>
-                <li>
+                <li className="hover:bg-slate-600 p-2 rounded-lg hidden">
                     <div className="dropdown dropdown-bottom dropdown-end">
                         <div className="flex flex-row item-center justify-center gap-1">
-                            <label tabIndex={0} className="bg-slate-800"> دوره های آموزشی </label>
+                            <label tabIndex={0} className="hover:cursor-pointer"> دوره های آموزشی </label>
                             <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                         </div>
                         <ul tabIndex={0}
-                            className="dropdown-content menu p-2 shadow bg-slate-800 rounded-box w-52">
-                            <li><a> آموزش حضوری </a></li>
-                            <li><a> آموزش آنلاین </a></li>
-                            <li><a> آموزش های سازمانی </a></li>
-                            <li><a> سمینارهای استانی </a></li>
+                            className="dropdown-content menu mt-2 border-t-2 p-2 shadow bg-slate-800 rounded-box w-52">
+                            <li className="hover:bg-slate-600"><a> آموزش حضوری </a></li>
+                            <li className="hover:bg-slate-600"><a> آموزش آنلاین </a></li>
+                            <li className="hover:bg-slate-600"><a> آموزش های سازمانی </a></li>
+                            <li className="hover:bg-slate-600"><a> سمینارهای استانی </a></li>
                         </ul>
                     </div>
                 </li>
 
                 <li>
-                    <Link href="/AboutUs/#Contact" scroll={false} >
+                    <Link href="/#Contact" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg" >
                         تماس با ما
                     </Link>
                 </li>
 
                 <li>
-                    <Link href="/" scroll={false} >
+                    <Link href="/certification" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                           دریافت گواهی آموزشی
                     </Link>
                 </li>

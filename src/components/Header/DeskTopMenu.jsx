@@ -66,7 +66,7 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 </li>
 
                 <li>
-                    <Link href="/" scroll={false}  className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
+                    <Link href="/certification" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                           دریافت گواهی آموزشی
                     </Link>
                 </li>

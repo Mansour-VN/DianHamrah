@@ -16,7 +16,7 @@ const Contact = () => {
                     <div className="phone flex flex-col items-start gap-4 ">
 
                         <div className="text-center text-4xl flex flex-row gap-4 items-center">
-                            <Button mobile="" text="تماس با ما" type="tel" icon={<FiPhoneCall/>}/>
+                            <Button mobile="" text="تماس با ما" type="tel" icon={<FiPhoneCall/>} onClick=""/>
                             <div className=" text-2xl md:text-4xl">021-96646</div>
                         </div>
                         <p>آدرس: تهران، میدان صنعت، خیابان دادمان، کوچه میلاد چهارم،پلاک ۱۵</p>

@@ -3,10 +3,8 @@ import Contact from "@/pages/AboutUs/Contact";
 import BranchesCard from "../../components/BranchesCard/BranchesCard"
 import Image from "next/image";
 import BgCustomerClub from "../../../public/assets/images/background/customerClub.jpg";
-import OurTeam from "@/pages/AboutUs/OurTeam";
 import Button from "@/components/Button/Button";
 import { AiOutlineLogin } from 'react-icons/ai';
-import Link from "next/link";
 
 const AboutUs = () => {
     //ts
@@ -60,7 +58,7 @@ const AboutUs = () => {
             برای وارد شدن به باشگاه مشتریان روی لینک زیر کلید
                         </p>
                         <a href="http://club.dianhamrah.ir/branch/1196">
-                             <Button text="ورود" type="normal" icon={<AiOutlineLogin/>} mobile={false}/>
+                             <Button text="ورود" type="normal" icon={<AiOutlineLogin/>} mobile={false} onClick=""/>
                         </a>
                 </div>
             </div>

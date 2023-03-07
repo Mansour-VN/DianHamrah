@@ -30,7 +30,7 @@ const section1 = () => {
                             <form>
                                 <div className="flex justify-center items-center md:gap-x-4 ">
                                     <input type="text" placeholder="به دنبال چه قانونی می گردید " className="input w-full max-w-xl md:my-20" />
-                                    <Button text="جستوجو " type="normal" icon=<BsArrowLeftSquare/> mobile={false}/>
+                                    <Button text="جستوجو " type="normal" icon=<BsArrowLeftSquare/> mobile={false} onClick=""/>
                                 </div>
 
                             </form>

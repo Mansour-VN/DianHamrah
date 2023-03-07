@@ -13,7 +13,7 @@ const Section6 = () => {
         <div className="phone flex items-center gap-4 " >
 
           <div className="text-center text-4xl flex items-center">
-            <Button mobile="" text ="تماس با ما" type="tel" icon={<FiPhoneCall/>}/>
+            <Button mobile="" text ="تماس با ما" type="tel" icon={<FiPhoneCall/>} onClick=""/>
           </div>
           <div className=" text-2xl md:text-4xl">021-96646</div>
         </div>

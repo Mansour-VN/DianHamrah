@@ -8,7 +8,7 @@ const Footer = () => {
             <div className='z-0'>
                 <Image
                     src={"/assets/images/background/f-bg.png"}
-                    alt=""
+                    alt="bg"
                     width={1900}
                     height={400}
                 />

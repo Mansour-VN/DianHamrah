@@ -25,8 +25,8 @@ const Report = () => {
 
     return (
         <div className="w-full bg-sky-50">
-            {/*{fullReport.title}*/}
-            <div className="container  text-center bg-sky-50 mx-auto  py-12 flex flex-col justify-center items-center px-6 md:px-0">
+            <div
+                className="container  text-center bg-sky-50 mx-auto  py-12 flex flex-col justify-center items-center px-6 md:px-0">
                 {/*{renderPage()}*/}
                 <h1 className="text-official leading-[1.5] font-bold text-6xl">{`${titleReport}`}</h1>
                 <Image src={imageReport} alt={titleReport}/>

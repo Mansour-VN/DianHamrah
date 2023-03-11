@@ -18,6 +18,7 @@ const Card2 = ({report, path}) => {
                             onClick={
                                 () => {
                                     router.push(`/${path}`)
+                                    console.log(report)
                                 }}>اطلاعات بیشتر
                     </button>
                 </div>

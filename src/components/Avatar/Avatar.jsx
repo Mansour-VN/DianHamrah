@@ -1,6 +1,5 @@
 import Image from "next/image";
-import SocialMedial from "@/components/SocialMedia/Socialmedia";
-import {useState} from "react";
+
 
 const Avatar = ({image, name, title}) => {
 

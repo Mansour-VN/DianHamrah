@@ -1,4 +1,4 @@
-const BranchesCard = ({title, address, map, tel, mobile, mail, manager, services}) => {
+const BranchesCard = ({title, address, tel, mail, manager, services}) => {
 
     return (
         <div tabIndex={0}
@@ -14,8 +14,6 @@ const BranchesCard = ({title, address, map, tel, mobile, mail, manager, services
                 <div className="">
                     <p className="font-bold">تلفن: </p>
                     <p>{tel}</p>
-                    <p className="font-bold">موبایل: </p>
-                    <p> {mobile}</p>
                     <p className="font-bold">ایمیل: </p>
                     <p> {mail}</p>
                     <p className="font-bold">مدیریت: </p>
@@ -24,11 +22,11 @@ const BranchesCard = ({title, address, map, tel, mobile, mail, manager, services
                     {services.map((service, index) => (<p className="text-red-600" key={index}>✔ {service}</p>))}
                 </div>
                 <div>
-                    <iframe
-                        src={map}
-                        style={{width:"100%", height:"350px"}}  className="border-2 border-sky-500 w-1/2"
-                        referrerPolicy="no-referrer-when-downgrade">
-                    </iframe>
+                    {/*<iframe*/}
+                    {/*    src={map}*/}
+                    {/*    style={{width:"100%", height:"350px"}}  className="border-2 border-sky-500 w-1/2"*/}
+                    {/*    referrerPolicy="no-referrer-when-downgrade">*/}
+                    {/*</iframe>*/}
                 </div>
             </div>
         </div>

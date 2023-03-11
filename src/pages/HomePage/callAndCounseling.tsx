@@ -16,6 +16,8 @@ const Section6 = () => {
             <Button mobile="" text ="تماس با ما" type="tel" icon={<FiPhoneCall/>} onClick=""/>
           </div>
           <div className=" text-2xl md:text-4xl">021-96646</div>
+          <div className=" text-2xl md:text-4xl">info@dianhamrah.ir</div>
+
         </div>
       </div>
       <div className="  w-0 md:w-4/12">

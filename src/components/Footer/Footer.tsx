@@ -38,7 +38,7 @@ const Footer = () => {
                     <div className="flex flex-col gap-2 text-sky-100 ">
                         <ul className="flex flex-col gap-2">
                             <li className="hover:text-official">
-                                <a href="https://dianhamrah.ir/"> آساک قرن</a>
+                                <a href="https://dianhamrah.ir/">موسسه آساک قرن</a>
                             </li>
                             <li  className="hover:text-official">
                                 <a href="https://mefa.ir/fa-IR/mefa/1/page/%D8%B5%D9%81%D8%AD%D9%87-%D8%A7%D8%B5%D9%84%DB%8C">وزارت اقتصاد و دارایی</a>
@@ -63,7 +63,7 @@ const Footer = () => {
 
                         <div className="text-sky-100 flex flex-col gap-2">
                             <p>شماره تماس :   96646-021</p>
-                            <p> آدرس : تهران، شهرک غرب، بلوارد دادمان کوچه میلاد چهارم پلاک 5</p>
+                            <p> آدرس : تهران، شهرک غرب، بلوار دادمان کوچه میلاد چهارم پلاک 5</p>
                         </div>
                     <div id="socialMediaFooter" className="">
                         <SocialMedia/>

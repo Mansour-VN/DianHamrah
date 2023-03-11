@@ -1,13 +1,15 @@
 import React from 'react';
 import Image from "next/image";
+import {useRouter} from "next/navigation";
 
-function Card5({backImg, icon, title, content}) {
+function Card5({backImg, icon, title, content,path}) {
+    const router = useRouter()
     return (
         <div className="w-full rounded-lg drop-shadow-xl relative p-8 box-border mt-3" data-theme="light">
             <div >
                 <Image
                        src={backImg}
-                       alt="img"
+                       alt={title}
                        width={300}
                        style={{
                            position: "absolute",
@@ -20,7 +22,7 @@ function Card5({backImg, icon, title, content}) {
             <div className="bg-orange-100 mb-4 rounded inline-block">
                 <Image
                        src={icon}
-                       alt="img"
+                       alt={title}
                        width={100}
                        height={100}
 
@@ -32,7 +34,10 @@ function Card5({backImg, icon, title, content}) {
                 <p className="font-bold text-justify">{content}</p>
             </div>
             <div className="card-actions justify-end ">
-                <button className="btn btn-primary">اطلاعات بیشتر</button>
+                <button onClick={
+                    () => {
+                        router.push(`/${path}`)
+                    }} className="btn btn-primary">اطلاعات بیشتر</button>
             </div>
         </div>
 

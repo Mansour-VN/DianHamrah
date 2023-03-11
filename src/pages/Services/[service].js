@@ -11,7 +11,6 @@ const Report = () => {
 
     useEffect(() => {
         const serviceTitle = (router.query.service)
-            console.log(serviceTitle)
         {
             services.map((service) => {
                 if (service.title === serviceTitle) {

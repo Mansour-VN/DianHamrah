@@ -70,17 +70,17 @@ const Footer = () => {
                     </div>
                     <div className='p-8 flex justify-center items-center'>
 
-                        <Link  target="_blank"  href="https://trustseal.enamad.ir/?id=314366&amp;Code=wZigmxkmHR2UnStBUQ0T">
-                            <Image
-                                width={145}
-                                height={145}
-                                src="/assets/images/People/enamad.jpg"
-                                alt="LogoDian"
-                                className="rounded-full"
-                            />
+                        {/*<Link  target="_blank"  href="https://trustseal.enamad.ir/?id=314366&amp;Code=wZigmxkmHR2UnStBUQ0T">*/}
+                        {/*    <Image*/}
+                        {/*        width={145}*/}
+                        {/*        height={145}*/}
+                        {/*        src="/assets/images/People/enamad.jpg"*/}
+                        {/*        alt="LogoDian"*/}
+                        {/*        className="rounded-full"*/}
+                        {/*    />*/}
 
 
-                        </Link>
+                        {/*</Link>*/}
                     </div>
 
                 </div>

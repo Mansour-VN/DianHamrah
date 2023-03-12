@@ -15,16 +15,16 @@ const Section5 = () => {
                 <div className="container flex flex-row flex-wrap items-center">
                     <div className="md:w-1/2 flex flex-col md:flex-row">
                         <div className="flex flex-col p-2">
-                            <Card5 backImg={supportPNG} icon={supportIcon} title="حمایت کردن" path=""
-                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..."/>
-                            <Card5 backImg={keepingPNG} icon={keepingIcon} title="نگهداری" path=""
-                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." />
+                            <Card5 backImg={supportPNG} icon={supportIcon} title="حمایت کردن"
+                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path="/"/>
+                            <Card5 backImg={keepingPNG} icon={keepingIcon} title="نگهداری"
+                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path="/"/>
                         </div>
                         <div className="flex flex-col p-2 md:mt-16">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="برنامه ریزی"
-                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path=""/>
+                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path="/"/>
                             <Card5 backImg={managementPNG} icon={managementIcon} title="مدیریت"
-                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path=""/>
+                                   content="تشخیص موتور نکته بعدی در مورد متن ساختگی لورم ایپسوم این است که بعضی از طراحان وبسایت و..." path="/"/>
                         </div>
                     </div>
                     <div className="md:w-1/2 flex-col md:pr-8">

@@ -16,35 +16,35 @@ const section2 = () => {
 
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title=" قانون پایانه های فروشگاهی و سامانه  مودیان "
-                                   content="."/>
+                                   content="." path="/" />
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title=" قانون مالیات های مستقیم "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="  قانون مالیات بر ارزش افزوده جدید "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="قانون مالیات بر ارزش افزوده قدیم  "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className="min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="آرشیو سوالات متداول "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="استاندارد های حسابرسی "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="تحلیل و بررسی فنی "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
                             <Card5 backImg={planingPNG} icon={planingIcon} title="آرشیو "
-                                   content="."/>
+                                   content="." path="/"/>
                         </div>
 
 

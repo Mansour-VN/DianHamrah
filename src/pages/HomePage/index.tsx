@@ -2,7 +2,7 @@ import Home from "@/module/HomePage";
 
 const HomePage = () => {
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <div className="flex flex-col gap-8">
         <Home/>
      </div>
   )

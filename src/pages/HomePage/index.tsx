@@ -1,23 +1,12 @@
-import Demo from "@/pages/HomePage/demo";
-import ServicesDian from "@/pages/HomePage/servicesDian";
-import Requirement from "@/pages/HomePage/requirement";
-import LawTerminals from "@/pages/HomePage/lawTerminals";
-import CallAndCounseling from "@/pages/HomePage/callAndCounseling";
-import TaxNews from "@/pages/HomePage/taxNews";
-import OrganizationIcon from "@/pages/HomePage/organizationIcon";
+import Home from "@/module/HomePage";
 
 const HomePage = () => {
   return (
     <div className="flex flex-col gap-8 items-center">
-        <Demo/>
-        <ServicesDian/>
-        <TaxNews/>
-        <Requirement/>
-        {/* <LawTerminals/> */}
-        <CallAndCounseling/>
-        <OrganizationIcon/>
+        <Home/>
      </div>
   )
 }
 
 export default HomePage
+

@@ -11,7 +11,7 @@ const section1 = () => {
                 loop
                 muted
                 autoPlay
-                className="opacity-70"
+                className="w-full opacity-70"
             />
 
             <div className="absolute bg-gray-100 opacity-70 rounded-md md:p-4">

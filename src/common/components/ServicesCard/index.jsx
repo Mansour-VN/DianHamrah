@@ -3,7 +3,7 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Link from 'next/link';
 
-function Card5({ backImg, icon, title, content, path }) {
+function ServicesCard({ backImg, icon, title, content, path }) {
     const router = useRouter()
     return (
         <div className="w-full rounded-lg drop-shadow-xl relative p-8 box-border mt-3" data-theme="light">
@@ -29,10 +29,10 @@ function Card5({ backImg, icon, title, content, path }) {
 
                 />
             </div>
-            <div className="services-content2 h-40 overflow-hidden">
+            <div className="services-content2 h-40 ">
                 <h5 className="hover:text-official text-2xl font-extrabold py-4"><a href="">{title}</a>
                 </h5>
-                <p className="font-bold text-justify">{content}</p>
+                <p className="font-bold text-justify">{content.slice(0,150)} . . .</p>
             </div>
             <div className="card-actions justify-end ">
                 <Link href={`/${path}`}>
@@ -44,4 +44,4 @@ function Card5({ backImg, icon, title, content, path }) {
     );
 }
 
-export default Card5;
+export default ServicesCard;

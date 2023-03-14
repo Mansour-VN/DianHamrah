@@ -1,5 +1,5 @@
 import { services } from "public/Constants/dummy";
-import CervicesCard from "@/common/components/CervicesCard";
+import ServicesCard from "@/common/components/ServicesCard";
 import Button from "@/common/components/Button";
 import {useRouter} from "next/navigation";
 
@@ -33,17 +33,17 @@ const ServicesDian = () => {
                     <div className="flex flex-col md:flex-row">
 
                         <div className="flex flex-col p-2 md:w-1/2">
-                            <CervicesCard backImg={services[1].image} icon={services[1].image} title={services[1].title}
+                            <ServicesCard backImg={services[1].image} icon={services[1].image} title={services[1].title}
                                 content={services[1].description.slice(0,120)+" . . ."} path={`Services/${services[1].title}`}/>
 
-                            <CervicesCard backImg={services[0].image} icon={services[0].image} title={services[0].title}
+                            <ServicesCard backImg={services[0].image} icon={services[0].image} title={services[0].title}
                                 content={services[0].description.slice(0,120)+" . . ."} path={`Services/${services[0].title}`}/>
 
                         </div>
                         <div className="flex flex-col p-2 md:mt-16  md:w-1/2">
-                            <CervicesCard backImg={services[2].image} icon={services[2].image} title={services[2].title}
+                            <ServicesCard backImg={services[2].image} icon={services[2].image} title={services[2].title}
                                 content={services[2].description.slice(0,120)+" . . ."} path={`Services/${services[2].title}`}/>
-                            <CervicesCard backImg={services[3].image} icon={services[3].image} title={services[3].title}
+                            <ServicesCard backImg={services[3].image} icon={services[3].image} title={services[3].title}
                                 content={services[3].description.slice(0,120)+" . . ."} path={`Services/${services[3].title}`}/>
                         </div>
                     </div>

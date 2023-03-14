@@ -8,7 +8,7 @@ import OrganizationIcon from "./OrganizationalIcon";
 
 const Home = () => {
   return (
-    <div className="flex flex-col gap-8 items-center">
+    <div className="w-full flex flex-col gap-8 items-center">
         <Demo/>
         <ServicesDian/>
         <TaxNews/>

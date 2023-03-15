@@ -2,20 +2,13 @@ import {AiFillCaretDown, AiOutlineClose, AiOutlineMenu} from "react-icons/ai";
 import Link from "next/link";
 import React from "react";
 
-const DeskTopMenu = ({setMenu, menu}) => {
+const DeskTopMenu = () => {
 
 
     return(
+
         <div className="md:flex">
-            <button
-                onClick={()=>setMenu(!menu)}
-                className={`text-4xl md:hidden ${menu ? "fixed top-4 left-10" : "block fixed top-4 left-10"}`}>
-                {menu ? <AiOutlineClose/> : <AiOutlineMenu/>}
-            </button>
-
-            <ul className={`md:flex flex-col md:flex-row items-center gap-6 ${menu ? `flex` : `hidden`}`}>
-
-
+            <ul className="md:flex flex-col md:flex-row items-center gap-6">
                 <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                     <Link href="/">صفحه اصلی</Link>
                 </li>
@@ -26,7 +19,7 @@ const DeskTopMenu = ({setMenu, menu}) => {
                             <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                         </div>
                         <ul tabIndex={0}
-                            className="dropdown-content menu p-2 mt-2 shadow bg-slate-800 border-t-2 rounded-box w-52 ">
+                            className="dropdown-content menu p-2 mt-2 shadow bg-slate-800 bg-opacity-50 border-t-2 rounded-box w-52 ">
                             <li className="hover:bg-slate-600" ><Link  href="/AboutUs/#History" scroll={false}>تاریخچه</Link></li>
                             <li className="hover:bg-slate-600"><Link href="/AboutUs/#Contact" scroll={false}> اطلاعات تماس </Link></li>
                             <li className="hover:bg-slate-600"><Link href="/AboutUs/#Branches" scroll={false}> شعب و دفاتر </Link></li>

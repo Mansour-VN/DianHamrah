@@ -6,7 +6,7 @@ import {BsArrowLeftSquare} from "react-icons/bs";
 
 const TitleLegislation = () => {
     return (
-        <div id="sec1" className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[1300px]  ">
+        <div id="Legislation" className="w-full flex items-center justify-center relative flex-col w-full md:h-[700px] h-[1300px]  ">
             <div className="w-full z-0 	bg-cover">
                 <Image placeholder="blur"
                        quality={100}

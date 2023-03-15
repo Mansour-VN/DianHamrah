@@ -4,7 +4,7 @@ import Requirement from "./Requirement";
 import LawTerminals from "./LawTerminals";
 import CallAndCounseling from "./CallAndCounseling";
 import TaxNews from "./TaxNews";
-import OrganizationIcon from "./CustomersIcons";
+import OrganizationIcon from "./OrganizationalIcon";
 
 const Home = () => {
   return (

@@ -39,7 +39,7 @@ const Header = () => {
     <div className="md:flex md:justify-center md:items-center  md:flex-col">
 
       <nav  
-        className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-center md:justify-around
+        className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-around
                    md:font-bold ${menu? "h-screen " : "md:h-24 h-20"} `}
       >
         <div className={`${menu ? "hidden" : "flex flex-row items-center  "}`}>
@@ -69,6 +69,7 @@ const Header = () => {
         <div className="flex md:hidden">
           <MobileMenu setMenu={setMenu} menu={menu} />
         </div>
+
       </nav>
     </div>
   );

@@ -1,13 +1,11 @@
 import { services } from "public/Constants/dummy";
 import ServicesCard from "@/common/components/ServicesCard";
-import Button from "@/common/components/Button";
-import {useRouter} from "next/navigation";
+import Link from "next/link";
 
 
 // import * as console from "console";
 
 const ServicesDian = () => {
-    const router = useRouter()
 
     return (
 
@@ -47,11 +45,11 @@ const ServicesDian = () => {
                                 content={services[3].description.slice(0,120)+" . . ."} path={`Services/${services[3].title}`}/>
                         </div>
                     </div>
-                    <div className="w-full px-4 md:px-0">
-                        <Button
-                            text="اطلاعات بیشتر" type="wide" icon="" mobile=""
-                            onClick={() => router.push(`/Services`)}
-                        />
+                    <div className="w-full px-4 md:px-0 pt-8">
+                        <p className="text-center">
+                            برای مشاهده خدمات بیشتر <Link className="text-official" href="/Services">کلیک نمایید .</Link>
+                        </p>
+
                     </div>
                 </div>
         

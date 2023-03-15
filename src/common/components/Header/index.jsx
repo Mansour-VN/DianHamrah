@@ -2,6 +2,7 @@ import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import DeskTopMenu from "./DeskTopMenu";
 import MobileMenu from "./MobileMenu";
+import SocialMedia from "../SocialMedia";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -25,7 +26,7 @@ const Header = () => {
 
   console.log("scrollPosition is:", scrollPosition)
   useEffect(()=>{
-    if(scrollPosition>250) {
+    if(scrollPosition>200) {
       setMenuScroll(true)
       console.log("menuScroll is:", menuScroll)
     }else {
@@ -35,9 +36,10 @@ const Header = () => {
 
 
   return (
-    <div className="md:flex md:justify-center">
+    <div className="md:flex md:justify-center md:items-center  md:flex-col">
+
       <nav  
-        className={`${menuScroll? "md:bg-opacity-90 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-center md:justify-around
+        className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-center md:justify-around
                    md:font-bold ${menu? "h-screen " : "md:h-24 h-20"} `}
       >
         <div className={`${menu ? "hidden" : "flex flex-row items-center  "}`}>

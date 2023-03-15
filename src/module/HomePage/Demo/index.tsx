@@ -11,7 +11,6 @@ const DemoVideo = () => {
                 loop
                 muted
                 autoPlay
-                className="opacity-70"
             />
         </div>
     )

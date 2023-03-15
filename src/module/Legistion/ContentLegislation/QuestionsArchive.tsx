@@ -1,6 +1,6 @@
 const QuestionsArchive = ()=>{
     return(
-        <></>
+        <div>QuestionsArchive</div>
     )
 }
 

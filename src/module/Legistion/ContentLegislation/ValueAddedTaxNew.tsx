@@ -1,6 +1,6 @@
 const ValueAddedTaxNew = ()=>{
     return(
-        <></>
+        <div>ValueAddedTaxNew</div>
     )
 }
 

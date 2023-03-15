@@ -1,6 +1,6 @@
 const AuditingStandards = ()=>{
     return(
-        <></>
+        <div>AuditingStandards</div>
     )
 }
 

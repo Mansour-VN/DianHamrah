@@ -1,6 +1,6 @@
 const TechnicalAnalysis = ()=>{
     return(
-        <></>
+        <div>TechnicalAnalysis</div>
     )
 }
 

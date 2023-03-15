@@ -1,6 +1,6 @@
 const StoresTax = ()=>{
     return(
-        <></>
+        <div>StoresTax</div>
     )
 }
 

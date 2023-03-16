@@ -6,7 +6,7 @@ const Login = () => {
   return (
     <div
       id="sec1"
-      className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[800px]  "
+      className="w-full flex items-center justify-center relative flex-col h-screen"
     >
       <div className="w-full z-0 	bg-cover">
         <Image
@@ -24,10 +24,10 @@ const Login = () => {
       <div className="container flex flex-wrap flex-row  justify-center items-center mx-auto  z-10 absolute">
         <div className="px-4 flex-1 flex-col">
           <div>
-            <p className="text-black md:text-6xl text-4xl font-extrabold pb-4" > 
+            <p className="text-black text-4xl font-extrabold pb-4" > 
               سلام!
             </p>
-            <h2 className="md:text-2xl text-xl font-extrabold text-black pb-6 text-justify">
+            <h2 className="text-xl font-extrabold text-black pb-6 text-justify">
              ‌به دیان‌همراه فردا اولین و تنها ترین معتمد مالیاتی نوع دو و سه کشور خوش آمدید
             </h2>
           </div>
@@ -35,9 +35,8 @@ const Login = () => {
           {/* start form */}
           <div className=" flex  flex-col items-center  mx-auto justify-center ">
             <div className="hero">
-              <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2">
-               
-                <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100">
+              <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
+                <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
                   <div className="card-body">
                     <div className="form-control">
                       <label className="label">
@@ -54,7 +53,7 @@ const Login = () => {
                         <span className="label-text">رمز عبور</span>
                       </label>
                       <input
-                        type="text"
+                        type="password"
                         placeholder="رمز عبور..."
                         className="input input-bordered"
                       />
@@ -67,19 +66,21 @@ const Login = () => {
                     <div className="form-control mt-6">
                       <button className="btn btn-primary">ورود</button>
                     </div>
-                    <div className="form-control mt-2">
-                      <Link href="/Registre">
-                         <p className="text-red-800">ثبت نام کنید!</p>
-                      </Link>
+                    <div className="flex flex-row justify-between">
+                      <div className="form-control mt-2">
+                        <Link href="/Register">
+                          <p className="text-red-800">ثبت نام کنید!</p>
+                        </Link>
+                      </div>
+                      <div className="form-control mt-2">
+                        <Link href="/">
+                          <p className="text-blue-800">بازگشت به سایت</p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
-                {/* <div className="text-center lg:text-left">
-                  <h1 className="text-2xl font-bold">لطفا </h1>
-                  <p className="py-6">
-                        نام کاربری و رمز عبور خود را وارد کنید
-                  </p>
-                </div> */}
+            
               </div>
             </div>
           </div>

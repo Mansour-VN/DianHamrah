@@ -24,11 +24,11 @@ const Header = () => {
 
   }, [])
 
-  console.log("scrollPosition is:", scrollPosition)
+  // console.log("scrollPosition is:", scrollPosition)
   useEffect(()=>{
     if(scrollPosition>200) {
       setMenuScroll(true)
-      console.log("menuScroll is:", menuScroll)
+      // console.log("menuScroll is:", menuScroll)
     }else {
       setMenuScroll(false)
     }
@@ -36,7 +36,7 @@ const Header = () => {
 
 
   return (
-    <div className={`md:flex md:justify-center md:items-center  md:flex-col ${menuScroll? "" : "relative top-10"} `}>
+    <div className={`md:flex md:justify-center md:items-center  md:flex-col ${menuScroll? "" : "relative md:top-10"} `}>
 
       <nav  
         className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-around

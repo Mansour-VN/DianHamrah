@@ -57,6 +57,12 @@ const DeskTopMenu = () => {
                         تماس با ما
                     </Link>
                 </li>
+                
+                <li>
+                    <Link href="/Login" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg bg-slate-900">
+                         ثبت‌نام / ورود 
+                    </Link>
+                </li>
 
                 <li>
                     <Link href="/" scroll={false} className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg hidden">

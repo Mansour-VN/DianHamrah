@@ -1,5 +1,5 @@
 
-import Card5 from "@/common/components/CervicesCard";
+import Card5 from "@/common/components/ServicesCard";
 import planingPNG from "public/assets/images/Icons/se-icon4-af.png";
 import planingIcon from "public/assets/images/Icons/se-icon4.png";
 

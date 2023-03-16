@@ -1,10 +1,9 @@
 import CustomerSwiper from "@/common/components/CustomerSwiper/CustomerSwiper"
-import React, {useRef, useState} from "react";
 
 
 
 
-const Section7 = () => {
+const CustomersIcons = () => {
 
 
 
@@ -18,4 +17,4 @@ const Section7 = () => {
     )
 }
 
-export default Section7
+export default CustomersIcons

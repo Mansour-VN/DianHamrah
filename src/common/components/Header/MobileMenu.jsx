@@ -19,6 +19,7 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 <li onClick={()=>setMenu(!menu)} className="border-2 border-slate-700 w-full text-center p-2 rounded-lg">
                     <Link href="/">صفحه اصلی</Link>
                 </li>
+
                 <li className="border-2 border-slate-700 w-full text-center p-2 rounded-lg">
                     <div className="dropdown dropdown-bottom dropdown-end hover:bg-slate-600 p-2 rounded-lg">
                         <div className="flex flex-row item-center justify-center gap-1">

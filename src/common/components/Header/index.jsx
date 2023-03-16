@@ -1,16 +1,46 @@
-import React, { useRef, useState } from "react";
+import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import DeskTopMenu from "./DeskTopMenu";
 import MobileMenu from "./MobileMenu";
+import SocialMedia from "../SocialMedia";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
+  const [scrollPosition, setScrollPosition] = useState(0);
+  const [menuScroll, setMenuScroll] = useState(false)
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+
+      const handleScroll = () => {
+        const position = window.scrollY;
+        setScrollPosition(position);
+      }
+
+      window.addEventListener("scroll", handleScroll);
+
+      return () => window.removeEventListener("scroll", handleScroll);
+    }
+
+  }, [])
+
+  console.log("scrollPosition is:", scrollPosition)
+  useEffect(()=>{
+    if(scrollPosition>200) {
+      setMenuScroll(true)
+      console.log("menuScroll is:", menuScroll)
+    }else {
+      setMenuScroll(false)
+    }
+  },[scrollPosition])
+
 
   return (
-    <div className="md:flex md:justify-center">
+    <div className={`md:flex md:justify-center md:items-center  md:flex-col ${menuScroll? "" : "relative top-10"} `}>
+
       <nav  
-        className={`md:w-3/4  duration-1000 ease-in-out  md:p-0 md:rounded-lg md:bg-opacity-40 bg-slate-800 text-white flex items-center justify-center md:justify-around
-                   md:font-bold ${menu ? "h-screen  " : "md:h-24 h-20 "} `}
+        className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-around
+                   md:font-bold ${menu? "h-screen " : "md:h-24 h-20"} `}
       >
         <div className={`${menu ? "hidden" : "flex flex-row items-center  "}`}>
           <div className={`${menu ? "hidden" : ""}`}>
@@ -39,6 +69,7 @@ const Header = () => {
         <div className="flex md:hidden">
           <MobileMenu setMenu={setMenu} menu={menu} />
         </div>
+
       </nav>
     </div>
   );

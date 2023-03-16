@@ -6,7 +6,7 @@ import managementIcon from "public/assets/images/Icons/se-icon6.png";
 import managementPNG from "public/assets/images/Icons/se-icon6-af.png";
 import keepingIcon from "public/assets/images/Icons/se-icon5.png";
 import keepingPNG from "public/assets/images/Icons/se-icon5-af.png";
-import CervicesCard from "@/common/components/CervicesCard";
+import CervicesCard from "@/common/components/ServicesCard";
 
 const Section5 = () => {
     return (

@@ -51,8 +51,7 @@ const AboutUs = () => {
                     <h2 className="text-center w-full md:text-7xl  text-4xl font-extrabold hover:cursor-pointer">باشگاه مشتریان</h2>
                     <p className="px-4 font-bold">
                         
-                    از مهم‌ترین هدف باشگاه دیان‌همراه فردا ایجاد ارتباط دو سویه با شما مشتری گرامی و ایجاد منافع مشترک است. 
-            <hr/>
+                    از مهم‌ترین هدف باشگاه دیان‌همراه فردا ایجاد ارتباط دو سویه با شما مشتری گرامی و ایجاد منافع مشترک است.
             برای وارد شدن به باشگاه مشتریان روی لینک زیر کلید
                         </p>
                         <a href="http://club.dianhamrah.ir/branch/1196">

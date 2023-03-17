@@ -40,11 +40,11 @@ const Login = () => {
                   <div className="card-body">
                     <div className="form-control">
                       <label className="label">
-                        <span className="label-text">نام کاربری</span>
+                        <span className="label-text">تلفن همراه</span>
                       </label>
                       <input
-                        type="text"
-                        placeholder="نام کاربری..."
+                        type=""
+                        placeholder="تلفن همراه..."
                         className="input input-bordered"
                       />
                     </div>

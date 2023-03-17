@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import headerBg from "public/assets/images/background/header-bg.png";
-import Button from "@/common/components/Button";
+import {Button} from "@/common/components/Button";
 import {BsArrowLeftSquare} from "react-icons/bs";
 
 

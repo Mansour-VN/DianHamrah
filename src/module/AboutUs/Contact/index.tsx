@@ -1,4 +1,4 @@
-import Button from '@/common/components/Button';
+import {Button} from '@/common/components/Button';
 import Image from 'next/image'
 import {FiPhoneCall} from 'react-icons/fi';
 import SocialMedia from "@/common/components/SocialMedia";

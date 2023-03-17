@@ -3,7 +3,7 @@ import Contact from "./Contact";
 import BranchesCard from "@/common/components/BranchesCard/BranchesCard"
 import Image from "next/image";
 import BgCustomerClub from "public/assets/images/background/customerClub.jpg";
-import Button from "@/common/components/Button";
+import {Button} from "@/common/components/Button";
 import { AiOutlineLogin } from 'react-icons/ai';
 
 const AboutUs = () => {

@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Button ({text ,type, icon ,mobile,...rest}) {
+export function Button ({text ,type, icon ,mobile,...rest}) {
     return (
 
         <button className={`text-center btn btn-${type} flex items-center justify-center ${mobile?'btn-tel-mobile':''}` } {...rest}>
@@ -9,4 +9,7 @@ function Button ({text ,type, icon ,mobile,...rest}) {
     );
 }
 
-export default Button;
+
+export function AdminButton ({text}){
+    return <button className="btnAdmin sm:btn-sm md:btn-md lg:btn-lg">{text}</button>
+}

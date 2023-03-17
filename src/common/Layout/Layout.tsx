@@ -28,10 +28,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
 
   return (
     <div>
-       <div className={`${RegisterPage || LoginPage? "hidden" : "header_Layout sticky top-0 z-50"}`}>
+       <div className={`${RegisterPage || LoginPage? "hidden" : "z-50 relative flex justify-center"}`}>
           <Header/>
        </div>
-       <main className={`${RegisterPage || LoginPage? "" : "md:relative md:bottom-40"}`}>{children}</main>
+       {/* md:relative md:bottom-40 */}
+       <main className={`${RegisterPage || LoginPage? "" : ""}`}>{children}</main>
        <div className={`${RegisterPage || LoginPage? "hidden" : "" }`}>
           <Footer />
        </div>

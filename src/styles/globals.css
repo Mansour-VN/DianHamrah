@@ -16,6 +16,23 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
     color:white;
     border: 0;
 }
+
+.btnAdmin {
+    /* background-image:-webkit-linear-gradient( 0deg, rgb(75, 68, 69) 0%, rgb(138, 89, 47) 100%); */
+    background-color: #205375;
+    border-radius: 6px;
+    text-align: center;
+    font-weight:400;
+    color:#EFEFEF;
+    border: 1px solid;
+    width: 100%;
+}
+
+.btnAdmin:hover{
+    font-weight:600;
+    text-shadow: #fff;
+}
+
 .btn-normal {
     padding:14px 50px 14px 25px;
 }

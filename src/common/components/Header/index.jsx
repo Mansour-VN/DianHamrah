@@ -2,7 +2,6 @@ import React, {useEffect, useRef, useState} from "react";
 import Image from "next/image";
 import DeskTopMenu from "./DeskTopMenu";
 import MobileMenu from "./MobileMenu";
-import SocialMedia from "../SocialMedia";
 
 const Header = () => {
   const [menu, setMenu] = useState(false);
@@ -26,7 +25,7 @@ const Header = () => {
 
   // console.log("scrollPosition is:", scrollPosition)
   useEffect(()=>{
-    if(scrollPosition>200) {
+    if(scrollPosition>170) {
       setMenuScroll(true)
       // console.log("menuScroll is:", menuScroll)
     }else {
@@ -36,13 +35,13 @@ const Header = () => {
 
 
   return (
-    <div className={`md:flex md:justify-center md:items-center  md:flex-col ${menuScroll? "" : "relative md:top-10"} `}>
+    <div className={`md:flex md:justify-center md:items-center md:flex-col  duration-1000 ease-in-out ${menuScroll? "fixed top-0" : "absolute md:top-10 "} `}>
 
       <nav  
-        className={`${menuScroll? "md:bg-opacity-100 w-full": "md:bg-opacity-60 md:w-3/4 " } duration-1000 ease-in-out  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-around
+        className={`${menuScroll? "md:bg-opacity-100 w-screen": "md:bg-opacity-60" }  md:p-0 md:rounded-lg  bg-slate-800 text-white flex items-center justify-around
                    md:font-bold ${menu? "h-screen " : "md:h-24 h-20"} `}
       >
-        <div className={`${menu ? "hidden" : "flex flex-row items-center  "}`}>
+        <div className={`${menu ? "hidden" : "flex flex-row items-center"}`}>
           <div className={`${menu ? "hidden" : ""}`}>
             <Image
               src="/assets/images/Logos/DianHamrah.jpg"

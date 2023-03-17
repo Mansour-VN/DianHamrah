@@ -9,4 +9,10 @@ const Register = () => {
   )
 }
 
+Register.getLayout = function getLayout(page:React.ReactElement){
+  return (
+    page
+  )
+}
+
 export default Register

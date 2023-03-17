@@ -10,25 +10,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [RegisterPage, setRegisterPage] = useState(false);
   const { asPath } = useRouter();
 
-  useEffect(() => {
-    if (asPath === "/Login") {
-        setRegisterPage(false)
-        setLoginPage(true);
+  // useEffect(() => {
+  //   if (asPath === "/Login") {
+  //       setRegisterPage(false)
+  //       setLoginPage(true);
 
-    } else if (asPath === "/Register"){
-        setLoginPage(false)
-        setRegisterPage(true)
+  //   } else if (asPath === "/Register"){
+  //       setLoginPage(false)
+  //       setRegisterPage(true)
 
-    } else {
-        setLoginPage(false);
-        setRegisterPage(false)
-    }
-  }, [asPath]);
+  //   } else {
+  //       setLoginPage(false);
+  //       setRegisterPage(false)
+  //   }
+  // }, [asPath]);
 
 
   return (
     <div>
-       <div className={`${RegisterPage || LoginPage? "hidden" : "z-50 relative flex justify-center"}`}>
+       <div className={`${"z-50 relative flex justify-center"}`}>
           <Header/>
        </div>
        {/* md:relative md:bottom-40 */}

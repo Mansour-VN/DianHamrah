@@ -31,7 +31,7 @@ const DeskTopMenu = () => {
 
                 <li>
 
-                    <Link href="/Legislation" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
+                    <Link href="/Library" className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                         کتابخانه دیان همراه
                     </Link>
 

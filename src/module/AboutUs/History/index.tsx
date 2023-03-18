@@ -1,12 +1,13 @@
 import Image from "next/image";
 import headerBg from "public/assets/images/background/header-bg.png";
 import about_image from "public/assets/images/People/about-img2.png";
+import Link from "next/link";
 
 const History = () => {
     return (
         <div id="History" className="block w-full">
             <div
-                className="w-full flex items-center justify-center relative flex-col h-[300px]  ">
+                className="w-full flex items-center justify-center relative flex-col md:h-[700px] h-[400px]  ">
                 <div className="w-full  z-0 bg-cover">
                     <Image placeholder="blur"
                            quality={100}
@@ -19,7 +20,7 @@ const History = () => {
                 <div className="z-1 absolute container flex md:flex-row-reverse flex-col items-center justify-between ">
                     <div className="text-sm breadcrumbs">
                         <ul>
-                            <li><a>صفحه اصلی</a></li>
+                            <li><Link href="/">صفحه اصلی</Link></li>
                             <li className="text-official">درباره ما</li>
 
                         </ul>

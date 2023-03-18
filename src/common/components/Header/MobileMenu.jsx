@@ -39,7 +39,7 @@ const DeskTopMenu = ({setMenu, menu}) => {
                 </li>
 
                 <li onClick={()=>setMenu(!menu)} className="border-2 border-slate-700 w-full text-center p-2 rounded-lg">
-                    <Link href="/Legislation" >
+                    <Link href="/Library" >
                         کتابخانه دیان همراه
                     </Link>
 

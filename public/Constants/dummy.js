@@ -32,6 +32,12 @@ import Logo6 from "@/../public/assets/images/Logos/logo6.jpg";
 import Logo7 from "@/../public/assets/images/Logos/logo7.png";
 import Logo8 from "@/../public/assets/images/Logos/logo8.png";
 
+
+//icons
+import { BiCommentDetail } from 'react-icons/bi';
+import { BsCart3 } from 'react-icons/bs';
+import { TbFileCertificate } from 'react-icons/tb';
+
 // export const socialNetwork = {
 //     socials: {
 //         Whatsapp: [Whatsapp, "https://chat.whatsapp.com/G0o3ZKS1EHpEhbGtevLhRs"],
@@ -290,8 +296,8 @@ export const Logos = [
 
 export const AdminPanel = {
   Navbar: [
-    { name: "مدیریت کارمندان", route: "UserDashboard/manageUsers" },
-    { name: "مشاهده محصولات", route: "UserDashboard/products" },
-    {name :"مشتریان" , route :"UserDashboard/manageEmployee"},
+    { name: "دریافت گواهی‌نامه", route: "UserDashboard/Certification", icon:<TbFileCertificate/>},
+    { name: "پشتیبانی", route: "UserDashboard/userSupport", icon:<BiCommentDetail/> },
+    {name :"سبد خرید" , route :"UserDashboard/cart", icon:<BsCart3/>},
   ],
 };

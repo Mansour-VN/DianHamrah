@@ -1,42 +1,55 @@
 import { AdminButton } from "@/common/components/Button";
 import Link from "next/link";
 import { AdminPanel } from "public/Constants/dummy";
-import  axios from "axios"
-import { useEffect } from "react";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
 const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
   const { Navbar } = AdminPanel;
-  const getProfileInformation = async ()=>{
-    const token = localStorage.getItem("token")
-    const res = await axios.get("http://188.121.102.86:8000/api/user/" , {
-      headers:{
-        "Authorization" : "Bearer " + token
-      }
-    }) 
-    return res
-  }
+  // const getProfileInformation = async ()=>{
+  //   const token = localStorage.getItem("token")
+  //   const res = await axios.get("http://188.121.102.86:8000/api/user/" , {
+  //     headers:{
+  //       "Authorization" : "Bearer " + token
+  //     }
+  //   })
+  //   return res
+  // }
 
-  useEffect(()=>{
-    getProfileInformation().then((res)=>console.log(res.data))
-  },[])
+  // const [userName, setUserName] = useState({
+  //   name:"",
+  //   lastName:""
+  // })
+
+  // useEffect(()=>{
+  //   getProfileInformation().then((res)=>
+  //   setUserName({
+  //     name:res.data.firstName,
+  //     lastName:res.data.lastName
+  //   })
+  //   )
+  // },[]);
+
   return (
-    <div className="flex flex-col max-h-screen h-screen">
+    <div className="flex flex-col h-screen">
       <div
         id="HeaderAdmin"
-        className="px-4 h-10 flex items-center  bg-slate-800 border-b-2"
+        className="pr-4 h-12 flex flex-row items-center  bg-gradient-to-l from-slate-800 border-b-2"
       >
         <p className="p-4 text-white">نام و نشان شما: </p>
+        <p className="p-4 text-orange-300">نام و نشانی که از کاربر میگیری</p>
       </div>
-      <div className="flex flex-row gap-2 max-w-screen">
-      <div
+      <div className="flex flex-row max-w-screen h-full">
+        <div
           id="SidebarAdmin"
-          className="bg-slate-800 w-1/6 flex  flex-col justify-around items-center px-2">
-          <ul className="flex gap-4 flex-col justify-center items-center w-full">
+          className="bg-slate-900 z-0 h-full w-1/6 flex  flex-col justify-around items-center"
+        >
+          <ul className="flex gap-4 flex-col justify-center items-center w-full ">
             {Navbar.map((item, index) => {
               return (
                 <li className="w-full" key={index}>
                   <Link href={`/${item.route}`}>
-                    <AdminButton text={item.name} />
+                    <AdminButton text={item.name} icon={item.icon} type={"btnNavbar"}/>
                   </Link>
                 </li>
               );
@@ -44,12 +57,12 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
           </ul>
 
           <p className="text-white hover:text-red-400">
-            <Link href="/" onClick={(e)=>localStorage.removeItem("token")}>خروج</Link>
+            <Link href="/" onClick={(e) => localStorage.removeItem("token")}>
+              خروج
+            </Link>
           </p>
-      </div>
-      <div className=" bg-green-100 w-5/6">
-            {children}
-      </div>
+        </div>
+        <div className=" bg-slate-800 w-5/6 p-4">{children}</div>
       </div>
     </div>
   );

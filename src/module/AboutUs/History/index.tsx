@@ -6,7 +6,7 @@ const History = () => {
     return (
         <div id="History" className="block w-full">
             <div
-                className="w-full flex items-center justify-center relative flex-col h-[300px]  ">
+                className="w-full flex items-center justify-center relative flex-col h-screen  ">
                 <div className="w-full  z-0 bg-cover">
                     <Image placeholder="blur"
                            quality={100}

@@ -1,4 +1,4 @@
-import LayoutAdmin from "@/common/Layout/LayOutAdmin";
+import LayOutUser from "@/common/Layout/LayOutUser";
 const UserSupport = () =>{
     return(
         <div className="text-white h-full  flex justify-center items-center">
@@ -9,7 +9,7 @@ const UserSupport = () =>{
 
 
 UserSupport.getLayout = function getLayout(page:React.ReactElement){
-    return <LayoutAdmin>{page}</LayoutAdmin>
+    return <LayOutUser>{page}</LayOutUser>
 }
 
 export default UserSupport;

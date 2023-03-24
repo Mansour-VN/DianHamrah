@@ -1,10 +1,34 @@
 import { AdminButton } from "@/common/components/Button";
 import Link from "next/link";
-import { AdminPanel } from "public/Constants/dummy";
+import { UserPanel } from "public/Constants/dummy";
+import axios from "axios";
+import { useEffect, useState } from "react";
 
-const LayOutAdmin = ({children}:{children:React.ReactNode}) => {
+const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
+  const { Navbar } = UserPanel;
+  // const getProfileInformation = async ()=>{
+  //   const token = localStorage.getItem("token")
+  //   const res = await axios.get("http://188.121.102.86:8000/api/user/" , {
+  //     headers:{
+  //       "Authorization" : "Bearer " + token
+  //     }
+  //   })
+  //   return res
+  // }
 
-  const { Navbar } = AdminPanel;
+  // const [userName, setUserName] = useState({
+  //   name:"",
+  //   lastName:""
+  // })
+
+  // useEffect(()=>{
+  //   getProfileInformation().then((res)=>
+  //   setUserName({
+  //     name:res.data.firstName,
+  //     lastName:res.data.lastName
+  //   })
+  //   )
+  // },[]);
 
   return (
     <div className="flex flex-col h-screen">
@@ -12,13 +36,13 @@ const LayOutAdmin = ({children}:{children:React.ReactNode}) => {
         id="HeaderAdmin"
         className="pr-4 h-12 flex flex-row items-center  bg-gradient-to-l from-slate-800 border-b-2"
       >
-        <p className="p-4 text-white">نام و نشان کارمند: </p>
-        <p className="p-4 text-orange-300">نام و نشان ادمین سایت </p>
+        <p className="p-4 text-white">نام و نشان شما: </p>
+        <p className="p-4 text-orange-300">نام و نشانی که از کاربر میگیری</p>
       </div>
       <div className="flex flex-row max-w-screen h-full">
         <div
           id="SidebarAdmin"
-          className="bg-cyan-700 z-0 h-full w-1/6 flex  flex-col justify-around items-center"
+          className="bg-slate-900 z-0 h-full w-1/6 flex  flex-col justify-around items-center"
         >
           <ul className="flex gap-4 flex-col justify-center items-center w-full ">
             {Navbar.map((item, index) => {
@@ -41,7 +65,7 @@ const LayOutAdmin = ({children}:{children:React.ReactNode}) => {
         <div className=" bg-slate-800 w-5/6 p-4">{children}</div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default LayOutAdmin
+export default LayoutAdmin;

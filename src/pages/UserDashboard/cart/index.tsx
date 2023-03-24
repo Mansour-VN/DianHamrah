@@ -1,5 +1,4 @@
-import LayoutAdmin from '@/common/Layout/LayOutAdmin';
-import React from 'react'
+import LayOutUser from '@/common/Layout/LayOutUser';
 
 const Cart = () => {
   return (
@@ -9,7 +8,7 @@ const Cart = () => {
   )
 }
 Cart.getLayout = function getLayout(page: React.ReactElement) {
-  return <LayoutAdmin>{page}</LayoutAdmin>;
+  return <LayOutUser>{page}</LayOutUser>;
 };
 
 export default Cart

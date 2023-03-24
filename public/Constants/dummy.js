@@ -294,10 +294,17 @@ export const Logos = [
   },
 ];
 
-export const AdminPanel = {
+export const UserPanel = {
   Navbar: [
     { name: "دریافت گواهی‌نامه", route: "UserDashboard/Certification", icon:<TbFileCertificate/>},
     { name: "پشتیبانی", route: "UserDashboard/userSupport", icon:<BiCommentDetail/> },
     {name :"سبد خرید" , route :"UserDashboard/cart", icon:<BsCart3/>},
+  ],
+};
+
+
+export const AdminPanel = {
+  Navbar: [
+    { name: "بارگذاری گواهی‌نامه", route: "Admin/pushCertification", icon:<TbFileCertificate/>},
   ],
 };

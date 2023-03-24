@@ -1,6 +1,5 @@
 import { AdminButton } from '@/common/components/Button';
-import LayoutAdmin from '@/common/Layout/LayOutAdmin';
-import React from 'react'
+import LayOutUser from '@/common/Layout/LayOutUser';
 import { AiOutlineDownload } from 'react-icons/ai';
 
 
@@ -17,7 +16,7 @@ const Certification = () => {
   )
 }
 Certification.getLayout = function getLayout(page: React.ReactElement) {
-  return <LayoutAdmin>{page}</LayoutAdmin>;
+  return <LayOutUser>{page}</LayOutUser>;
 };
 
 export default Certification

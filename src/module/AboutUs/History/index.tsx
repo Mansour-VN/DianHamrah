@@ -26,8 +26,7 @@ const History = () => {
                     </div>
                     <div className="breadcrumb-title  mb-30">
                         <h2 className="text-[60px] md:p-0 px-2 text-black ">درباره ما</h2>
-                        <p className="text-gray-400 px-2 md:p-0">با استفاده از الگوهای پیش ساخته ما وب سایت های قدرتمند و
-                            چشمگیری ایجاد کنید</p>
+                        <p className="text-gray-400 px-2 md:p-0"> با دیان همراه فردا محکم و استوار قدم بردارید </p>
                     </div>
                 </div>
 

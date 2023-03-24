@@ -1,21 +1,48 @@
 import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
-import React from "react";
+import React,{useState} from "react";
+import Image from "next/image";
 
-const DeskTopMenu = ({ setMenu, menu }) => {
+const DeskTopMenu = () => {
+  const [menu, setMenu] = useState(false);
+
   return (
+    <div>
+
+          <nav  
+        className={`w-screen bg-slate-800 text-white flex items-center justify-around
+        duration-1000 ease-in-out ${menu? "h-screen fixed " : "h-20"} `}
+      >
+    <div className={`${menu ? "hidden" : "flex flex-row items-center"}`}>
+          <div className={`${menu ? "hidden" : ""}`}>
+            <Image
+              src="/assets/images/Logos/DianHamrah.jpg"
+              alt="لوگو"
+              width={40}
+              height={40}
+              className="rounded m-2"
+            />
+          </div>
+        <div className="flex flex-col">
+            <h5 className="text-xl">دیان همراه فردا</h5>
+            <span className="badge badge-sm">
+              تنها معتمد مالیاتی نوع دو و سه کشور
+            </span>
+        </div>
+    </div>
+
     <div className="md:flex">
       <button
         onClick={() => setMenu(!menu)}
-        className={`text-4xl md:hidden ${
-          menu ? "fixed top-4 left-10" : "block fixed top-4 left-10"
+        className={`text-4xl ${
+          menu ? "fixed top-4 left-10" : "block left-10"
         }`}
       >
         {menu ? <AiOutlineClose /> : <AiOutlineMenu />}
       </button>
 
       <ul
-        className={`md:flex flex-col md:flex-row items-center gap-6 ${
+        className={`flex-col md:flex-row items-center gap-6 ${
           menu ? `flex` : `hidden`
         }`}
       >
@@ -138,6 +165,10 @@ const DeskTopMenu = ({ setMenu, menu }) => {
           </Link>
         </li>
       </ul>
+    </div>
+    
+      </nav>
+
     </div>
   );
 };

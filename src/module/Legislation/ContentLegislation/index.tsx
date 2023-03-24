@@ -1,5 +1,5 @@
 
-import Card5 from "@/common/components/ServicesCard";
+import ServicesCard from "@/common/components/ServicesCard";
 import planingPNG from "public/assets/images/Icons/se-icon4-af.png";
 import planingIcon from "public/assets/images/Icons/se-icon4.png";
 
@@ -10,40 +10,40 @@ const ContentLegislation = () => {
 
             <h2 className="text-4xl py-8">دسته بندی  قوانین  </h2>
 
-            <div className="w-1/2">
-                <div className="container mx-auto px-4   ">
-                    <div className="Qtable flex flex-col  md:flex-row md:gap-4 flex-wrap flex-grow  m-auto ">
+            <div className="w-full">
+                <div className="container mx-auto px-4">
+                    <div className="table flex flex-col  md:flex-row md:gap-4 flex-wrap flex-grow  m-auto ">
 
-                        <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title=" قانون پایانه های فروشگاهی و سامانه  مودیان "
+                        <div className=" min-w-full bg-green-300 m-auto ">
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title=" قانون پایانه های فروشگاهی و سامانه  مودیان "
                                    content="." path="/" />
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title=" قانون مالیات های مستقیم "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title=" قانون مالیات های مستقیم "
                                    content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="  قانون مالیات بر ارزش افزوده جدید "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="  قانون مالیات بر ارزش افزوده جدید "
                                    content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="قانون مالیات بر ارزش افزوده قدیم  "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="قانون مالیات بر ارزش افزوده قدیم  "
                                    content="." path="/"/>
                         </div>
                         <div className="min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="آرشیو سوالات متداول "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="آرشیو سوالات متداول "
                                    content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="استاندارد های حسابرسی "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="استاندارد های حسابرسی "
                                    content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="تحلیل و بررسی فنی "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="تحلیل و بررسی فنی "
                                    content="." path="/"/>
                         </div>
                         <div className=" min-w-full m-auto">
-                            <Card5 backImg={planingPNG} icon={planingIcon} title="آرشیو "
+                            <ServicesCard backImg={planingPNG} icon={planingIcon} title="آرشیو "
                                    content="." path="/"/>
                         </div>
 

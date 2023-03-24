@@ -1,4 +1,4 @@
-import Legislation from "@/module/Legistion"
+import Legislation from "@/module/Legislation"
 
 const LegislationPage = () => {
     return (

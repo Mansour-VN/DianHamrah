@@ -30,7 +30,7 @@ function ServicesCard({ backImg, icon, title, content, path }) {
                 />
             </div>
             <div className="services-content2 h-40 ">
-                <h5 className="hover:text-official text-2xl font-extrabold py-4"><a href="">{title}</a>
+                <h5 className="hover:text-official text-2xl font-extrabold py-4 text-right"><a href="">{title}</a>
                 </h5>
                 <p className="font-bold text-justify">{content.slice(0,150)} . . .</p>
             </div>

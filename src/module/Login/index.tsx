@@ -5,6 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Cookies } from "react-cookie";
+import TitleLogin from "./title";
 
 const Login = () => {
   const { push } = useRouter();
@@ -51,13 +52,7 @@ const Login = () => {
       </div>
       <div className="container flex flex-wrap flex-row  justify-center items-center mx-auto  z-10 absolute">
         <div className="px-4 flex-1 flex-col">
-          <div>
-            <p className="text-black text-4xl font-extrabold pb-4">سلام!</p>
-            <h2 className="text-xl font-extrabold text-black pb-6 text-justify">
-              ‌به دیان‌همراه فردا اولین و تنها ترین معتمد مالیاتی نوع دو و سه
-              کشور خوش آمدید
-            </h2>
-          </div>
+         <TitleLogin/>
 
           {/* start form */}
           <form

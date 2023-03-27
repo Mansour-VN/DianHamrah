@@ -4,9 +4,11 @@ import Link from "next/link";
 import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
+import { Cookies } from "react-cookie";
 
 const Login = () => {
   const { push } = useRouter();
+  const cookies = new Cookies();
 
   const sendDataUserLogin = async (data: any) => {
     const res = await axios.post(
@@ -24,7 +26,7 @@ const Login = () => {
     };
     await sendDataUserLogin(tempObj)
       .then((res) => {
-        localStorage.setItem("token", res.data);
+        cookies.set('token', res.data );
         push("/UserDashboard");
       })
       .catch((e) => console.log(e));

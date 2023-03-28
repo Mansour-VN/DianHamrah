@@ -5,10 +5,34 @@ import axios from "axios";
 import { useState } from "react";
 import { useRouter } from "next/router";
 import { Cookies } from "react-cookie";
+import TitleLogin from "./title";
+import { Formik, Form, Field, validateYupSchema, useFormik } from "formik";
+import * as Yup from "yup";
+
+interface RegisterFormValues {
+  phoneNumber: string;
+  password: string;
+}
+
+const SignupSchema = Yup.object().shape({
+  phoneNumber: Yup.string()
+  .required("لطفا شماره همراه خود را وارد نمایید")
+  .min(10, "شماره وارد شده صحیح نمی‌باشد")
+  .max(10, "شماره وارد شده صحیح نمی‌باشد"),
+  password: Yup.string()
+    .min(2, "طول پسورد حداقل 2 کارکتر است")
+    .max(10, "حداکثر طول پسورد 10 کارکتر می‌باشد")
+    .required("پسورد را صحیح وارد کنید"),
+});
 
 const Login = () => {
   const { push } = useRouter();
   const cookies = new Cookies();
+
+  const initialValues: RegisterFormValues = {
+    phoneNumber: "",
+    password: "",
+  };
 
   const sendDataUserLogin = async (data: any) => {
     const res = await axios.post(
@@ -18,19 +42,6 @@ const Login = () => {
     return res;
   };
 
-  const sendAPI = async (e: any) => {
-    e.preventDefault();
-    const tempObj = {
-      userName: e.target.phoneNumber.value,
-      password: e.target.password.value,
-    };
-    await sendDataUserLogin(tempObj)
-      .then((res) => {
-        cookies.set('token', res.data );
-        push("/UserDashboard");
-      })
-      .catch((e) => console.log(e));
-  };
   return (
     <div
       id="sec1"
@@ -51,72 +62,92 @@ const Login = () => {
       </div>
       <div className="container flex flex-wrap flex-row  justify-center items-center mx-auto  z-10 absolute">
         <div className="px-4 flex-1 flex-col">
-          <div>
-            <p className="text-black text-4xl font-extrabold pb-4">سلام!</p>
-            <h2 className="text-xl font-extrabold text-black pb-6 text-justify">
-              ‌به دیان‌همراه فردا اولین و تنها ترین معتمد مالیاتی نوع دو و سه
-              کشور خوش آمدید
-            </h2>
-          </div>
-
+          <TitleLogin />
           {/* start form */}
-          <form
-            onSubmit={sendAPI}
-            className=" flex  flex-col items-center  mx-auto justify-center "
+          <Formik
+            initialValues={initialValues}
+            validationSchema={SignupSchema}
+            onSubmit={(values) => {
+              const {phoneNumber ,password } = values
+              sendDataUserLogin({
+                password,
+                userName : `0${phoneNumber}`
+              })
+                .then((res) => {
+                  cookies.set("token", res.data);
+                  push("/UserDashboard");
+                })
+                .catch(() => console.log("error Login...."));
+            }}
           >
-            <div className="hero">
-              <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
-                <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
-                  <div className="card-body">
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">تلفن همراه</span>
-                      </label>
-                      <input
-                        type="number"
-                        placeholder="تلفن همراه..."
-                        className="input input-bordered"
-                        name="phoneNumber"
-                      />
-                    </div>
-                    <div className="form-control">
-                      <label className="label">
-                        <span className="label-text">رمز عبور</span>
-                      </label>
-                      <input
-                        type="password"
-                        placeholder="رمز عبور..."
-                        className="input input-bordered"
-                        name="password"
-                      />
-                      <label className="label">
-                        <a href="#" className="label-text-alt link link-hover">
-                          {/* Forgot password? */}
-                        </a>
-                      </label>
-                    </div>
-                    <div className="form-control mt-6">
-                      <button className="btn btn-primary" type="submit">
-                        ورود
-                      </button>
-                    </div>
-                    <div className="flex flex-row justify-between">
-                      <div className="form-control mt-2">
-                        <Link href="/Register">
-                          <p className="text-red-800">ثبت نام کنید!</p>
-                        </Link>
-                      </div>
-                      <div className="form-control mt-2">
-                        <Link href="/">
-                          <p className="text-blue-800">بازگشت به سایت</p>
-                        </Link>
+            {({ errors, touched }) => (
+              <Form className=" flex  flex-col items-center   mx-auto justify-center">
+                <div className="hero">
+                  <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
+                    <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
+                      <div className="card-body">
+                        <div className="form-control">
+                          <label htmlFor="phoneNumber" className="label">
+                            <span className="label-text">تلفن همراه</span>
+                          </label>
+                          <Field
+                            type="number"
+                            placeholder="تلفن همراه..."
+                            className="input input-bordered"
+                            name="phoneNumber"
+                            id="phoneNumber"
+                          />
+                          {errors.phoneNumber || touched.phoneNumber ? (
+                            <div>{errors.phoneNumber}</div>
+                          ) : null}
+                        </div>
+                        <div className="form-control">
+                          <label htmlFor="password" className="label">
+                            <span className="label-text">رمز عبور</span>
+                          </label>
+                          <Field
+                            type="password"
+                            placeholder="رمز عبور..."
+                            className="input input-bordered"
+                            name="password"
+                            id="password"
+                          />
+                          {errors.password || touched.password ? (
+                            <div>{errors.password}</div>
+                          ) : null}
+                          <label className="label">
+                            <a
+                              href="#"
+                              className="label-text-alt link link-hover"
+                            >
+                              {/* Forgot password? */}
+                            </a>
+                          </label>
+                        </div>
+                        <div className="form-control mt-6">
+                          <button className="btn btn-primary" type="submit">
+                            ورود
+                          </button>
+                        </div>
+                        <div className="flex flex-row justify-between">
+                          <div className="form-control mt-2">
+                            <Link href="/Register">
+                              <p className="text-red-800">ثبت نام کنید!</p>
+                            </Link>
+                          </div>
+                          <div className="form-control mt-2">
+                            <Link href="/">
+                              <p className="text-blue-800">بازگشت به سایت</p>
+                            </Link>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </form>
+              </Form>
+            )}
+          </Formik>
           {/* end Form */}
         </div>
       </div>

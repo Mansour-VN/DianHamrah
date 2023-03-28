@@ -16,5 +16,13 @@ export function middleware(request: NextRequest) {
     }
   }
 
+  if(request.nextUrl.pathname.startsWith('/Admin')){
+    if(request.cookies.get("token")?.value){
+      return NextResponse.next()
+    }else {
+      return NextResponse.redirect(new URL('/LoginAdmin', request.url))
+    }
+  }
+
  
 }

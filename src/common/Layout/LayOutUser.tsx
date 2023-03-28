@@ -3,8 +3,12 @@ import Link from "next/link";
 import { UserPanel } from "public/Constants/dummy";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { useCookies } from "react-cookie";
+
 
 const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
+  const[token, setToken, removeToken] = useCookies(['token']);
+
   const { Navbar } = UserPanel;
   // const getProfileInformation = async ()=>{
   //   const token = localStorage.getItem("token")
@@ -55,12 +59,18 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
               );
             })}
           </ul>
-
-          <p className="text-white hover:text-red-400">
-            <Link href="/" onClick={(e) => localStorage.removeItem("token")}>
-              خروج
-            </Link>
-          </p>
+            <div>
+              <p className="text-white hover:text-slate-400 rounded-sm border-2 p-1">
+                <Link href="/">
+                    بازگشت به صفحه اصلی 
+                </Link>
+              </p>
+              <p className="text-white hover:text-red-400 mt-4 text-sm text-center">
+                <Link href="/" onClick={(e) =>removeToken("token",{path:'/'})}>
+                  خروج از حساب کاربری
+                </Link>
+              </p>
+            </div>
         </div>
         <div className=" bg-slate-800 w-5/6 p-4">{children}</div>
       </div>

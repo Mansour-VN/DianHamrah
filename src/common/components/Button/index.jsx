@@ -10,8 +10,8 @@ export function Button ({text ,type, icon ,mobile,...rest}) {
 }
 
 
-export function AdminButton ({text, icon, type}){
-    return <button className={`bg-slate-700 flex flex-row-reverse  justify-between items-center ${type?"bg-gradient-to-r from-slate-800" : ""}   hover:shadow-xl hover:text-xl text-white w-full sm:btn-sm md:btn-md lg:btn-lg`}>
+export function AdminButton ({text, icon, type , ...rest}){
+    return <button className={`bg-slate-700 flex flex-row-reverse  justify-between items-center ${type?"bg-gradient-to-r from-slate-800" : ""}   hover:shadow-xl hover:text-xl text-white w-full sm:btn-sm md:btn-md lg:btn-lg`} {...rest}>
           <span className="pl-2">{text}</span> <span>{icon}</span>
         </button>
 }

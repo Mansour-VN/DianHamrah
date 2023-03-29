@@ -3,36 +3,37 @@ import Link from "next/link";
 import { UserPanel } from "public/Constants/dummy";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { useCookies } from "react-cookie";
-
+import { Cookies, useCookies } from "react-cookie";
 
 const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
   const[token, setToken, removeToken] = useCookies(['token']);
 
   const { Navbar } = UserPanel;
-  // const getProfileInformation = async ()=>{
-  //   const token = localStorage.getItem("token")
-  //   const res = await axios.get("http://188.121.102.86:8000/api/user/" , {
-  //     headers:{
-  //       "Authorization" : "Bearer " + token
-  //     }
-  //   })
-  //   return res
-  // }
+  const getProfileInformation = async ()=>{
 
-  // const [userName, setUserName] = useState({
-  //   name:"",
-  //   lastName:""
-  // })
+    const cookie = new Cookies()
+    const token = cookie.get("token")
+    const res = await axios.get("http://188.121.102.86:8081/api/user/" , {
+      headers:{
+        "Authorization" : "Bearer " + token
+      }
+    })
+    return res
+  }
 
-  // useEffect(()=>{
-  //   getProfileInformation().then((res)=>
-  //   setUserName({
-  //     name:res.data.firstName,
-  //     lastName:res.data.lastName
-  //   })
-  //   )
-  // },[]);
+  const [userName, setUserName] = useState({
+    name:"",
+    lastName:""
+  })
+
+  useEffect(()=>{
+    getProfileInformation().then((res)=>
+    setUserName({
+      name:res.data.firstName,
+      lastName:res.data.lastName
+    })
+    )
+  },[]);
 
   return (
     <div className="flex flex-col h-screen">
@@ -40,8 +41,8 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
         id="HeaderAdmin"
         className="pr-4 h-12 flex flex-row items-center  bg-gradient-to-l from-slate-800 border-b-2"
       >
-        <p className="p-4 text-white">نام و نشان شما: </p>
-        <p className="p-4 text-orange-300">نام و نشانی که از کاربر میگیری</p>
+        <p className="p-4 text-white">نام و نشان شما:  </p>
+        <p className="p-4 text-orange-300">{userName.name + " " + userName.lastName}</p>
       </div>
       <div className="flex flex-row max-w-screen h-full">
         <div

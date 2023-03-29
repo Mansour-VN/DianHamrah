@@ -13,7 +13,7 @@ const LayOutAdmin = ({children}:{children:React.ReactNode}) => {
         className="pr-4 h-12 flex flex-row items-center  bg-gradient-to-l from-slate-800 border-b-2"
       >
         <p className="p-4 text-white">نام و نشان کارمند: </p>
-        <p className="p-4 text-orange-300">نام و نشان ادمین سایت </p>
+        <p className="p-4 text-orange-300">مرتضی ابوالفتحی</p>
       </div>
       <div className="flex flex-row max-w-screen h-full">
         <div

@@ -7,12 +7,11 @@ import { useRouter } from "next/router";
 import { Cookies } from "react-cookie";
 
 interface RegisterFormValues {
-  personalID: string;
+  personnelID: string;
   password: string;
 }
 const SignupSchema = Yup.object().shape({
-  personalID: Yup.string()
-    .required("شماره پرسنلی خودرا صحیح وارد کنید"),
+  personnelID: Yup.number().required("لطفا شماره پرسنلی خودرا وارد نمایید"),
   password: Yup.string()
     .min(2, " پسورد وارد شده باید بیشتر از 2 کارکتر باشد")
     .max(10, " پسورد نباید بیشتر از 10 کارکتر باشد")
@@ -23,22 +22,20 @@ const LoginAdminPage = () => {
   const cookies = new Cookies();
 
   const initialValues: RegisterFormValues = {
-    personalID: "",
+    personnelID: "",
     password: "",
   };
   const sendDataUserLogin = async (data: any) => {
-    const res = await axios.post("http://188.121.102.86:8000", data);
+    const res = await axios.post(
+      "http://188.121.102.86:8081/api/admin/login",
+      data
+    );
     return res;
   };
-  const sendAPI = async (e: any) => {
-    e.preventDefault();
-    const tempObj = {
-      personalID: e.target.phoneNumber.value,
-      password: e.target.password.value,
-    };
-    await sendDataUserLogin(tempObj)
+  const sendAPI = async (values: any) => {
+    await sendDataUserLogin(values)
       .then((res) => {
-        cookies.set("token", res.data);
+        cookies.set("adminToken", res.data);
         push("/Admin");
       })
       .catch((e) => console.log(e));
@@ -49,65 +46,74 @@ const LoginAdminPage = () => {
         initialValues={initialValues}
         validationSchema={SignupSchema}
         onSubmit={(values) => {
-          console.log("log in onSubmit formik", values);
+          const { personnelID, password } = values;
+          sendDataUserLogin({ password, personnelID: `${personnelID}` })
+            .then((res) => {
+              cookies.set("adminToken", res.data);
+              push("/Admin");
+            })
+            .catch((e) => console.log(e));
         }}
       >
-          {({ errors, touched }) => (
-        <Form className=" flex  flex-col items-center  mx-auto justify-center md:w-1/2 ">
-          <div className="hero">
-            <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
-              <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
-                <div className="card-body">
-                  <div className="form-control">
-                    <label className="label">
-                      <span className="label-text">
-                        {" "}
-                        شماره پرسنلی خود را وارد کنید
-                      </span>
-                    </label>
-                    <Field
-                      type="number"
-                      placeholder="شماره پرسنلی خود را وارد کنید ..."
-                      className="input input-bordered"
-                      name="personalId"
-                    />
-                  </div>
-                  {errors.personalID && touched.personalID ? (
-                            <div className="h-2 text-red-800 text-sm">{errors.personalID}</div>
-                          ) : null}
-                  <div className="form-control mt-8">
-                    <label className="label">
-                      <span className="label-text">رمز عبور</span>
-                    </label>
-                    <Field
-                      type="password"
-                      placeholder="رمز عبور..."
-                      className="input input-bordered"
-                      name="password"
-                    />
-                  </div>
-                  {errors.password && touched.password ? (
-                            <div className="h-2 text-red-800 text-sm">{errors.password}</div>
-                          ) : null}
-                  <div className="form-control mt-6">
-                    <button className="btn btn-primary" type="submit">
-                      <Link href="/Admin">ورود</Link>
-                    </button>
-                  </div>
-                  <div className="flex flex-row justify-between">
-                    <div className="form-control mt-2">
-                      <Link href="/">
-                        <p className="text-blue-800">بازگشت به سایت</p>
-                      </Link>
+        {({ errors, touched }) => (
+          <Form className=" flex  flex-col items-center  mx-auto justify-center md:w-1/2 ">
+            <div className="hero">
+              <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
+                <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
+                  <div className="card-body">
+                    <div className="form-control">
+                      <label className="label">
+                        <span className="label-text">
+                          {" "}
+                          شماره پرسنلی خود را وارد کنید
+                        </span>
+                      </label>
+                      <Field
+                        type="number"
+                        placeholder="شماره پرسنلی خود را وارد کنید ..."
+                        className="input input-bordered"
+                        name="personnelID"
+                      />
+                    </div>
+                    {errors.personnelID && touched.personnelID ? (
+                      <div className="h-2 text-red-800 text-sm">
+                        {errors.personnelID}
+                      </div>
+                    ) : null}
+                    <div className="form-control mt-8">
+                      <label className="label">
+                        <span className="label-text">رمز عبور</span>
+                      </label>
+                      <Field
+                        type="password"
+                        placeholder="رمز عبور..."
+                        className="input input-bordered"
+                        name="password"
+                      />
+                    </div>
+                    {errors.password && touched.password ? (
+                      <div className="h-2 text-red-800 text-sm">
+                        {errors.password}
+                      </div>
+                    ) : null}
+                    <div className="form-control mt-6">
+                      <button className="btn btn-primary" type="submit">
+                        <Link href="/Admin">ورود</Link>
+                      </button>
+                    </div>
+                    <div className="flex flex-row justify-between">
+                      <div className="form-control mt-2">
+                        <Link href="/">
+                          <p className="text-blue-800">بازگشت به سایت</p>
+                        </Link>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        </Form>
-          )}
-
+          </Form>
+        )}
       </Formik>
     </div>
   );

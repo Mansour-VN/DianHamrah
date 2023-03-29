@@ -8,6 +8,9 @@ import { Cookies } from "react-cookie";
 import TitleLogin from "./title";
 import { Formik, Form, Field, validateYupSchema, useFormik } from "formik";
 import * as Yup from "yup";
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify';
 
 interface RegisterFormValues {
   phoneNumber: string;
@@ -18,7 +21,7 @@ const SignupSchema = Yup.object().shape({
   phoneNumber: Yup.string()
   .required("لطفا شماره همراه خود را وارد نمایید")
   .min(10, "شماره وارد شده صحیح نمی‌باشد")
-  .max(10, "شماره وارد شده صحیح نمی‌باشد"),
+  .max(11, "شماره وارد شده صحیح نمی‌باشد"),
   password: Yup.string()
     .min(2, "طول پسورد حداقل 2 کارکتر است")
     .max(10, "حداکثر طول پسورد 10 کارکتر می‌باشد")
@@ -28,7 +31,7 @@ const SignupSchema = Yup.object().shape({
 const Login = () => {
   const { push } = useRouter();
   const cookies = new Cookies();
-
+  const LoginIsGood = () => toast("شما وارد شدید");
   const initialValues: RegisterFormValues = {
     phoneNumber: "",
     password: "",
@@ -36,7 +39,7 @@ const Login = () => {
 
   const sendDataUserLogin = async (data: any) => {
     const res = await axios.post(
-      "http://188.121.102.86:8000/api/user/login",
+      "http://188.121.102.86:8081/api/user/login",
       data
     );
     return res;
@@ -76,8 +79,11 @@ const Login = () => {
                 .then((res) => {
                   cookies.set("token", res.data);
                   push("/UserDashboard");
+                  LoginIsGood()
                 })
-                .catch(() => console.log("error Login...."));
+                .catch(() => {
+                  console.log("error Login....")
+                });
             }}
           >
             {({ errors, touched }) => (
@@ -151,6 +157,7 @@ const Login = () => {
           {/* end Form */}
         </div>
       </div>
+      <ToastContainer />
     </div>
   );
 };

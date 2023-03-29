@@ -37,6 +37,8 @@ import Logo8 from "@/../public/assets/images/Logos/logo8.png";
 import { BiCommentDetail } from 'react-icons/bi';
 import { BsCart3 } from 'react-icons/bs';
 import { TbFileCertificate } from 'react-icons/tb';
+import { SiGoogletagmanager, SiBlogger } from 'react-icons/si';
+import { MdOutlineManageAccounts } from 'react-icons/md';
 
 // export const socialNetwork = {
 //     socials: {
@@ -306,5 +308,8 @@ export const UserPanel = {
 export const AdminPanel = {
   Navbar: [
     { name: "بارگذاری گواهی‌نامه", route: "Admin/pushCertification", icon:<TbFileCertificate/>},
+    { name: "مدیریت محصولات", route: "", icon:<SiGoogletagmanager/>},
+    { name: "بلاگ ها", route: "", icon:<SiBlogger/>},
+    { name: "پشتیانی کاربران", route: "", icon:<MdOutlineManageAccounts/>},
   ],
 };

@@ -13,14 +13,17 @@ export function middleware(request: NextRequest) {
   if(request.nextUrl.pathname.startsWith('/Login')){
     if(request.cookies.get("token")?.value){
       return  NextResponse.redirect(new URL('/UserDashboard', request.url))
+    }else {
+
+      return NextResponse.next()
     }
   }
 
   if(request.nextUrl.pathname.startsWith('/Admin')){
-    if(request.cookies.get("token")?.value){
+    if(request.cookies.get("adminToken")?.value){
       return NextResponse.next()
     }else {
-      return NextResponse.redirect(new URL('/LoginAdmin', request.url))
+      return NextResponse.redirect(new URL('/AdminLogin', request.url))
     }
   }
 

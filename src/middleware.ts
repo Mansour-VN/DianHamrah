@@ -23,7 +23,7 @@ export function middleware(request: NextRequest) {
     if(request.cookies.get("adminToken")?.value){
       return NextResponse.next()
     }else {
-      return NextResponse.redirect(new URL('/AdminLogin', request.url))
+      return NextResponse.redirect(new URL('/ALogin', request.url))
     }
   }
 

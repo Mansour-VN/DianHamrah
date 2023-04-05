@@ -9,13 +9,13 @@ const Section3 = () => {
     const [customers, setCustomer] = useState(0)
     const [agent, setAgent] = useState(0)
     const increaseCounter = () => {
-        if (courses < 221) {
+        if (courses < 298) {
             setCourses(courses + 1)
         }
-        if (customers < 245) {
+        if (customers < 369) {
             setCustomer(customers + 1)
         }
-        if (agent < 12) {
+        if (agent < 13) {
             setAgent(customers + 1)
         }
     }

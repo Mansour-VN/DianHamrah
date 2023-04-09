@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from "react";
 import {useRouter} from "next/navigation";
 
-const CervicesCard = ({report, path}) => {
+const NewsCard = ({report, path}) => {
     const router = useRouter()
     return (
         <div className="card container bg-base-100 shadow-xlb flex justify-center items-center">
@@ -12,6 +12,8 @@ const CervicesCard = ({report, path}) => {
                 <h2 className="card-title text-official text-center ">{report.title}</h2>
 
                 <p className="text-justify  max-h-36 overflow-hidden ">{`${report.description.slice(0, 135)} . . .`}</p>
+
+                <p className="text-justify text-xs max-h-36 py-4 overflow-hidden ">{"تاریخ خبر :" + " " + `${report.date}`}</p>
 
                 <div className="card-actions justify-end">
                     <button className="btn btn-primary"
@@ -26,4 +28,4 @@ const CervicesCard = ({report, path}) => {
     )
 }
 
-export default CervicesCard;
+export default NewsCard;

@@ -39,6 +39,7 @@ import { BsCart3 } from 'react-icons/bs';
 import { TbFileCertificate } from 'react-icons/tb';
 import { SiGoogletagmanager, SiBlogger } from 'react-icons/si';
 import { MdOutlineManageAccounts } from 'react-icons/md';
+import { ImFinder } from 'react-icons/im';
 
 // export const socialNetwork = {
 //     socials: {
@@ -295,6 +296,12 @@ export const Logos = [
     Logo: Logo8,
   },
 ];
+
+export const About = {
+  title:"صفحه مورد نظر موجود نمی باشد.",
+  Error:"404",
+  Icon: <ImFinder/>
+};
 
 export const UserPanel = {
   Navbar: [

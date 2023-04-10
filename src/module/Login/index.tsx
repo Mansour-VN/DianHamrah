@@ -8,9 +8,9 @@ import { Cookies } from "react-cookie";
 import TitleLogin from "./title";
 import { Formik, Form, Field, validateYupSchema, useFormik } from "formik";
 import * as Yup from "yup";
-import { toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { ToastContainer } from 'react-toastify';
+import { toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import { ToastContainer } from "react-toastify";
 
 interface RegisterFormValues {
   phoneNumber: string;
@@ -18,10 +18,10 @@ interface RegisterFormValues {
 }
 
 const SignupSchema = Yup.object().shape({
-  phoneNumber: Yup.string()
-  .required("لطفا شماره همراه خود را وارد نمایید")
-  .min(10, "شماره وارد شده صحیح نمی‌باشد")
-  .max(11, "شماره وارد شده صحیح نمی‌باشد"),
+  phoneNumber: Yup.number()
+    .min(1000 * 1000 * 1000, "شماره همراه را کوتاه وارد کردید")
+    .max(1000 * 1000 * 1000 * 10, " شماره همراه نباید بیشتر از 11 رقم باشد")
+    .required("لطفا شماره همراه را وارد نمایید"),
   password: Yup.string()
     .min(2, "طول پسورد حداقل 2 کارکتر است")
     .max(10, "حداکثر طول پسورد 10 کارکتر می‌باشد")
@@ -31,7 +31,6 @@ const SignupSchema = Yup.object().shape({
 const Login = () => {
   const { push } = useRouter();
   const cookies = new Cookies();
-  const LoginIsGood = () => toast("شما وارد شدید");
   const initialValues: RegisterFormValues = {
     phoneNumber: "",
     password: "",
@@ -71,22 +70,22 @@ const Login = () => {
             initialValues={initialValues}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
-              const {phoneNumber ,password } = values
+              const { phoneNumber, password } = values;
               sendDataUserLogin({
                 password,
-                phoneNumber : `0${phoneNumber}`
+                phoneNumber: `0${phoneNumber}`,
               })
                 .then((res) => {
                   cookies.set("token", res.data);
                   push("/UserDashboard");
-                  LoginIsGood()
+                  toast("با موفقیت به پنل حود وارد شدید");
                 })
                 .catch(() => {
-                  console.log("error Login....")
+                  toast(" ورود شما نا موفق");
                 });
             }}
           >
-            {({ errors, touched }) => (
+            {({ errors, touched, handleChange, handleBlur }) => (
               <Form className=" flex  flex-col items-center   mx-auto justify-center">
                 <div className="hero">
                   <div className="hero-content flex-col lg:flex-row-reverse md:w-1/2 w-full ">
@@ -102,10 +101,12 @@ const Login = () => {
                             className="input input-bordered"
                             name="phoneNumber"
                             id="phoneNumber"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
                           />
-                          {errors.phoneNumber || touched.phoneNumber ? (
-                            <div>{errors.phoneNumber}</div>
-                          ) : null}
+                          <div className="text-red-800">
+                            {touched.phoneNumber && errors.phoneNumber}
+                          </div>
                         </div>
                         <div className="form-control">
                           <label htmlFor="password" className="label">
@@ -117,10 +118,12 @@ const Login = () => {
                             className="input input-bordered"
                             name="password"
                             id="password"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
                           />
-                          {errors.password || touched.password ? (
-                            <div>{errors.password}</div>
-                          ) : null}
+                          <div className="text-red-800">
+                            {touched.password && errors.password}
+                          </div>
                           <label className="label">
                             <a
                               href="#"

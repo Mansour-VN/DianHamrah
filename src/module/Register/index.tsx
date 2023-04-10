@@ -6,13 +6,14 @@ import axios from "axios";
 import { Formik, Form, Field, validateYupSchema, useFormik } from "formik";
 import * as Yup from "yup";
 import { Cookies } from "react-cookie";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, toast } from "react-toastify";
 
 interface RegisterFormValues {
   firstName: string;
   lastName: string;
   password: string;
   phoneNumber: number;
+  nationalCode: number;
 }
 
 const SignupSchema = Yup.object().shape({
@@ -25,14 +26,17 @@ const SignupSchema = Yup.object().shape({
     .max(15, "نام خانوادگی شما بیش از حد مجاز است")
     .required("لطفا نام خانوادگی خودرا وارد کنید "),
   password: Yup.string()
-    .min(2, "طول پسورد حداقل 2 کارکتر است")
-    .max(10, "حداکثر طول پسورد 10 کارکتر می‌باشد")
+    .min(2, "طول پسورد حداقل 2 عبارت است ")
     .required("پسورد را صحیح وارد کنید"),
   phoneNumber: Yup.number()
-  .required("لطفا شماره همراه خود را وارد نمایید")
-})
-;
-
+  .min(1000 * 1000 * 1000 ,"شماره همراه را کوتاه وارد کردید")
+  .max(1000 * 1000 * 1000 * 10 , " شماره همراه نباید بیشتر از 11 رقم باشد")
+  .required("لطفا شماره همراه را وارد نمایید"),
+  nationalCode:Yup.number()
+  .min(2, "کد ملی را کوتاه وارد کرده‌اید")
+  .max(1000 * 1000 * 1000 * 10,"کد ملی نباید بیشتر از 10 رقم باشد")
+  .required("شماره ملی را وارد کنید")
+});
 const RegisterPage = () => {
   const { push } = useRouter();
   const cookies = new Cookies();
@@ -46,12 +50,12 @@ const RegisterPage = () => {
     return res;
   };
 
-
   const initialValues: RegisterFormValues = {
     firstName: "",
     lastName: "",
     password: "",
-    phoneNumber:0
+    phoneNumber: 0,
+    nationalCode: 0,
   };
 
   return (
@@ -93,58 +97,64 @@ const RegisterPage = () => {
                 password,
                 firstName,
                 lastName,
+                nationalCode,
               } = values;
               sendDataUserRegister({
                 firstName,
                 lastName,
                 password,
-                phoneNumber :`${phoneNumber}`,
+                phoneNumber: `0${phoneNumber}`,
+                nationalCode: `${nationalCode}`,
               })
                 .then((res) => {
                   // cookies.set("token", res.data);
-                  notify()
+                  notify();
                   push("/Login");
                 })
                 .catch(() => console.log("error Login...."));
             }}
           >
-            {({ errors, touched }) => (
-              <Form
-                className=" flex  flex-col items-center md:w-1/2 justify-center "
-              >
+            {({ errors, touched, handleChange, handleBlur }) => (
+              <Form className=" flex  flex-col items-center md:w-1/2 justify-center ">
                 <div className="hero">
                   <div className="hero-content p-0 flex-col lg:flex-row-reverse w-full">
                     <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
                       <div className="card-body">
-                        <div className="form-control h-[100px]">
-                          <label className="label">
-                            <span className="label-text">نام</span>
-                          </label>
-                          <Field
-                            type="text"
-                            name="firstName"
-                            placeholder="نام..."
-                            className="input input-bordered "
-                          />
-                          {errors.firstName || touched.firstName ? (
-                            <div className="text-red-800">{errors.firstName}</div>
-                          ) : (
-                            null
-                          )}
-                        </div>
-                        <div className="form-control h-[100px]">
-                          <label className="label">
-                            <span className="label-text">نام خانوادگی</span>
-                          </label>
-                          <Field
-                            type="text"
-                            name="lastName"
-                            placeholder="نام خانوادگی..."
-                            className="input input-bordered"
-                          />
-                          {errors.lastName || touched.lastName ? (
-                            <div className="text-red-800">{errors.lastName}</div>
-                          ) : null}
+                        <div className="form-control flex md:flex-row justify-between gap-2 md:gap-0">
+                          <div className=" h-[100px]">
+                            <label className="label">
+                              <span className="label-text">نام</span>
+                            </label>
+                            <Field
+                              type="text"
+                              name="firstName"
+                              placeholder="نام..."
+                              onBlur={handleBlur}
+                              onChange={handleChange}
+                              className="input input-bordered w-full"
+                            />
+                            {errors.firstName || touched.firstName ? (
+                              <div className="text-red-800">
+                                {errors.firstName}
+                              </div>
+                            ) : null}
+                          </div>
+                          <div className=" h-[100px]">
+                            <label className="label">
+                              <span className="label-text">نام خانوادگی</span>
+                            </label>
+                            <Field
+                              type="text"
+                              name="lastName"
+                              placeholder="نام خانوادگی..."
+                              className="input input-bordered w-full"
+                              onBlur={handleBlur}
+                              onChange={handleChange}
+                            />
+                            <div className="text-red-800">
+                              {touched.lastName && errors.lastName}
+                            </div>
+                          </div>
                         </div>
                         <div className="form-control h-[100px]">
                           <label className="label">
@@ -155,10 +165,12 @@ const RegisterPage = () => {
                             name="password"
                             placeholder="رمز عبور..."
                             className="input input-bordered"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
                           />
-                          {errors.password || touched.password ? (
-                            <div className="text-red-800">{errors.password}</div>
-                          ) : null}
+                          <div className="text-red-800">
+                            {touched.password && errors.password}
+                          </div>
                         </div>
                         {/* <div className="form-control h-[100px]">
                           <label className="label">
@@ -185,9 +197,31 @@ const RegisterPage = () => {
                             name="phoneNumber"
                             placeholder="شماره همراه..."
                             className="input input-bordered"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
                           />
-                          {errors.phoneNumber || touched.phoneNumber ? (
-                            <div className="text-red-800">{errors.phoneNumber}</div>
+                            <div className="text-red-800">
+                              {touched.phoneNumber && errors.phoneNumber}
+                            </div>
+                        </div>
+                        <div className="form-control h-[100px]">
+                          <label className="label">
+                            <span className="label-text">
+                              شماره ملی خود را وارد کنید
+                            </span>
+                          </label>
+                          <Field
+                            type="number"
+                            name="nationalCode"
+                            placeholder="شماره ملی..."
+                            className="input input-bordered"
+                            onBlur={handleBlur}
+                            onChange={handleChange}
+                          />
+                          {errors.nationalCode || touched.nationalCode ? (
+                            <div className="text-red-800">
+                              {touched.nationalCode && errors.nationalCode}
+                            </div>
                           ) : null}
                         </div>
                         <div className="form-control mt-6">

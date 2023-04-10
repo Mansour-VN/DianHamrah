@@ -1,29 +1,33 @@
 import "@/styles/globals.css";
-import { useRouter } from "next/router";
-import type { AppProps } from "next/app";
+import type {AppProps} from "next/app";
 import Layout from "@/common/Layout/Layout";
-import { NextPage } from "next";
-import { ReactNode, ReactElement } from "react";
+import {NextPage} from "next";
+import {ReactElement, ReactNode} from "react";
 
-import { QueryClient, QueryClientProvider, useQuery } from "react-query";
+import {QueryClient, QueryClientProvider} from "react-query";
+
+import {Provider} from "react-redux";
+import {store} from "../../redux/store"
 
 type NextPageWithLayoutAndAuth = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
-  auth?: boolean;
+    getLayout?: (page: ReactElement) => ReactNode;
+    auth?: boolean;
 };
 
 type AppPropsWithLayout = AppProps & {
-  Component: NextPageWithLayoutAndAuth;
+    Component: NextPageWithLayoutAndAuth;
 };
 
 
-export default function App({ Component, pageProps }: AppPropsWithLayout) {
-  const queryClient = new QueryClient();
-  const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
+export default function App({Component, pageProps}: AppPropsWithLayout) {
+    const queryClient = new QueryClient();
+    const getLayout = Component.getLayout || ((page) => <Layout>{page}</Layout>);
 
-  return getLayout(
-    <QueryClientProvider client={queryClient}>
-      <Component {...pageProps} />
-    </QueryClientProvider>
-  );
+    return getLayout(
+        <Provider store={store}>
+            <QueryClientProvider client={queryClient}>
+                <Component {...pageProps} />
+            </QueryClientProvider>
+        </Provider>
+    );
 }

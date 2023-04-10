@@ -1,11 +1,11 @@
 import LayOutUser from "@/common/Layout/LayOutUser";
-import { ToastContainer } from 'react-toastify';
+// import { ToastContainer } from 'react-toastify';
 
 const AdminPanel = ({ children }: { children: React.ReactNode }) => {
   return (
-    <div> 
+    <div>
       { children }
-      <ToastContainer/>
+      {/*<ToastContainer/>*/}
     </div>
     );
 };

@@ -35,6 +35,12 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
     )
   },[]);
 
+
+  const exitAdmin = () =>{
+    console.log("ckick")
+    removeToken("token")
+    window.location.reload()
+  }
   return (
     <div className="flex flex-col h-screen">
       <div
@@ -67,7 +73,7 @@ const LayoutAdmin = ({ children }: { children: React.ReactNode }) => {
                 </Link>
               </p>
               <p className="text-white hover:text-red-400 mt-4 text-sm text-center">
-                <Link href="/" onClick={(e) =>removeToken("token",{path:'/'})}>
+                <Link href="" onClick={exitAdmin}>
                   خروج از حساب کاربری
                 </Link>
               </p>

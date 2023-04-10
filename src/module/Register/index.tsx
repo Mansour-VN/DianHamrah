@@ -98,7 +98,7 @@ const RegisterPage = () => {
                 firstName,
                 lastName,
                 password,
-                phoneNumber :`0${phoneNumber}`,
+                phoneNumber :`${phoneNumber}`,
               })
                 .then((res) => {
                   // cookies.set("token", res.data);

@@ -16,18 +16,15 @@ const Certification = () => {
         },
       })
       .then((user) => {
-        fetch(`http://188.121.102.86:8081/api/file/${user.data.id}`, {
-          method: "get",
+        axios.get(`http://188.121.102.86:8081/api/certificate/${user.data.id}`, {
           headers: {
             Authorization: "Bearer " + token,
           },
         })
-          .then((res) => res.blob())
-          .then((blob) => {
-            const url = window.URL.createObjectURL(blob);
+          .then((res) => res.data )
+          .then((data:any) => {
             const a = document.createElement("a");
-            a.href = url;
-            a.download = "govahi.pdf";
+            a.href = data.path;
             document.body.appendChild(a);
             a.click();
             document.body.removeChild(a);

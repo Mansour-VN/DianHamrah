@@ -2,6 +2,7 @@ import { AiFillCaretDown, AiOutlineClose, AiOutlineMenu } from "react-icons/ai";
 import Link from "next/link";
 import React,{useState} from "react";
 import Image from "next/image";
+import {Library} from "../../../../public/Constants/Library";
 
 const DeskTopMenu = () => {
   const [menu, setMenu] = useState(false);
@@ -96,6 +97,32 @@ const DeskTopMenu = () => {
           </div>
         </li>
 
+        <li className="border-2 border-slate-700 w-full text-center p-2 rounded-lg">
+          <div className="dropdown dropdown-bottom dropdown-end hover:bg-slate-600 p-2 rounded-lg">
+            <div className="flex flex-row item-center justify-center gap-1">
+              <label tabIndex={0}> کتابخانه دیان همراه </label>
+              <AiFillCaretDown className="mt-1.5" />
+            </div>
+            <ul
+                tabIndex={0}
+                className="dropdown-content menu p-2 shadow bg-slate-600 rounded-box w-[300px] "
+            >
+
+              {Library.map((item) => {
+                return (
+                    <li key={item.id} className="hover:bg-slate-600">
+                      <Link href={item.NavAddress} scroll={false}>
+                        {item.title}
+                      </Link>
+                    </li>
+                )
+              })}
+
+
+            </ul>
+          </div>
+        </li>
+
         <li className="border-2 w-full border-slate-700 text-center p-2 rounded-lg">
           <Link
             href="http://club.dianhamrah.ir/branch/1196"
@@ -111,7 +138,7 @@ const DeskTopMenu = () => {
           onClick={() => setMenu(!menu)}
           className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"
         >
-          <Link href="/Legislation">کتابخانه دیان همراه</Link>
+          <Link href="/Library">کتابخانه دیان همراه</Link>
         </li>
         <li className="hidden border-2  border-slate-700 w-full text-center p-2 rounded-lg">
           <div className="dropdown dropdown-bottom dropdown-end">

@@ -1,14 +1,28 @@
 //Social networks icons
-// import Whatsapp from "./DummyAssets/whatsapp-icon.svg";
-// import Telegram from "./DummyAssets/telegram.svg";
-// import Twitter from "./DummyAssets/twitter-circle-filled.svg";
-// import Instagram from "./DummyAssets/instagram-with-circle.svg";
-// import Linkedin from "./DummyAssets/linkedin-with-circle.svg";
-// import Aparat from "./DummyAssets/Aparat.svg";
-// import Youtube from "./DummyAssets/youtube-with-circle.svg";
-// import Bale from "./DummyAssets/bale.svg";
-// import Soroush from "./DummyAssets/Soroush logo";
-// import Eitaa from "./DummyAssets/Eitaa.svg";
+import DianLogo from "@/../public/assets/images/Icons/DianHamrah.jpg";
+import Whatsapp from "@/../public/assets/images/Icons/whatsapp-icon.svg";
+import Telegram from "@/../public/assets/images/Icons/telegram.svg";
+import Twitter from "@/../public/assets/images/Icons/twitter-circle-filled.svg";
+import Instagram from "@/../public/assets/images/Icons/instagram-with-circle.svg";
+import Linkedin from "@/../public/assets/images/Icons/linkedin-with-circle.svg";
+import Aparat from "@/../public/assets/images/Icons/Aparat.svg";
+import Youtube from "@/../public/assets/images/Icons/youtube-with-circle.svg";
+import Bale from "@/../public/assets/images/Icons/bale.svg";
+import Soroush from "@/../public/assets/images/Icons/Soroush logo.png";
+import Eitaa from "@/../public/assets/images/Icons/Eitaa.svg";
+export const Icons = {
+    DianLogo:DianLogo,
+    Whatsapp:Whatsapp,
+    Telegram:Telegram,
+    Twitter:Twitter,
+    Instagram:Instagram,
+    Linkedin:Linkedin,
+    Aparat:Aparat,
+    Youtube:Youtube,
+    Bale:Bale,
+    Soroush:Soroush,
+    Eitaa:Eitaa,
+}
 
 //Subsidiary companies
 
@@ -78,7 +92,6 @@ export const navbar = {
     menu: ["آساک", "محصولات", "خدمات", "آساکی شو", "تماس با ما"],
 };
 
-export const header = {};
 
 export const footer = {
     "خدمات مشتریان": {"حریم خصوصی": "", "پاسخ‌به پرسش‌های متداول": {}},
@@ -144,7 +157,7 @@ export const services = [
     {
         id: 4,
         image: Service4,
-        title: "پشتیبانی",
+        title: "support",
         description:
             "ارتباط با مشریان در این موسسه به سه روش میباشد.\n" +
             "مراجعه حضوری -\n" +
@@ -318,7 +331,7 @@ export const About = {
 export const UserPanel = {
     Navbar: [
         {name: "دریافت گواهی‌نامه", route: "UserDashboard/Certification", icon: <TbFileCertificate/>},
-        {name: "پشتیبانی", route: "UserDashboard/userSupport", icon: <BiCommentDetail/>},
+        {name: "support", route: "UserDashboard/userSupport", icon: <BiCommentDetail/>},
         {name: "سبد خرید", route: "UserDashboard/cart", icon: <BsCart3/>},
     ],
 };
@@ -340,28 +353,24 @@ export const links = [
             {
                 name: 'پروفایل',
                 icon: <RiContactsLine/>,
+                route: "Dashboard/profile"
             },
             {
                 name: 'گواهی ها',
                 icon: <TbFileCertificate/>,
+                route: "Dashboard/certificates"
             },
             {
-                name: 'سفارشات',
+                name: 'سبد خرید',
                 icon: <AiOutlineShoppingCart/>,
+                route: "Dashboard/orders"
             },
 
             {
                 name: 'پشتیبانی',
                 icon: <BiSupport/>,
+                route: "Dashboard/support"
             },
         ],
     },
 ]
-export const User = {
-    sideBar: [
-        {name: "پروفایل", route: "Dashboard/profile", icon: <RiContactsLine/>},
-        {name: "گواهی ها", route: "UserDashboard/certificate", icon: <TbFileCertificate/>},
-        {name: "سبد خرید", route: "Dashboard/cart", icon: <AiOutlineShoppingCart/>},
-        {name: "پشتیبانی", route: "Dashboard/Support", icon: <BiSupport/>},
-    ],
-};

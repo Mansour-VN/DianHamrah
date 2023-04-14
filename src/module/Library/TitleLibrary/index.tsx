@@ -4,7 +4,7 @@ import {Button} from "@/common/components/Button";
 import {BsArrowLeftSquare} from "react-icons/bs";
 
 
-const TitleLegislation = () => {
+const TitleLibrary = () => {
     return (
         <div id="sec1" className="w-full flex items-center justify-center relative flex-col h-screen">
             <div className="w-full z-0 	bg-cover">
@@ -18,9 +18,7 @@ const TitleLegislation = () => {
             </div>
             <div
                 className="container flex flex-wrap flex-row  justify-center items-center mx-auto  z-10">
-                {/*<div className="header-img px-4 mt-[100px] ">*/}
-                {/*    <Image src={happyMan} alt="image"/>*/}
-                {/*</div>*/}
+
 
                 <div className="px-4 flex-1 ">
                     <div>
@@ -45,4 +43,4 @@ const TitleLegislation = () => {
     )
 }
 
-export default TitleLegislation
+export default TitleLibrary

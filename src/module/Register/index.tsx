@@ -84,6 +84,16 @@ const RegisterPage = () => {
           </div>
 
           {/* start form */}
+          <div className="flex flex-col gap-4 ">
+          <label>در صورت موجود بودن عکس  با فرمت JPG  وارد کنید</label>
+               <div className="overflow-hidden relative w-full h-12 mb-4 border-2 border-gray-400 p-2 rounded-md ">
+              <input
+                className="cursor-pointer absolute block  w-full h-12  pin-r pin-t"
+                type="file"
+                name="pathImage"
+                id="file-type"
+              />
+            </div>
 
           <Formik
             initialValues={initialValues}
@@ -97,13 +107,16 @@ const RegisterPage = () => {
                 lastName,
                 nationalCode,
               } = values;
-              sendDataUserRegister({
-                firstName,
-                lastName,
-                password,
-                phoneNumber: `0${phoneNumber}`,
-                nationalCode: `${nationalCode}`,
-              })
+               //@ts-ignore
+              const file = document.getElementById("file-type").files[0];
+              const formData = new FormData();
+              formData.append("file", file);
+              formData.append("firstName", firstName);
+              formData.append("lastName", lastName);
+              formData.append("password", `${password}`);
+              formData.append("nationalCode", `${nationalCode}`);
+              formData.append("phoneNumber", `${phoneNumber}`);
+              sendDataUserRegister(formData)
                 .then((res) => {
                   // cookies.set("token", res.data);
                   notify();
@@ -113,7 +126,7 @@ const RegisterPage = () => {
             }}
           >
             {({ errors, touched, handleChange, handleBlur }) => (
-              <Form className=" flex  flex-col items-center md:w-1/2 justify-center ">
+              <Form className=" flex   flex-col items-center md:w-full justify-center ">
                 <div className="hero">
                   <div className="hero-content p-0 flex-col lg:flex-row-reverse w-full">
                     <div className="card flex-shrink-0 w-full  shadow-2xl bg-base-100 bg-opacity-40">
@@ -246,6 +259,7 @@ const RegisterPage = () => {
               </Form>
             )}
           </Formik>
+          </div>
           {/* end Form */}
         </div>
       </div>

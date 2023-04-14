@@ -73,7 +73,7 @@ const Login = () => {
               const { phoneNumber, password } = values;
               sendDataUserLogin({
                 password,
-                phoneNumber: `0${phoneNumber}`,
+                phoneNumber: `${phoneNumber}`,
               })
                 .then((res) => {
                   cookies.set("token", res.data);

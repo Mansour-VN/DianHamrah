@@ -177,14 +177,14 @@ const DeskTopMenu = () => {
             تماس با ما
           </Link>
         </li>
-        <li
-          onClick={() => setMenu(!menu)}
-          className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"
-        >
-          <Link href="/Login" scroll={false}>
-            ثبت‌نام / ورود
-          </Link>
-        </li>
+        {/*<li*/}
+        {/*  onClick={() => setMenu(!menu)}*/}
+        {/*  className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"*/}
+        {/*>*/}
+        {/*  <Link href="/Login" scroll={false}>*/}
+        {/*    ثبت‌نام / ورود*/}
+        {/*  </Link>*/}
+        {/*</li>*/}
 
         <li className="border-2 border-slate-700 w-full text-center p-2 rounded-lg hidden">
           <Link href="/" scroll={false}>

@@ -7,7 +7,7 @@ export const Questions = () => {
     const [tab, setTab] = useState(1)
 
     return (
-        <div>
+        <div className="pb-32">
             <div className="tabs">
                 {
                     FrequentlyQuestions.map((item) => (
@@ -23,6 +23,8 @@ export const Questions = () => {
 
                 return (
                     <>
+
+
                         {item.items.map((i) => (
                             item.id === tab ?
                                 <div key={i.id} tabIndex={0}

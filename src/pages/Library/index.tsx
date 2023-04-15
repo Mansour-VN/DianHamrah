@@ -1,9 +1,9 @@
-import Legislation from "@/module/Legistion"
+import Library from "@/module/Library"
 
 const LegislationPage = () => {
     return (
         <div className="flex flex-col items-center">
-            <Legislation/>
+            <Library/>
         </div>
     )
 }

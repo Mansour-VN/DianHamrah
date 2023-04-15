@@ -1,9 +1,9 @@
-import NewSItem from "@/module/News"
+import NewsItem from "@/module/News"
 
 const News = () => {
   return (
     <>
-    <NewSItem/>
+    <NewsItem/>
     </>
   )
 }

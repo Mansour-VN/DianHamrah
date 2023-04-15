@@ -16,6 +16,9 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
     color:white;
     border: 0;
 }
+
+
+
 .btn-normal {
     padding:14px 50px 14px 25px;
 }
@@ -64,6 +67,16 @@ html,
 body{
     scroll-behavior: smooth;
 }
+
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield !important;
+    }
+ }
 /*customer swiper*/
 .swiper-slide{
     padding: 0;

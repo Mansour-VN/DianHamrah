@@ -6,7 +6,7 @@ const History = () => {
     return (
         <div id="History" className="block w-full">
             <div
-                className="w-full flex items-center justify-center relative flex-col h-[300px]  ">
+                className="w-full flex items-center justify-center relative flex-col h-screen  ">
                 <div className="w-full  z-0 bg-cover">
                     <Image placeholder="blur"
                            quality={100}
@@ -26,8 +26,7 @@ const History = () => {
                     </div>
                     <div className="breadcrumb-title  mb-30">
                         <h2 className="text-[60px] md:p-0 px-2 text-black ">درباره ما</h2>
-                        <p className="text-gray-400 px-2 md:p-0">با استفاده از الگوهای پیش ساخته ما وب سایت های قدرتمند و
-                            چشمگیری ایجاد کنید</p>
+                        <p className="text-gray-400 px-2 md:p-0"> با دیان همراه فردا محکم و استوار قدم بردارید </p>
                     </div>
                 </div>
 

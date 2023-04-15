@@ -1,18 +1,21 @@
+import { useRouter } from "next/router";
 import Footer from "./../components/Footer";
 import Header from "./../components/Header";
+import { useState, useEffect } from "react";
+import Login from "@/module/Login";
+import Register from "@/pages/Register";
 
-export default function Layout({ children }: {
-    children: React.ReactNode,
-}) {
-    return (
-        <>
-            <div className="header_Layout sticky top-0 z-50">
-                <Header />
-            </div>
-            <main className="md:relative md:bottom-40">{children}</main>
-            <div className="footer_layout">
-                <Footer />
-            </div>
-        </>
-    )
+export default function Layout({ children }: { children: React.ReactNode }) {
+
+  return (
+    <div>
+       <div className="z-50 relative flex">
+          <Header/>
+       </div>
+       <main>{children}</main>
+       <div className="hidden">
+          <Footer />
+       </div>
+     </div>
+   );
 }

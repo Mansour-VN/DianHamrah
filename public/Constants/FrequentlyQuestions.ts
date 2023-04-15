@@ -505,3 +505,16 @@ export const FrequentlyQuestions = [
     }
 
 ]
+export const FrequentlyQuestionsLinks = [
+    {
+        id: 1,
+        title: "امضا الکترونیک",
+        link: "https://dian.s3.ir-thr-at1.arvanstorage.ir/gica.ir.pdf"
+    },
+    {
+        id: 2,
+        title: "راهنمای-شناسه کالا و خدمات",
+        link: "https://dian.s3.ir-thr-at1.arvanstorage.ir/راهنمای-شناسه-کالا-و-خدمات.pdf"
+    }
+]
+

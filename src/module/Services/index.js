@@ -1,5 +1,5 @@
 import {services} from "public/Constants/dummy";
-import CervicesCard from "@/common/components/CervicesCard";
+import CervicesCard from "@/common/components/ServicesCard";
 
 const Services = () => {
     return (

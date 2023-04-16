@@ -8,5 +8,10 @@ const LoginPage = () => {
     </>
   )
 }
+LoginPage.getLayout = function getLayout(page: React.ReactElement) {
+  return (
+      page
+  );
+};
 
 export default LoginPage

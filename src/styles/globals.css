@@ -14,7 +14,11 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
     text-align: center;
     font-weight:600;
     color:white;
+    border: 0;
 }
+
+
+
 .btn-normal {
     padding:14px 50px 14px 25px;
 }
@@ -24,7 +28,6 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
 .btn-tel {
 
     text-align: center;
-    /*line-height: 92px;*/
 
 }
 .btn-tel-mobile {
@@ -63,5 +66,28 @@ p,h1,h2,h3,h4,h5,a,span, button, div{
 html,
 body{
     scroll-behavior: smooth;
+}
+
+@layer base {
+    input[type='number']::-webkit-outer-spin-button,
+    input[type='number']::-webkit-inner-spin-button,
+    input[type='number'] {
+      -webkit-appearance: none;
+      margin: 0;
+      -moz-appearance: textfield !important;
+    }
+ }
+/*customer swiper*/
+.swiper-slide{
+    padding: 0;
+    margin-right: 50px;
+}
+
+@media (max-width: 960px) {
+    .swiper-slide>img{
+        padding: 0;
+        margin-right: 30%;
+
+    }
 }
 

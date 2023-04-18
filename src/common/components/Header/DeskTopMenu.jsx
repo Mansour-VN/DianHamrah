@@ -109,8 +109,7 @@ const DeskTopMenu = () => {
                             <div className="dropdown dropdown-bottom dropdown-end">
                                 <div className="flex flex-row item-center justify-center gap-1">
                                     <label tabIndex={0} className="hover:cursor-pointer">
-                                        {" "}
-                                        کتابخانه دیان همراه{" "}
+                                      قوانین و کتابخانه 
                                     </label>
                                     <AiFillCaretDown className="mt-1.5 md:block hidden"/>
                                 </div>
@@ -179,15 +178,15 @@ const DeskTopMenu = () => {
                             </Link>
                         </li>
 
-                        {/*<li>*/}
-                        {/*    <Link*/}
-                        {/*        href="/Login"*/}
-                        {/*        scroll={false}*/}
-                        {/*        className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg bg-slate-900"*/}
-                        {/*    >*/}
-                        {/*        ثبت‌نام / ورود*/}
-                        {/*    </Link>*/}
-                        {/*</li>*/}
+                        <li>
+                            <Link
+                                href="/Login"
+                                scroll={false}
+                                className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg bg-slate-900 hidden"
+                            >
+                                ثبت‌نام / ورود
+                            </Link>
+                        </li>
 
                         <li>
                             <Link

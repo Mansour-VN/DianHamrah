@@ -100,7 +100,7 @@ const DeskTopMenu = () => {
         <li className="border-2 border-slate-700 w-full text-center p-2 rounded-lg">
           <div className="dropdown dropdown-bottom dropdown-end hover:bg-slate-600 p-2 rounded-lg">
             <div className="flex flex-row item-center justify-center gap-1">
-              <label tabIndex={0}> کتابخانه دیان همراه </label>
+              <label tabIndex={0}>  قوانین و کتابخانه  </label>
               <AiFillCaretDown className="mt-1.5" />
             </div>
             <ul
@@ -110,7 +110,7 @@ const DeskTopMenu = () => {
 
               {Library.map((item) => {
                 return (
-                    <li key={item.id} className="hover:bg-slate-600">
+                    <li key={item.id} onClick={() => setMenu(!menu)} className="hover:bg-slate-600">
                       <Link href={item.NavAddress} scroll={false}>
                         {item.title}
                       </Link>
@@ -134,12 +134,7 @@ const DeskTopMenu = () => {
           </Link>
         </li>
 
-        <li
-          onClick={() => setMenu(!menu)}
-          className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"
-        >
-          <Link href="/Library">کتابخانه دیان همراه</Link>
-        </li>
+        
         <li className="hidden border-2  border-slate-700 w-full text-center p-2 rounded-lg">
           <div className="dropdown dropdown-bottom dropdown-end">
             <div className="flex flex-row item-center justify-center gap-1">
@@ -177,14 +172,14 @@ const DeskTopMenu = () => {
             تماس با ما
           </Link>
         </li>
-        {/*<li*/}
-        {/*  onClick={() => setMenu(!menu)}*/}
-        {/*  className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"*/}
-        {/*>*/}
-        {/*  <Link href="/Login" scroll={false}>*/}
-        {/*    ثبت‌نام / ورود*/}
-        {/*  </Link>*/}
-        {/*</li>*/}
+        <li
+          onClick={() => setMenu(!menu)}
+          className="border-2 border-slate-700 w-full text-center p-2 rounded-lg hidden"
+        >
+          <Link href="/Login" scroll={false}>
+            ثبت‌نام / ورود
+          </Link>
+        </li>
 
         <li className="border-2 border-slate-700 w-full text-center p-2 rounded-lg hidden">
           <Link href="/" scroll={false}>

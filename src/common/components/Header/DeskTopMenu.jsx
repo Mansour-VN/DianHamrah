@@ -64,39 +64,7 @@ const DeskTopMenu = () => {
                         <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                             <Link href="/">صفحه اصلی</Link>
                         </li>
-                        <li className="hover:bg-slate-600 p-2 rounded-lg">
-                            <div className="dropdown dropdown-bottom dropdown-end">
-                                <div className="flex flex-row item-center justify-center gap-1">
-                                    <label tabIndex={0} className="hover:cursor-pointer">
-                                        {" "}
-                                        درباره ما{" "}
-                                    </label>
-                                    <AiFillCaretDown className="mt-1.5 md:block hidden"/>
-                                </div>
-                                <ul
-                                    tabIndex={0}
-                                    className="dropdown-content menu p-2 mt-2 shadow bg-slate-800 bg-opacity-50 border-t-2 rounded-box w-52 "
-                                >
-                                    <li className="hover:bg-slate-600">
-                                        <Link href="/AboutUs/#History" scroll={false}>
-                                            تاریخچه
-                                        </Link>
-                                    </li>
-                                    <li className="hover:bg-slate-600">
-                                        <Link href="/AboutUs/#Contact" scroll={false}>
-                                            {" "}
-                                            اطلاعات تماس{" "}
-                                        </Link>
-                                    </li>
-                                    <li className="hover:bg-slate-600">
-                                        <Link href="/AboutUs/#Branches" scroll={false}>
-                                            {" "}
-                                            شعب و دفاتر{" "}
-                                        </Link>
-                                    </li>
-                                </ul>
-                            </div>
-                        </li>
+                      
 
                         <li className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg">
                             <Link href="http://club.dianhamrah.ir/branch/1196" scroll={false}>
@@ -176,6 +144,40 @@ const DeskTopMenu = () => {
                             >
                                 تماس با ما
                             </Link>
+                        </li>
+
+                        <li className="hover:bg-slate-600 p-2 rounded-lg">
+                            <div className="dropdown dropdown-bottom dropdown-end">
+                                <div className="flex flex-row item-center justify-center gap-1">
+                                    <label tabIndex={0} className="hover:cursor-pointer">
+                                        {" "}
+                                        درباره ما{" "}
+                                    </label>
+                                    <AiFillCaretDown className="mt-1.5 md:block hidden"/>
+                                </div>
+                                <ul
+                                    tabIndex={0}
+                                    className="dropdown-content menu p-2 mt-2 shadow bg-slate-800 bg-opacity-50 border-t-2 rounded-box w-52 "
+                                >
+                                    <li className="hover:bg-slate-600">
+                                        <Link href="/AboutUs/#History" scroll={false}>
+                                            تاریخچه
+                                        </Link>
+                                    </li>
+                                    <li className="hover:bg-slate-600">
+                                        <Link href="/AboutUs/#Contact" scroll={false}>
+                                            {" "}
+                                            اطلاعات تماس{" "}
+                                        </Link>
+                                    </li>
+                                    <li className="hover:bg-slate-600">
+                                        <Link href="/AboutUs/#Branches" scroll={false}>
+                                            {" "}
+                                            شعب و دفاتر{" "}
+                                        </Link>
+                                    </li>
+                                </ul>
+                            </div>
                         </li>
 
                         <li>

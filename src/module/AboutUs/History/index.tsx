@@ -95,7 +95,7 @@ const History = () => {
                                     className="rounded-full border-2 w-10 h-10 flex items-center justify-center text-official">✔
                                 </div>
                                 <div className="text pr-2">
-                                    
+                                    خدمات حسابداری و حسابرسی مالیاتی
                                 </div>
                             </li>
                         </ul>

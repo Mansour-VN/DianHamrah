@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import React from 'react';
 import SocialMedia from "@/common/components/SocialMedia";
+import Link from 'next/link';
 
 const Footer = () => {
     return (
@@ -70,17 +71,15 @@ const Footer = () => {
                     </div>
                     <div className='p-8 flex justify-center items-center'>
 
-                        {/*<Link  target="_blank"  href="https://trustseal.enamad.ir/?id=314366&amp;Code=wZigmxkmHR2UnStBUQ0T">*/}
-                        {/*    <Image*/}
-                        {/*        width={145}*/}
-                        {/*        height={145}*/}
-                        {/*        src="/assets/images/People/enamad.jpg"*/}
-                        {/*        alt="LogoDian"*/}
-                        {/*        className="rounded-full"*/}
-                        {/*    />*/}
-
-
-                        {/*</Link>*/}
+                        <Link  target="_blank"   href="https://trustseal.enamad.ir/?id=337338&amp;Code=jrGUgu1aEpsplM6Sm7CX">
+                            <Image
+                                width={135}
+                                height={135}
+                                src="/assets/images/People/enamad.jpg"
+                                alt="LogoDian"
+                                className="rounded-full"
+                            />
+                        </Link> 
                     </div>
 
                 </div>

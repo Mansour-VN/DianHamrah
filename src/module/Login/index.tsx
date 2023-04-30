@@ -13,14 +13,14 @@ import "react-toastify/dist/ReactToastify.css";
 import { ToastContainer } from "react-toastify";
 
 interface RegisterFormValues {
-  phoneNumber: string;
+  userName: string;
   password: string;
 }
 
 const SignupSchema = Yup.object().shape({
-  phoneNumber: Yup.number()
-    .min(1000 * 1000 * 1000, "شماره همراه را کوتاه وارد کردید")
-    .max(1000 * 1000 * 1000 * 10, " شماره همراه نباید بیشتر از 11 رقم باشد")
+  userName: Yup.number()
+    // .min(1000 * 1000 * 1000, "شماره همراه را کوتاه وارد کردید")
+    // .max(1000 * 1000 * 1000 * 10, " شماره همراه نباید بیشتر از 11 رقم باشد")
     .required("لطفا شماره همراه را وارد نمایید"),
   password: Yup.string()
     .min(2, "طول پسورد حداقل 2 کارکتر است")
@@ -32,7 +32,7 @@ const Login = () => {
   const { push } = useRouter();
   const cookies = new Cookies();
   const initialValues: RegisterFormValues = {
-    phoneNumber: "",
+    userName: "",
     password: "",
   };
 
@@ -70,10 +70,10 @@ const Login = () => {
             initialValues={initialValues}
             validationSchema={SignupSchema}
             onSubmit={(values) => {
-              const { phoneNumber, password } = values;
+              const { userName, password } = values;
               sendDataUserLogin({
                 password,
-                phoneNumber: `${phoneNumber}`,
+                userName: `${userName}`,
               })
                 .then((res) => {
                   cookies.set("token", res.data);
@@ -99,13 +99,13 @@ const Login = () => {
                             type="number"
                             placeholder="تلفن همراه..."
                             className="input input-bordered"
-                            name="phoneNumber"
+                            name="userName"
                             id="phoneNumber"
                             onBlur={handleBlur}
                             onChange={handleChange}
                           />
                           <div className="text-red-800">
-                            {touched.phoneNumber && errors.phoneNumber}
+                            {touched.userName && errors.userName}
                           </div>
                         </div>
                         <div className="form-control">
@@ -139,11 +139,11 @@ const Login = () => {
                           </button>
                         </div>
                         <div className="flex flex-row justify-between">
-                          <div className="form-control mt-2">
+                          {/* <div className="form-control mt-2">
                             <Link href="/Register">
                               <p className="text-red-800">ثبت نام کنید!</p>
                             </Link>
-                          </div>
+                          </div> */}
                           <div className="form-control mt-2">
                             <Link href="/">
                               <p className="text-blue-800">بازگشت به سایت</p>

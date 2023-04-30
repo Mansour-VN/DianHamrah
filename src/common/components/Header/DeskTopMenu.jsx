@@ -184,9 +184,9 @@ const DeskTopMenu = () => {
                             <Link
                                 href="/Login"
                                 scroll={false}
-                                className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg bg-slate-900 hidden"
+                                className="hover:cursor-pointer hover:bg-slate-600 p-2 rounded-lg bg-slate-900"
                             >
-                                ثبت‌نام / ورود
+                                 ورود
                             </Link>
                         </li>
 

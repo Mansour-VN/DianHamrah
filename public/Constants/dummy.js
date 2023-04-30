@@ -312,8 +312,8 @@ export const About = {
 export const UserPanel = {
   Navbar: [
     { name: "دریافت گواهی‌نامه", route: "UserDashboard/Certification", icon:<TbFileCertificate/>},
-    { name: "پشتیبانی", route: "UserDashboard/userSupport", icon:<BiCommentDetail/> },
-    {name :"سبد خرید" , route :"UserDashboard/cart", icon:<BsCart3/>},
+    // { name: "پشتیبانی", route: "UserDashboard/userSupport", icon:<BiCommentDetail/> },
+    // {name :"سبد خرید" , route :"UserDashboard/cart", icon:<BsCart3/>},
   ],
 };
 

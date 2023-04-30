@@ -174,10 +174,10 @@ const DeskTopMenu = () => {
         </li>
         <li
           onClick={() => setMenu(!menu)}
-          className="border-2 border-slate-700 w-full text-center p-2 rounded-lg hidden"
+          className="border-2 border-slate-700 w-full text-center p-2 rounded-lg"
         >
           <Link href="/Login" scroll={false}>
-            ثبت‌نام / ورود
+              ورود
           </Link>
         </li>
 
